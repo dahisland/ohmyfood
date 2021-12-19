@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 
 <html lang="fr">
+
     <head>
+
         <meta charset="utf-8" />
         <title>Ohmyfood ! Réservez le menu qui vous convient</title>
         <meta name="description" content="Grâce à Ohmyfood, découvrez la carte des restaurants gastronomiques à proximité
@@ -9,15 +11,86 @@
         des mets les plus raffinés sans attente, dès votre arrivée au restaurant de votre choix." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- GOOGLE FONT -->
-
+        <!-- GOOGLE FONT Roboto & Shrikhand-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet"> 
+        
         <!-- SCRIPT FONT AWESOME -->
         <script src="https://kit.fontawesome.com/e2e7cc2238.js" crossorigin="anonymous"></script>
 
         <!-- CSS links -->
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+
     </head>
+
     <body>
+
+        <header>
+            <picture>
+                <img src="./images/logo/ohmyfood.png" alt="Logo Ohmyfood" />
+            </picture>
+        </header>
+
+        <main>
+
+            <section class="reservation">
+                <form>
+                    <label for="localisation"><span class="fas fa-map-marker-alt"></span></label>
+                    <input type="search" name="localise" id="localisation" />
+                </form>
+                    <h1>Réservez le menu qui vous convient</h1>
+                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                    <a href="#list-restaurants">Explorer nos restaurants</a>
+            </section>
+
+            <section class="functioning">
+                <h2>Fonctionnement</h2>
+                <ol>
+                    <li><span>1</span><span class="fas fa-mobile-alt"></span>Choisissez un restaurant</li>
+                    <li><span>2</span><span class="fas fa-list-ul"></span>Composez votre menu</li>
+                    <li><span>3</span><span class="fas fa-store"></span>Dégustez au restaurant</li>
+                </ol>
+            </section>
+
+            <section id="list-restaurants" class="restaurants">
+                <h2>Restaurants</h2>
+                <div>
+                    <a href="./html/menu-gout.html">
+                        <figure>
+                            <picture>
+                                <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant La palette du goût" />
+                            </picture>
+                            <span>Nouveau</span>
+                            <figcaption>
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <span class="far fa-heart"></span>
+                    <span class="fas fa-heart"></span>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Ohmyfood</p>>
+            <ul>
+                <li>
+                    <a href="#"><span class="fas fa-utensils"></span>Proposer un restaurant</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fas fa-hands-helping"></span>Devenir partenaire</a>
+                </li>
+                <li>
+                    <a href="#">Mentions légales</a>
+                </li>
+                <li>
+                    <a href="mailto:#">Contact</a>
+                </li>
+            </ul>
+        </footer>
 
     </body>
 </html>
