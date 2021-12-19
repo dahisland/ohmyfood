@@ -1,0 +1,52 @@
+/* MAPS*/
+$colors-palette: (
+    purple:#9356DC,
+    pink:#FF79DA,
+    mint:#99E2D0,
+    dark:#000,
+    white:#fff,
+    darkshadow:#eaeaea,
+    lightshadow:#f6f6f6,
+    lightpurple:#f5edff
+);
+
+$width-palette: (
+    max:100%, 
+    medium:92%,
+    small:70%,
+    x-small:40%
+);
+
+$txt-size: (
+    txt-xs:0.8rem, 
+    txt-m:1rem, 
+    xt-l:1.1rem, 
+    txt-xl:1.4rem
+);
+
+$txt-weight: (
+    txt-light:300,
+    txt-med:500,
+    txt-bold:700,
+);
+
+/* MIXINS */
+@mixin reset-margin {
+    margin:0;
+}
+@mixin center-margin {
+    margin:0 auto;
+}
+@mixin reset-padding {
+    padding:0;
+}
+@mixin padding-page {
+    padding-left:1rem;
+    padding-right:1rem;
+}
+
+/* EXTENSIONS */
+%reset-margin {
+    margin:0;
+    padding:0;
+}

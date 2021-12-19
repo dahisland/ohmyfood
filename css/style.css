@@ -1,3 +1,66 @@
+/* MAPS*/
+/* MIXINS */
+/* EXTENSIONS */
+p, h3, h1, h2, figure, ul, ol {
+  margin: 0;
+  padding: 0;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+img {
+  object-fit: contain;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+header, section, footer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+header {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+section {
+  padding-bottom: 2rem;
+}
+
+footer {
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+h1, h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding-top: 1rem;
+  padding-bottom: 1.3rem;
+}
+
+h3 {
+  font-weight: 700;
+}
 
 /*# sourceMappingURL=style.css.map */

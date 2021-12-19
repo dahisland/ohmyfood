@@ -1,0 +1,54 @@
+* {
+    box-sizing:border-box;
+}
+html {
+    font-size:16px;
+}
+body {
+    @include center-margin;
+    font-family:'Roboto',sans-serif;
+    font-weight:map-get($txt-weight, txt-light);
+}
+ul, ol {
+    @extend%reset-margin;
+    list-style-type:none;
+}
+figure {
+    @extend%reset-margin;
+}
+img {
+    object-fit: contain;
+    width:map-get($width-palette, max);
+}
+a {
+    text-decoration:none;
+}
+header, section, footer {
+    @include padding-page;
+}
+header {
+    padding-top:1rem;
+    padding-bottom:0.5rem;
+}
+section {
+    padding-bottom:2rem;
+}
+footer {
+    padding-top:1rem;
+    padding-bottom:2.5rem;
+}
+h1, h2 {
+    @extend%reset-margin;
+    font-size:map-get($txt-size , txt-xl);
+    font-weight:map-get($txt-weight, txt-bold);
+    padding-top:1rem;
+    padding-bottom:1.3rem;
+}
+h3 {
+    @extend%reset-margin;
+    font-size:map-get($txt-size , txt-l);
+    font-weight:map-get($txt-weight, txt-bold);
+}
+p {
+    @extend%reset-margin;
+}
