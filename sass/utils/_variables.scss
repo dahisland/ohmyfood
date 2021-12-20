@@ -1,4 +1,6 @@
+
 /* MAPS*/
+
 $colors-palette: (
     purple:#9356DC,
     pink:#FF79DA,
@@ -14,7 +16,7 @@ $width-palette: (
     max:100%, 
     medium:92%,
     small:70%,
-    x-small:40%
+    x-small:45%
 );
 
 $txt-size: (
@@ -31,21 +33,28 @@ $txt-weight: (
 );
 
 /* MIXINS */
-@mixin reset-margin {
-    margin:0;
-}
+
 @mixin center-margin {
     margin:0 auto;
-}
-@mixin reset-padding {
-    padding:0;
 }
 @mixin padding-page {
     padding-left:1rem;
     padding-right:1rem;
 }
+@mixin relative ($zindex) {
+    position:relative;
+    z-index:$zindex;
+}
+@mixin absolute ($zindex) {
+    position:absolute;
+    z-index:$zindex;
+}
+@mixin shadow-box ($lighting:80%) {
+    box-shadow: 0px 5px 8px lighten(map-get($colors-palette, dark),$lighting);
+}
 
 /* EXTENSIONS */
+
 %reset-margin {
     margin:0;
     padding:0;

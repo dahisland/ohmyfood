@@ -1,3 +1,5 @@
+/* RESET CSS */
+
 * {
     box-sizing:border-box;
 }
@@ -27,8 +29,8 @@ header, section, footer {
     @include padding-page;
 }
 header {
-    padding-top:1rem;
-    padding-bottom:0.5rem;
+    padding-top:1.2rem;
+    padding-bottom:0.4rem;
 }
 section {
     padding-bottom:2rem;
@@ -37,7 +39,7 @@ footer {
     padding-top:1rem;
     padding-bottom:2.5rem;
 }
-h1, h2 {
+h2 {
     @extend%reset-margin;
     font-size:map-get($txt-size , txt-xl);
     font-weight:map-get($txt-weight, txt-bold);
@@ -51,4 +53,10 @@ h3 {
 }
 p {
     @extend%reset-margin;
+}
+button {
+    font-family: 'Roboto', sans-serif;
+    font-size:1rem;
+    border:none;
+    cursor:pointer;
 }

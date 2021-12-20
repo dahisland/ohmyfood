@@ -1,0 +1,30 @@
+/* SECTION RESERVATION */
+
+.reservation {
+    @extend %reset-margin;
+    text-align:center;
+    @include relative (10);
+    &__localise {
+        padding: 1rem;
+        background:map-get($colors-palette, darkshadow);
+        font-weight:map-get($txt-weight, txt-med);
+    }
+    span {
+        margin-right:1rem;
+        margin-left:-1.7rem;
+        vertical-align: top;
+    }
+    &__explore {
+        padding:0.5rem 1rem 3rem 1rem;
+        background: map-get($colors-palette, lightshadow);
+    }
+    &__explore p {
+        padding-bottom:1.5rem;
+    }
+    h1 {
+        @extend%reset-margin;
+        padding:1.5rem 3rem 0.5rem 3rem;
+        font-size:map-get($txt-size , txt-xl);
+        font-weight:map-get($txt-weight, txt-bold);    
+    }
+}

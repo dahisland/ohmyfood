@@ -1,11 +1,12 @@
 /* MAPS*/
 /* MIXINS */
 /* EXTENSIONS */
-p, h3, h1, h2, figure, ul, ol {
+.reservation h1, .reservation, p, h3, h2, figure, ul, ol {
   margin: 0;
   padding: 0;
 }
 
+/* RESET CSS */
 * {
   box-sizing: border-box;
 }
@@ -39,8 +40,8 @@ header, section, footer {
 }
 
 header {
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
+  padding-top: 1.2rem;
+  padding-bottom: 0.4rem;
 }
 
 section {
@@ -52,7 +53,7 @@ footer {
   padding-bottom: 2.5rem;
 }
 
-h1, h2 {
+h2 {
   font-size: 1.4rem;
   font-weight: 700;
   padding-top: 1rem;
@@ -60,6 +61,98 @@ h1, h2 {
 }
 
 h3 {
+  font-weight: 700;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* BUTTONS WITH LINEAR GRADIENT ANIMATED ON HOVER */
+.btn-gradient {
+  display: block;
+  width: fit-content;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5rem;
+  margin: 0 auto;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0px 5px 8px #cccccc;
+  opacity: 1;
+}
+.btn-gradient:hover {
+  transition-duration: 0.4s;
+  box-shadow: 0px 5px 8px #999999;
+  opacity: 0.8;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  box-shadow: 0px 2px 3px #cccccc;
+  position: relative;
+  z-index: 20;
+}
+header img {
+  width: 45%;
+  max-width: 300px;
+}
+
+/* FOOTER */
+footer {
+  color: #fff;
+  background: #404040;
+}
+footer p {
+  font-family: "Shrikhand", cursive;
+  padding-bottom: 1rem;
+}
+footer a {
+  color: #fff;
+}
+footer li {
+  padding-bottom: 0.4rem;
+}
+footer li:nth-child(1), footer li:nth-child(2) {
+  font-weight: 500;
+}
+footer li:nth-child(2) span {
+  font-size: 0.7rem;
+}
+footer span {
+  margin-right: 1rem;
+}
+
+/* SECTION RESERVATION */
+.reservation {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+.reservation__localise {
+  padding: 1rem;
+  background: #eaeaea;
+  font-weight: 500;
+}
+.reservation span {
+  margin-right: 1rem;
+  margin-left: -1.7rem;
+  vertical-align: top;
+}
+.reservation__explore {
+  padding: 0.5rem 1rem 3rem 1rem;
+  background: #f6f6f6;
+}
+.reservation__explore p {
+  padding-bottom: 1.5rem;
+}
+.reservation h1 {
+  padding: 1.5rem 3rem 0.5rem 3rem;
+  font-size: 1.4rem;
   font-weight: 700;
 }
 

@@ -1,0 +1,37 @@
+/* HEADER */
+
+header {
+    text-align:center;
+    box-shadow: 0px 2px 3px lighten(map-get($colors-palette, dark),80%);
+    @include relative (20);
+    img {
+        width:map-get($width-palette, x-small);
+        max-width:300px;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    color:map-get($colors-palette, white);
+    background:lighten(map-get($colors-palette, dark),25%);
+    p {
+        font-family:'Shrikhand', cursive;
+        padding-bottom:1rem;
+    }
+    a {
+        color:map-get($colors-palette, white);
+    }
+    li {
+        padding-bottom:0.4rem;
+    }
+    li:nth-child(1), li:nth-child(2) {
+        font-weight:map-get($txt-weight, txt-med);
+    }
+    li:nth-child(2) span {
+        font-size:0.7rem;
+    }
+    span {
+        margin-right:1rem;
+    }
+}
