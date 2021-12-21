@@ -1,15 +1,43 @@
-/* RESET CSS */
+/* BASE CSS */
+
 
 * {
     box-sizing:border-box;
 }
 html {
     font-size:16px;
+    @include responsive (tabs) {
+        font-size:15px;
+    }
 }
 body {
     @include center-margin;
-    font-family:'Roboto',sans-serif;
+    @extend%font-roboto;
     font-weight:map-get($txt-weight, txt-light);
+}
+main {
+    display:grid;
+    @include responsive (tabs) {
+        grid-template-columns: 50% 50%;
+    }
+}
+h1 {
+    @extend%reset-margin;
+}
+h2 {
+    @extend%reset-margin;
+    font-size:map-get($txt-size , txt-xl);
+    @extend%font-bold;
+    padding-top:1rem;
+    padding-bottom:1.3rem;
+}
+h3 {
+    @extend%reset-margin;
+    font-size:map-get($txt-size , txt-l);
+    @extend%font-bold;
+}
+p {
+    @extend%reset-margin;
 }
 ul, ol {
     @extend%reset-margin;
@@ -40,24 +68,8 @@ footer {
     padding-top:1rem;
     padding-bottom:2.5rem;
 }
-h2 {
-    @extend%reset-margin;
-    font-size:map-get($txt-size , txt-xl);
-    font-weight:map-get($txt-weight, txt-bold);
-    padding-top:1rem;
-    padding-bottom:1.3rem;
-}
-h3 {
-    @extend%reset-margin;
-    font-size:map-get($txt-size , txt-l);
-    font-weight:map-get($txt-weight, txt-bold);
-}
-p {
-    @extend%reset-margin;
-}
 button {
-    font-family: 'Roboto', sans-serif;
-    font-size:1rem;
+    @extend%font-roboto;
     border:none;
     cursor:pointer;
 }

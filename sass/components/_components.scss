@@ -5,13 +5,13 @@
 .btn-gradient {
     display:block;
     width:fit-content;
+    color:map-get($colors-palette, white);
     padding:0.8rem 1.5rem;
     border-radius:5rem;
     @include center-margin;
-    background:linear-gradient(to top left, map-get($colors-palette,purple), map-get($colors-palette, pink));
-    color:map-get($colors-palette, white );
-    font-weight:map-get($txt-weight, txt-med);
     @include shadow-box;
+    background:linear-gradient(to top left, map-get($colors-palette,purple), map-get($colors-palette, pink));
+    font-weight:map-get($txt-weight, txt-med);
     opacity: 1;
     &:hover {
         transition-duration:0.4s;

@@ -1,3 +1,13 @@
+/* MAIN */
+
+main {
+    section {
+        @include responsive (tabs) {
+            padding-bottom:1rem;
+        }
+    }
+}
+
 /* SECTION RESERVATION */
 
 .reservation {
@@ -10,18 +20,23 @@
     }
     span {
         margin-right:1rem;
-        margin-left:-1.7rem;
+        margin-left:-1rem;
         vertical-align: top;
     }
     &__explore {
         padding:0.5rem 1rem 3rem 1rem;
         background: map-get($colors-palette, lightshadow);
+        @include responsive (tabs) {
+            height:280px;
+        }
     }
     &__explore p {
         padding-bottom:1.5rem;
+        @include responsive (tabs) {
+            padding-bottom:2.5rem;
+        }
     }
     h1 {
-        @extend%reset-margin;
         padding:1.5rem 3rem 0.5rem 3rem;
         font-size:map-get($txt-size , txt-xl);
         font-weight:map-get($txt-weight, txt-bold);    
@@ -32,49 +47,82 @@
 
 .functioning {
     @include padding-page;
+    display:flex;
+    flex-direction:column;
+    @include responsive (tabs) {
+        justify-content: space-between;
+    }
     ol {
         font-weight:map-get($txt-weight, txt-med);
-    }
-    .instructions__step {
         display:flex;
-        align-items:center;
-        padding:1.5rem 2rem 1.5rem 2rem;
-        margin-bottom:1rem;
-        margin-left:1rem;
-        border-radius:1rem;
-        background:map-get($colors-palette, lightshadow);
-        @include shadow-box (90%);
-        @include relative (30);
-    }
-    .instructions__step:nth-child(3) {
-        background: map-get($colors-palette, lightpurple);
-    }
-    .step__number {
-        color:map-get($colors-palette, white);
-        background:map-get($colors-palette, purple);
-        border-radius:1rem;
-        font-weight:map-get($txt-weight, txt-light);
-        display:inline-block;
-        width:1.4rem;
-        height:1.4rem;
-        line-height: 1.4rem;
-        font-size:map-get($txt-size,txt-xs);
-        text-align: center;
-        @include absolute (40);
-        left:-11px;
-    }
-    .step__icon {
-        margin-right:2rem;
-        width:22px;
-        font-size:map-get($txt-size, txt-l);
-        &--grey {
-            color:lighten(map-get($colors-palette, dark), 50%);
+        flex-direction:column;
+        @include responsive (tabs) {
+            justify-content: space-between;
+            height:285px;
+            padding-bottom:10px;
         }
-        &--purple {
-            color:map-get($colors-palette, purple);
-        }
+    }
+    h2 {
+        @include responsive (tabs) {
+            text-align:center;
+        }    
     }
 }
+.instructions__step {
+    display:flex;
+    align-items:center;
+    padding:1.5rem 2rem 1.5rem 2rem;
+    margin-bottom:1rem;
+    margin-left:1rem;
+    border-radius:1rem;
+    background:map-get($colors-palette, lightshadow);
+    @include shadow-box (90%);
+    @include relative (30);
+    @include responsive (tabs) {
+        flex-direction:column;
+        margin-left:0rem;
+        text-align:center;
+        padding:1.5rem 2rem 1rem 2rem;
+    }    
+    &:nth-child(3) {
+        background: map-get($colors-palette, lightpurple);
+    }
+}
+.step__number {
+    color:map-get($colors-palette, white);
+    background:map-get($colors-palette, purple);
+    border-radius:1rem;
+    font-weight:map-get($txt-weight, txt-light);
+    display:inline-block;
+    width:1.4rem;
+    height:1.4rem;
+    line-height: 1.4rem;
+    font-size:map-get($txt-size,txt-xs);
+    text-align: center;
+    @include absolute (40);
+    left:-11px;
+    @include responsive (tabs) {
+        left:inherit;
+        top:-10px;
+        width:4rem;
+    }    
+
+}
+.step__icon {
+    margin-right:2rem;
+    width:22px;
+    font-size:map-get($txt-size, txt-l);
+    @include responsive (tabs) {
+        margin-right:0rem;
+    }  
+    &--grey {
+        color:lighten(map-get($colors-palette, dark), 50%);
+    }
+    &--purple {
+        color:map-get($colors-palette, purple);
+    }
+}    
+    
 
 /* SECTION RESTAURANTS */
 
@@ -82,12 +130,25 @@
     @include padding-page;
     background: map-get($colors-palette, lightshadow);
     padding-top:2rem;
-    .restaurants-flexbox {
+    @include responsive (tabs) {
+        grid-column: 1 / span 2;
+    }
+    h2 {
+        @include responsive (tabs) {
+            text-align:center;
+        }      
+    }
+    &-flexbox {
         display:flex;
         flex-direction:column;
         flex-wrap:wrap;
+        @include responsive (tabs) {
+            flex-direction:row;
+            justify-content: space-between;
+        }
+    
     }
-    .restaurants__link-menu {
+    &__link-menu {
         display:block;
         border-radius:1rem;
         overflow:hidden;
@@ -95,42 +156,47 @@
         @include shadow-box (90);
         @include relative (40);
         transition:0.3s;
+        @include responsive (tabs) {
+            width:48%;
+        }    
         &:hover {
             color:map-get($colors-palette, purple );
             @include shadow-box (80);
         }
     }
-    .card__img img {
-        height:200px;
+}
+.card__img img {
+    height:200px;
+}
+.card__caption {
+    padding:0.6rem 0.8rem 0.8rem 0.8rem;
+    line-height:1.5rem;
+    background: map-get($colors-palette, white); 
+}
+.link-menu__sticker-new {
+    @include absolute(40);
+    top:1rem;
+    right:1rem;
+    background:map-get($colors-palette, mint);
+    font-size:map-get($txt-size, txt-xs);
+    font-weight:map-get($txt-weight, txt-med);
+    color:darken(map-get($colors-palette, mint),40%);
+    width:5rem;
+    height: 1.8rem;
+    line-height:1.8rem;
+    text-align:center;
+}
+.link-menu__icon {
+    @include absolute (50);
+    font-size:map-get($txt-size, txt-xl);
+    bottom:1.7rem;
+    right:1.2rem;
+    &--empty {
+        opacity:1;
     }
-    .link-menu__sticker-new {
-        @include absolute(40);
-        top:1rem;
-        right:1rem;
-        background:map-get($colors-palette, mint);
-        font-size:map-get($txt-size, txt-xs);
-        font-weight:map-get($txt-weight, txt-med);
-        color:darken(map-get($colors-palette, mint),40%);
-        width:5rem;
-        height: 1.8rem;
-        line-height:1.8rem;
-        text-align:center;
-    }
-    .card__caption {
-        padding:0.6rem 0.8rem 0.8rem 0.8rem;
-        line-height:1.5rem;
-        background: map-get($colors-palette, white); 
-    }
-    .link-menu__icon {
-        @include absolute (50);
-        font-size:map-get($txt-size, txt-xl);
-        bottom:1.7rem;
-        right:1.2rem;
-        &--empty {
-        }
-        &--full {
-            color:map-get($colors-palette, pink);
-            opacity:1;
-        }
+    &--full {
+        color:map-get($colors-palette, pink);
+        opacity:1;
     }
 }
+

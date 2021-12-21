@@ -1,0 +1,36 @@
+$colors-palette: (
+    purple:#9356DC,
+    pink:#FF79DA,
+    mint:#99E2D0,
+    dark:#000,
+    white:#fff,
+    darkshadow:#eaeaea,
+    lightshadow:#f6f6f6,
+    lightpurple:#f5edff
+);
+
+$width-palette: (
+    max:100%, 
+    medium:92%,
+    small:70%,
+    x-small:45%
+);
+
+$txt-size: (
+    txt-xs:0.8rem, 
+    txt-m:1rem, 
+    txt-l:1.1rem, 
+    txt-xl:1.4rem
+);
+
+$txt-weight: (
+    txt-light:300,
+    txt-med:500,
+    txt-bold:700,
+);
+
+$breakpoints: (
+    tabs:650px,
+    desktop:900px,
+    desktop-xl:1400px
+);

@@ -13,14 +13,17 @@ header {
 /* FOOTER */
 
 footer {
-    color:map-get($colors-palette, white);
     background:lighten(map-get($colors-palette, dark),25%);
+    @include responsive (tabs) {
+        text-align:center;
+    }  
     p {
+        @extend%txt-footer-white;
         font-family:'Shrikhand', cursive;
         padding-bottom:1rem;
     }
     a {
-        color:map-get($colors-palette, white);
+        @extend%txt-footer-white;
         &:hover {
             color:map-get($colors-palette, pink );
         }
