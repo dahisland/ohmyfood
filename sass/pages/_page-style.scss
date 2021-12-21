@@ -1,7 +1,6 @@
 /* SECTION RESERVATION */
 
 .reservation {
-    @extend %reset-margin;
     text-align:center;
     @include relative (10);
     &__localise {
@@ -26,5 +25,112 @@
         padding:1.5rem 3rem 0.5rem 3rem;
         font-size:map-get($txt-size , txt-xl);
         font-weight:map-get($txt-weight, txt-bold);    
+    }
+}
+
+/* SECTION FUNCTIONING */
+
+.functioning {
+    @include padding-page;
+    ol {
+        font-weight:map-get($txt-weight, txt-med);
+    }
+    .instructions__step {
+        display:flex;
+        align-items:center;
+        padding:1.5rem 2rem 1.5rem 2rem;
+        margin-bottom:1rem;
+        margin-left:1rem;
+        border-radius:1rem;
+        background:map-get($colors-palette, lightshadow);
+        @include shadow-box (90%);
+        @include relative (30);
+    }
+    .instructions__step:nth-child(3) {
+        background: map-get($colors-palette, lightpurple);
+    }
+    .step__number {
+        color:map-get($colors-palette, white);
+        background:map-get($colors-palette, purple);
+        border-radius:1rem;
+        font-weight:map-get($txt-weight, txt-light);
+        display:inline-block;
+        width:1.4rem;
+        height:1.4rem;
+        line-height: 1.4rem;
+        font-size:map-get($txt-size,txt-xs);
+        text-align: center;
+        @include absolute (40);
+        left:-11px;
+    }
+    .step__icon {
+        margin-right:2rem;
+        width:22px;
+        font-size:map-get($txt-size, txt-l);
+        &--grey {
+            color:lighten(map-get($colors-palette, dark), 50%);
+        }
+        &--purple {
+            color:map-get($colors-palette, purple);
+        }
+    }
+}
+
+/* SECTION RESTAURANTS */
+
+.restaurants {
+    @include padding-page;
+    background: map-get($colors-palette, lightshadow);
+    padding-top:2rem;
+    .restaurants-flexbox {
+        display:flex;
+        flex-direction:column;
+        flex-wrap:wrap;
+    }
+    .restaurants__link-menu {
+        display:block;
+        border-radius:1rem;
+        overflow:hidden;
+        margin-bottom:1.1rem;
+        @include shadow-box (90);
+        @include relative (40);
+        transition:0.3s;
+        &:hover {
+            color:map-get($colors-palette, purple );
+            @include shadow-box (80);
+        }
+    }
+    .card__img img {
+        height:200px;
+    }
+    .link-menu__sticker-new {
+        @include absolute(40);
+        top:1rem;
+        right:1rem;
+        background:map-get($colors-palette, mint);
+        font-size:map-get($txt-size, txt-xs);
+        font-weight:map-get($txt-weight, txt-med);
+        color:darken(map-get($colors-palette, mint),40%);
+        width:5rem;
+        height: 1.8rem;
+        line-height:1.8rem;
+        text-align:center;
+    }
+    .card__caption {
+        padding:0.6rem 0.8rem 0.8rem 0.8rem;
+        line-height:1.5rem;
+        background: map-get($colors-palette, white); 
+    }
+    .link-menu__icon {
+        @include absolute (50);
+        font-size:map-get($txt-size, txt-xl);
+        bottom:1.7rem;
+        right:1.2rem;
+        &--empty {
+        }
+        &--full {
+            color:map-get($colors-palette, pink);
+            opacity:1;
+        }
     }
 }

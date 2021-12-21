@@ -19,13 +19,14 @@ figure {
     @extend%reset-margin;
 }
 img {
-    object-fit: contain;
+    object-fit: cover;
     width:map-get($width-palette, max);
 }
 a {
     text-decoration:none;
+    color:map-get($colors-palette, dark);
 }
-header, section, footer {
+header, footer {
     @include padding-page;
 }
 header {
@@ -33,7 +34,7 @@ header {
     padding-bottom:0.4rem;
 }
 section {
-    padding-bottom:2rem;
+    padding-bottom:3rem;
 }
 footer {
     padding-top:1rem;

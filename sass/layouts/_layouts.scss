@@ -21,6 +21,9 @@ footer {
     }
     a {
         color:map-get($colors-palette, white);
+        &:hover {
+            color:map-get($colors-palette, pink );
+        }
     }
     li {
         padding-bottom:0.4rem;
