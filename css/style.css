@@ -181,12 +181,6 @@ footer span {
   position: relative;
   z-index: 10;
 }
-@media screen and (min-width: 1100px) {
-  .reservation {
-    margin-left: 1rem;
-    border-radius: 0rem 0rem 1.5rem 1.5rem;
-  }
-}
 .reservation__localise {
   padding: 1rem;
   background: #eaeaea;
@@ -204,11 +198,6 @@ footer span {
 @media screen and (min-width: 650px) {
   .reservation__explore {
     height: 280px;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .reservation__explore {
-    border-radius: 0rem 0rem 1.5rem 1.5rem;
   }
 }
 .reservation__explore p {
@@ -245,13 +234,13 @@ footer span {
 @media screen and (min-width: 650px) {
   .functioning ol {
     justify-content: space-between;
-    height: 285px;
     padding-bottom: 0.5rem;
   }
 }
 @media screen and (min-width: 650px) {
   .functioning h2 {
     text-align: center;
+    padding-bottom: 1.9rem;
   }
 }
 
@@ -272,8 +261,9 @@ footer span {
     flex-direction: column;
     align-items: center;
     margin-left: 0rem;
+    margin-bottom: 1.5rem;
     text-align: center;
-    padding: 1.5rem 2rem 1rem 2rem;
+    padding: 1.5rem 2rem 0.8rem 2rem;
   }
 }
 .instructions__step:nth-child(3) {
@@ -331,6 +321,7 @@ footer span {
 @media screen and (min-width: 650px) {
   .restaurants h2 {
     text-align: center;
+    padding-bottom: 2rem;
   }
 }
 .restaurants-flexbox {
@@ -341,13 +332,6 @@ footer span {
 @media screen and (min-width: 650px) {
   .restaurants-flexbox {
     flex-direction: row;
-    justify-content: space-between;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .restaurants-flexbox {
-    flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-between;
   }
 }
@@ -367,28 +351,13 @@ footer span {
     margin-bottom: 1.5rem;
   }
 }
-@media screen and (min-width: 1100px) {
-  .restaurants__link-menu {
-    width: 23%;
-  }
-}
 .restaurants__link-menu:hover {
   color: #9356DC;
   box-shadow: 0px 5px 8px #cccccc;
 }
-@media screen and (min-width: 1100px) {
-  .restaurants__link-menu:hover {
-    width: 29%;
-  }
-}
 
 .card__img img {
   height: 200px;
-}
-@media screen and (min-width: 1100px) {
-  .card__img img {
-    height: 250px;
-  }
 }
 
 .card__caption {

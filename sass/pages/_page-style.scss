@@ -16,11 +16,6 @@ main {
 .reservation {
     text-align:center;
     @include relative (10);
-    @include responsive (desktop) {
-        margin-left:1rem;
-        border-radius: 0rem 0rem 1.5rem 1.5rem;
-    }
-
     &__localise {
         padding: 1rem;
         background:map-get($colors-palette, darkshadow);
@@ -36,10 +31,7 @@ main {
         background: map-get($colors-palette, lightshadow);
         @include responsive (tabs) {
             height:280px;
-        }
-        @include responsive (desktop) {
-            border-radius: 0rem 0rem 1.5rem 1.5rem;
-        }    
+        }   
     }
     &__explore p {
         padding-bottom:1.5rem;
@@ -62,19 +54,18 @@ main {
     @include responsive (tabs) {
         justify-content: space-between;
     }
-    
     ol {
         font-weight:map-get($txt-weight, txt-med);
         @include flex-column;
         @include responsive (tabs) {
             justify-content: space-between;
-            height:285px;
             padding-bottom:0.5rem;
         }
     }
     h2 {
         @include responsive (tabs) {
             text-align:center;
+            padding-bottom:1.9rem;
         }
     }
 }
@@ -92,8 +83,9 @@ main {
         flex-direction:column;
         align-items:center;
         margin-left:0rem;
+        margin-bottom:1.5rem;
         text-align:center;
-        padding:1.5rem 2rem 1rem 2rem;
+        padding:1.5rem 2rem 0.8rem 2rem;
     }    
     &:nth-child(3) {
         background: map-get($colors-palette, lightpurple);
@@ -145,6 +137,7 @@ main {
     h2 {
         @include responsive (tabs) {
             text-align:center;
+            padding-bottom:2rem;
         }      
     }
     &-flexbox {
@@ -152,11 +145,6 @@ main {
         flex-wrap:wrap;
         @include responsive (tabs) {
             flex-direction:row;
-            justify-content: space-between;
-        }
-        @include responsive (desktop) {
-            flex-direction:row;
-            flex-wrap:nowrap;
             justify-content: space-between;
         }
     }
@@ -172,24 +160,14 @@ main {
             width:48%;
             margin-bottom:1.5rem;
         }
-        @include responsive (desktop) {
-            width:23%;
-        }
         &:hover {
             color:map-get($colors-palette, purple );
             @include shadow-box (80);
-            @include responsive (desktop) {
-                width:29%;
-            }
-        
         }
     }
 }
 .card__img img {
     height:200px;
-    @include responsive (desktop) {
-        height:250px;
-    } 
 }
 .card__caption {
     padding:0.6rem 0.8rem 0.8rem 0.8rem;
