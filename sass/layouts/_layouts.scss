@@ -8,10 +8,6 @@ header {
         width:map-get($width-palette, x-small);
         max-width:180px;
     }
-    @include responsive (desktop) {
-        display:grid;
-        grid-template-columns: 35% 75%;
-    }
 }
 
 /* FOOTER */

@@ -4,13 +4,6 @@ main {
     @include responsive (tabs) {
         grid-template-columns: 50% 50%;
     }
-    @include responsive (desktop) {
-        grid-template-columns: 35% 65%;
-    }
-    @include responsive (desktop-xl) {
-        max-width:2000px;
-        margin:0 auto;
-    }
     section {
         @include responsive (tabs) {
             padding-bottom:1rem;
@@ -24,8 +17,10 @@ main {
     text-align:center;
     @include relative (10);
     @include responsive (desktop) {
-        padding-bottom:0px;
+        margin-left:1rem;
+        border-radius: 0rem 0rem 1.5rem 1.5rem;
     }
+
     &__localise {
         padding: 1rem;
         background:map-get($colors-palette, darkshadow);
@@ -43,7 +38,7 @@ main {
             height:280px;
         }
         @include responsive (desktop) {
-            height:fit-content;
+            border-radius: 0rem 0rem 1.5rem 1.5rem;
         }    
     }
     &__explore p {
@@ -51,17 +46,11 @@ main {
         @include responsive (tabs) {
             padding-bottom:2.5rem;
         }
-        @include responsive (desktop) {
-            padding-bottom:1.5rem;
-        }
     }
     h1 {
         padding:1.5rem 3rem 0.5rem 3rem;
         font-size:map-get($txt-size , txt-xl);
         font-weight:map-get($txt-weight, txt-bold);   
-        @include responsive (desktop) {
-            padding:1rem 3rem 1rem 3rem;
-        }
     }
 }
 
@@ -73,9 +62,7 @@ main {
     @include responsive (tabs) {
         justify-content: space-between;
     }
-    @include responsive (desktop) {
-        grid-row:2;
-    }
+    
     ol {
         font-weight:map-get($txt-weight, txt-med);
         @include flex-column;
@@ -84,17 +71,11 @@ main {
             height:285px;
             padding-bottom:0.5rem;
         }
-        @include responsive (desktop) {
-            height:290px;
-        }
     }
     h2 {
         @include responsive (tabs) {
             text-align:center;
         }
-        @include responsive (desktop) {
-            padding-top:0.4rem;
-        }        
     }
 }
 .instructions__step {
@@ -161,10 +142,6 @@ main {
         background: map-get($colors-palette, white );
         padding-top:0rem;
     }
-    @include responsive (desktop) {
-        grid-row:1 / span 2;
-        grid-column: 2;
-    }
     h2 {
         @include responsive (tabs) {
             text-align:center;
@@ -175,6 +152,11 @@ main {
         flex-wrap:wrap;
         @include responsive (tabs) {
             flex-direction:row;
+            justify-content: space-between;
+        }
+        @include responsive (desktop) {
+            flex-direction:row;
+            flex-wrap:nowrap;
             justify-content: space-between;
         }
     }
@@ -189,15 +171,25 @@ main {
         @include responsive (tabs) {
             width:48%;
             margin-bottom:1.5rem;
-        }    
+        }
+        @include responsive (desktop) {
+            width:23%;
+        }
         &:hover {
             color:map-get($colors-palette, purple );
             @include shadow-box (80);
+            @include responsive (desktop) {
+                width:29%;
+            }
+        
         }
     }
 }
 .card__img img {
     height:200px;
+    @include responsive (desktop) {
+        height:250px;
+    } 
 }
 .card__caption {
     padding:0.6rem 0.8rem 0.8rem 0.8rem;
