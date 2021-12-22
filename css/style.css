@@ -38,11 +38,6 @@ body {
 main {
   display: grid;
 }
-@media screen and (min-width: 650px) {
-  main {
-    grid-template-columns: 50% 50%;
-  }
-}
 
 h2 {
   font-size: 1.4rem;
@@ -84,7 +79,7 @@ section {
 
 footer {
   padding-top: 1rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 2rem;
 }
 
 button {
@@ -121,7 +116,13 @@ header {
 }
 header img {
   width: 45%;
-  max-width: 300px;
+  max-width: 180px;
+}
+@media screen and (min-width: 900px) {
+  header {
+    display: grid;
+    grid-template-columns: 35% 75%;
+  }
 }
 
 /* FOOTER */
@@ -136,9 +137,16 @@ footer {
 footer p {
   font-family: "Shrikhand", cursive;
   padding-bottom: 1rem;
+  font-size: 1.2rem;
 }
 footer a:hover {
   color: #FF79DA;
+}
+@media screen and (min-width: 650px) {
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 footer li {
   padding-bottom: 0.4rem;
@@ -152,8 +160,29 @@ footer li:nth-child(2) span {
 footer span {
   margin-right: 1rem;
 }
+@media screen and (min-width: 650px) {
+  footer span {
+    margin-right: 0.4rem;
+  }
+}
 
 /* MAIN */
+@media screen and (min-width: 650px) {
+  main {
+    grid-template-columns: 50% 50%;
+  }
+}
+@media screen and (min-width: 900px) {
+  main {
+    grid-template-columns: 35% 65%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  main {
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 650px) {
   main section {
     padding-bottom: 1rem;
@@ -165,6 +194,11 @@ footer span {
   text-align: center;
   position: relative;
   z-index: 10;
+}
+@media screen and (min-width: 900px) {
+  .reservation {
+    padding-bottom: 0px;
+  }
 }
 .reservation__localise {
   padding: 1rem;
@@ -185,6 +219,11 @@ footer span {
     height: 280px;
   }
 }
+@media screen and (min-width: 900px) {
+  .reservation__explore {
+    height: fit-content;
+  }
+}
 .reservation__explore p {
   padding-bottom: 1.5rem;
 }
@@ -193,10 +232,20 @@ footer span {
     padding-bottom: 2.5rem;
   }
 }
+@media screen and (min-width: 900px) {
+  .reservation__explore p {
+    padding-bottom: 1.5rem;
+  }
+}
 .reservation h1 {
   padding: 1.5rem 3rem 0.5rem 3rem;
   font-size: 1.4rem;
   font-weight: 700;
+}
+@media screen and (min-width: 900px) {
+  .reservation h1 {
+    padding: 1rem 3rem 1rem 3rem;
+  }
 }
 
 /* SECTION FUNCTIONING */
@@ -211,6 +260,11 @@ footer span {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 900px) {
+  .functioning {
+    grid-row: 2;
+  }
+}
 .functioning ol {
   font-weight: 500;
   display: flex;
@@ -220,7 +274,12 @@ footer span {
   .functioning ol {
     justify-content: space-between;
     height: 285px;
-    padding-bottom: 10px;
+    padding-bottom: 0.5rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .functioning ol {
+    height: 290px;
   }
 }
 @media screen and (min-width: 650px) {
@@ -228,15 +287,20 @@ footer span {
     text-align: center;
   }
 }
+@media screen and (min-width: 900px) {
+  .functioning h2 {
+    padding-top: 0.4rem;
+  }
+}
 
 .instructions__step {
-  display: flex;
-  align-items: center;
   padding: 1.5rem 2rem 1.5rem 2rem;
   margin-bottom: 1rem;
   margin-left: 1rem;
   border-radius: 1rem;
   background: #f6f6f6;
+  display: flex;
+  align-items: center;
   box-shadow: 0px 5px 8px #e6e6e6;
   position: relative;
   z-index: 30;
@@ -244,6 +308,7 @@ footer span {
 @media screen and (min-width: 650px) {
   .instructions__step {
     flex-direction: column;
+    align-items: center;
     margin-left: 0rem;
     text-align: center;
     padding: 1.5rem 2rem 1rem 2rem;
@@ -277,14 +342,8 @@ footer span {
 }
 
 .step__icon {
-  margin-right: 2rem;
-  width: 22px;
+  width: 40px;
   font-size: 1.1rem;
-}
-@media screen and (min-width: 650px) {
-  .step__icon {
-    margin-right: 0rem;
-  }
 }
 .step__icon--grey {
   color: gray;
@@ -303,6 +362,14 @@ footer span {
 @media screen and (min-width: 650px) {
   .restaurants {
     grid-column: 1/span 2;
+    background: #fff;
+    padding-top: 0rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .restaurants {
+    grid-row: 1/span 2;
+    grid-column: 2;
   }
 }
 @media screen and (min-width: 650px) {
@@ -334,6 +401,7 @@ footer span {
 @media screen and (min-width: 650px) {
   .restaurants__link-menu {
     width: 48%;
+    margin-bottom: 1.5rem;
   }
 }
 .restaurants__link-menu:hover {
@@ -364,6 +432,7 @@ footer span {
   height: 1.8rem;
   line-height: 1.8rem;
   text-align: center;
+  border-radius: 0.1rem;
 }
 
 .link-menu__icon {

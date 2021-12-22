@@ -17,9 +17,6 @@ body {
 }
 main {
     display:grid;
-    @include responsive (tabs) {
-        grid-template-columns: 50% 50%;
-    }
 }
 h1 {
     @extend%reset-margin;
@@ -66,7 +63,7 @@ section {
 }
 footer {
     padding-top:1rem;
-    padding-bottom:2.5rem;
+    padding-bottom:2rem;
 }
 button {
     @extend%font-roboto;

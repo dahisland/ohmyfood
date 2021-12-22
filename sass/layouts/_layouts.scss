@@ -6,7 +6,11 @@ header {
     @include relative (20);
     img {
         width:map-get($width-palette, x-small);
-        max-width:300px;
+        max-width:180px;
+    }
+    @include responsive (desktop) {
+        display:grid;
+        grid-template-columns: 35% 75%;
     }
 }
 
@@ -21,12 +25,19 @@ footer {
         @extend%txt-footer-white;
         font-family:'Shrikhand', cursive;
         padding-bottom:1rem;
+        font-size:1.2rem;
     }
     a {
         @extend%txt-footer-white;
         &:hover {
             color:map-get($colors-palette, pink );
         }
+    }
+    ul {
+        @include responsive (tabs) {
+            display:flex;
+            justify-content: space-around;
+        }    
     }
     li {
         padding-bottom:0.4rem;
@@ -39,5 +50,8 @@ footer {
     }
     span {
         margin-right:1rem;
+        @include responsive (tabs) {
+            margin-right:0.4rem;
+        }    
     }
 }
