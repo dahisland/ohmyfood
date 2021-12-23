@@ -31,6 +31,11 @@ html {
     font-size: 15px;
   }
 }
+@media screen and (min-width: 1224px) {
+  html {
+    font-size: 13px;
+  }
+}
 
 body {
   margin: 0 auto;
@@ -308,7 +313,8 @@ footer span {
 }
 @media screen and (min-width: 1224px) {
   .instructions__step {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem 2rem 1rem 2rem;
   }
 }
 .instructions__step:nth-child(3) {

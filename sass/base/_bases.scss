@@ -11,6 +11,9 @@ html {
     @include responsive (tabs) {
         font-size:15px;
     }
+    @include responsive (desktop) {
+        font-size:13px;
+    }
 }
 body {
     @include center-margin;
