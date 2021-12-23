@@ -3,6 +3,12 @@
 main {
     @include responsive (tabs) {
         grid-template-columns: 50% 50%;
+        align-items:flex-start;
+    }
+    @include responsive (desktop) {
+        grid-template-columns: 30% 70%;
+        grid-template-rows:270px 370px auto;
+        grid-row-gap:1.2rem;
     }
     section {
         @include responsive (tabs) {
@@ -16,6 +22,11 @@ main {
 .reservation {
     text-align:center;
     @include relative (10);
+    @include responsive (tabs) {
+        @include shadow-box (91%);
+        border-radius: 0rem 0rem 1rem 1rem;
+        padding-bottom:0rem;
+    }
     &__localise {
         padding: 1rem;
         background:map-get($colors-palette, darkshadow);
@@ -31,6 +42,12 @@ main {
         background: map-get($colors-palette, lightshadow);
         @include responsive (tabs) {
             height:280px;
+        }   
+        @include responsive (tabs) {
+            height:273px;
+        }   
+        @include responsive (desktop) {
+            height:250px;
         }   
     }
     &__explore p {
@@ -54,6 +71,9 @@ main {
     @include responsive (tabs) {
         justify-content: space-between;
     }
+    @include responsive (desktop) {
+        grid-row:2;
+    }
     ol {
         font-weight:map-get($txt-weight, txt-med);
         @include flex-column;
@@ -67,6 +87,10 @@ main {
             text-align:center;
             padding-bottom:1.9rem;
         }
+        @include responsive (desktop) {
+            padding-bottom:3rem;
+            padding-top:3rem;
+        }    
     }
 }
 .instructions__step {
@@ -86,7 +110,10 @@ main {
         margin-bottom:1.5rem;
         text-align:center;
         padding:1.5rem 2rem 0.8rem 2rem;
-    }    
+    }
+    @include responsive (desktop) {
+        margin-bottom:2.5rem;
+    }        
     &:nth-child(3) {
         background: map-get($colors-palette, lightpurple);
     }
@@ -134,11 +161,22 @@ main {
         background: map-get($colors-palette, white );
         padding-top:0rem;
     }
+    @include responsive (desktop) {
+        grid-row:1 / span 3;
+        grid-column:2;
+        @include flex-column;
+        justify-content: space-around;
+    }
     h2 {
         @include responsive (tabs) {
             text-align:center;
             padding-bottom:2rem;
-        }      
+        }    
+        @include responsive (desktop) {
+            margin-bottom:3rem;
+            padding-top:0.8rem;
+            padding-bottom:0.8rem;
+        }        
     }
     &-flexbox {
         @include flex-column;
@@ -160,6 +198,9 @@ main {
             width:48%;
             margin-bottom:1.5rem;
         }
+        @include responsive (desktop) {
+            margin-bottom:3rem;
+        }
         &:hover {
             color:map-get($colors-palette, purple );
             @include shadow-box (80);
@@ -168,6 +209,12 @@ main {
 }
 .card__img img {
     height:200px;
+    @include responsive (tabs) {
+        height:220px;
+    }    
+    @include responsive (desktop) {
+        height:270px;
+    }        
 }
 .card__caption {
     padding:0.6rem 0.8rem 0.8rem 0.8rem;

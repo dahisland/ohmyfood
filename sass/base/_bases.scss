@@ -16,10 +16,13 @@ body {
     @include center-margin;
     @extend%font-roboto;
     font-weight:map-get($txt-weight, txt-light);
-    height:100%;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
 }
 main {
     display:grid;
+    flex-grow:1;
 }
 h1 {
     @extend%reset-margin;

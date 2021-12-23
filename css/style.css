@@ -26,7 +26,7 @@ html {
   width: 100%;
   height: 100%;
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   html {
     font-size: 15px;
   }
@@ -35,11 +35,14 @@ html {
 body {
   margin: 0 auto;
   font-weight: 300;
-  height: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
   display: grid;
+  flex-grow: 1;
 }
 
 h2 {
@@ -117,6 +120,12 @@ header {
   position: relative;
   z-index: 20;
 }
+@media screen and (min-width: 1224px) {
+  header {
+    display: grid;
+    grid-template-columns: 35% 65%;
+  }
+}
 header img {
   width: 45%;
   max-width: 180px;
@@ -126,7 +135,7 @@ header img {
 footer {
   background: #404040;
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   footer {
     text-align: center;
   }
@@ -139,7 +148,7 @@ footer p {
 footer a:hover {
   color: #FF79DA;
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   footer ul {
     display: flex;
     justify-content: space-around;
@@ -157,19 +166,27 @@ footer li:nth-child(2) span {
 footer span {
   margin-right: 1rem;
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   footer span {
     margin-right: 0.4rem;
   }
 }
 
 /* MAIN */
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   main {
     grid-template-columns: 50% 50%;
+    align-items: flex-start;
   }
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 1224px) {
+  main {
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 270px 370px auto;
+    grid-row-gap: 1.2rem;
+  }
+}
+@media screen and (min-width: 640px) {
   main section {
     padding-bottom: 1rem;
   }
@@ -180,6 +197,13 @@ footer span {
   text-align: center;
   position: relative;
   z-index: 10;
+}
+@media screen and (min-width: 640px) {
+  .reservation {
+    box-shadow: 0px 5px 8px #e8e8e8;
+    border-radius: 0rem 0rem 1rem 1rem;
+    padding-bottom: 0rem;
+  }
 }
 .reservation__localise {
   padding: 1rem;
@@ -195,15 +219,25 @@ footer span {
   padding: 0.5rem 1rem 3rem 1rem;
   background: #f6f6f6;
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   .reservation__explore {
     height: 280px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .reservation__explore {
+    height: 273px;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .reservation__explore {
+    height: 250px;
   }
 }
 .reservation__explore p {
   padding-bottom: 1.5rem;
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   .reservation__explore p {
     padding-bottom: 2.5rem;
   }
@@ -221,9 +255,14 @@ footer span {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   .functioning {
     justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .functioning {
+    grid-row: 2;
   }
 }
 .functioning ol {
@@ -231,16 +270,22 @@ footer span {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   .functioning ol {
     justify-content: space-between;
     padding-bottom: 0.5rem;
   }
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   .functioning h2 {
     text-align: center;
     padding-bottom: 1.9rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .functioning h2 {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
   }
 }
 
@@ -256,7 +301,7 @@ footer span {
   position: relative;
   z-index: 30;
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   .instructions__step {
     flex-direction: column;
     align-items: center;
@@ -264,6 +309,11 @@ footer span {
     margin-bottom: 1.5rem;
     text-align: center;
     padding: 1.5rem 2rem 0.8rem 2rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .instructions__step {
+    margin-bottom: 2.5rem;
   }
 }
 .instructions__step:nth-child(3) {
@@ -285,7 +335,7 @@ footer span {
   z-index: 40;
   left: -11px;
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   .step__number {
     left: inherit;
     top: -10px;
@@ -311,17 +361,33 @@ footer span {
   background: #f6f6f6;
   padding-top: 2rem;
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   .restaurants {
     grid-column: 1/span 2;
     background: #fff;
     padding-top: 0rem;
   }
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 1224px) {
+  .restaurants {
+    grid-row: 1/span 3;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 640px) {
   .restaurants h2 {
     text-align: center;
     padding-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .restaurants h2 {
+    margin-bottom: 3rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
   }
 }
 .restaurants-flexbox {
@@ -329,7 +395,7 @@ footer span {
   flex-direction: column;
   flex-wrap: wrap;
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   .restaurants-flexbox {
     flex-direction: row;
     justify-content: space-between;
@@ -345,10 +411,15 @@ footer span {
   z-index: 40;
   transition: 0.3s;
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
   .restaurants__link-menu {
     width: 48%;
     margin-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .restaurants__link-menu {
+    margin-bottom: 3rem;
   }
 }
 .restaurants__link-menu:hover {
@@ -358,6 +429,16 @@ footer span {
 
 .card__img img {
   height: 200px;
+}
+@media screen and (min-width: 640px) {
+  .card__img img {
+    height: 220px;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .card__img img {
+    height: 270px;
+  }
 }
 
 .card__caption {
