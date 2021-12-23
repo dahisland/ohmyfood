@@ -1,18 +1,18 @@
-button, body {
+body, button {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
 }
 
-figure, ul, ol, p, h3, h2, h1 {
+h1, h2, h3, p, ul, ol, figure {
   margin: 0;
   padding: 0;
 }
 
-h3, h2 {
+h2, h3 {
   font-weight: 700;
 }
 
-footer a, footer p {
+footer p, footer a {
   color: #fff;
 }
 
@@ -98,7 +98,6 @@ button {
   cursor: pointer;
 }
 
-/* COMPONENTS */
 /* Buttons with linear gradient animated on hover */
 .btn-gradient {
   display: block;

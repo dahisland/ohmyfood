@@ -1,23 +1,27 @@
+@use "../utils/maps";
+@use "../utils/mixins";
+@use "../utils/extensions";
+
 /* HEADER */
 
 header {
     text-align:center;
-    box-shadow: 0px 2px 3px lighten(map-get($colors-palette, dark),80%);
-    @include relative (20);
-    @include responsive (desktop) {
+    box-shadow: 0px 2px 3px lighten(map-get(maps.$colors-palette, dark),80%);
+    @include mixins.relative (20);
+    @include mixins.responsive (desktop) {
         display:grid;
         grid-template-columns: 30% 70%;
     }   
-    @include responsive (desktop-xl) {
+    @include mixins.responsive (desktop-xl) {
         grid-template-columns: 15% 70% 15%;
     } 
     picture {
-        @include responsive (desktop-xl) {
+        @include mixins.responsive (desktop-xl) {
             grid-column:2;
         }     
     }     
     img {
-        width:map-get($width-palette, x-small);
+        width:map-get(maps.$width-palette, x-small);
         max-width:180px;
     }
 }
@@ -25,11 +29,11 @@ header {
 /* FOOTER */
 
 footer {
-    background:lighten(map-get($colors-palette, dark),25%);
-    @include responsive (tabs) {
+    background:lighten(map-get(maps.$colors-palette, dark),25%);
+    @include mixins.responsive (tabs) {
         text-align:center;
     } 
-    @include responsive (desktop-xl) {
+    @include mixins.responsive (desktop-xl) {
         display:flex;
         flex-direction:column;
     }
@@ -42,34 +46,34 @@ footer {
     a {
         @extend%txt-footer-white;
         &:hover {
-            color:map-get($colors-palette, pink );
+            color:map-get(maps.$colors-palette, pink );
         }
     }
     ul {
-        @include responsive (tabs) {
+        @include mixins.responsive (tabs) {
             display:flex;
             justify-content: space-around;
         }
-        @include responsive (desktop-xl) {
+        @include mixins.responsive (desktop-xl) {
             justify-content: center;
         }        
     }
     li {
         padding-bottom:0.4rem;
-        @include responsive (desktop-xl) {
+        @include mixins.responsive (desktop-xl) {
             margin-left:1rem;
             margin-right:1rem;
         }        
     }
     li:nth-child(1), li:nth-child(2) {
-        font-weight:map-get($txt-weight, txt-med);
+        font-weight:map-get(maps.$txt-weight, txt-med);
     }
     li:nth-child(2) span {
         font-size:0.7rem;
     }
     span {
         margin-right:1rem;
-        @include responsive (tabs) {
+        @include mixins.responsive (tabs) {
             margin-right:0.4rem;
         }    
     }

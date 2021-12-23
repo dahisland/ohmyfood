@@ -1,3 +1,5 @@
+@use "./maps";
+
 @mixin center-margin {
     margin:0 auto;
 }
@@ -14,10 +16,10 @@
     z-index:$zindex;
 }
 @mixin shadow-box ($lighting:80%) {
-    box-shadow: 0px 5px 8px lighten(map-get($colors-palette, dark),$lighting);
+    box-shadow: 0px 5px 8px lighten(map-get(maps.$colors-palette, dark),$lighting);
 }
 @mixin responsive ($screen) {
-    @media screen and (min-width:map-get($breakpoints, $screen)) {
+    @media screen and (min-width:map-get(maps.$breakpoints, $screen)) {
         @content;
     }
 }

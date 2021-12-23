@@ -1,5 +1,7 @@
 /* BASE CSS */
-
+@use "../utils/mixins";
+@use "../utils/maps";
+@use "../utils/extensions";
 
 * {
     box-sizing:border-box;
@@ -8,17 +10,17 @@ html {
     font-size:16px;
     width:100%;
     height:100%;
-    @include responsive (tabs) {
+    @include mixins.responsive (tabs) {
         font-size:15px;
     }
-    @include responsive (desktop) {
+    @include mixins.responsive (desktop) {
         font-size:13px;
     }
 }
 body {
-    @include center-margin;
+    @include mixins.center-margin;
     @extend%font-roboto;
-    font-weight:map-get($txt-weight, txt-light);
+    font-weight:map-get(maps.$txt-weight, txt-light);
     height:100vh;
     display:flex;
     flex-direction: column;
@@ -32,14 +34,14 @@ h1 {
 }
 h2 {
     @extend%reset-margin;
-    font-size:map-get($txt-size , txt-xl);
+    font-size:map-get(maps.$txt-size , txt-xl);
     @extend%font-bold;
     padding-top:1rem;
     padding-bottom:1.3rem;
 }
 h3 {
     @extend%reset-margin;
-    font-size:map-get($txt-size , txt-l);
+    font-size:map-get(maps.$txt-size , txt-l);
     @extend%font-bold;
 }
 p {
@@ -54,14 +56,14 @@ figure {
 }
 img {
     object-fit: cover;
-    width:map-get($width-palette, max);
+    width:map-get(maps.$width-palette, max);
 }
 a {
     text-decoration:none;
-    color:map-get($colors-palette, dark);
+    color:map-get(maps.$colors-palette, dark);
 }
 header, footer {
-    @include padding-page;
+    @include mixins.padding-page;
 }
 header {
     padding-top:1.2rem;

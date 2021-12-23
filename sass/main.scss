@@ -1,8 +1,6 @@
-@import "./utils/maps";
-@import "./utils/mixins";
-@import "./utils/extensions";
-@import "./base/bases";
-@import "./components/components";
-@import "./layouts/layouts";
-@import "./pages/page-style";
+@use "./utils/index";
+@use "./base/bases";
+@use "./components/components";
+@use "./layouts/layouts";
+@use "./pages/page-style";
 

@@ -1,22 +1,25 @@
+@use "../utils/maps";
+@use "../utils/mixins";
+
 /* MAIN */
 
 main {
-    @include responsive (tabs) {
+    @include mixins.responsive (tabs) {
         grid-template-columns: 50% 50%;
         align-items:flex-start;
     }
-    @include responsive (desktop) {
+    @include mixins.responsive (desktop) {
         grid-template-columns: 30% 70%;
         grid-template-rows:300px 370px auto;
         grid-row-gap:1.2rem;
     }
-    @include responsive (desktop-xl) {
+    @include mixins.responsive (desktop-xl) {
         grid-template-columns: 15% 70% 15%;
         grid-template-rows: 200px 370px auto;
         grid-row-gap:1.2rem;
     }
     section {
-        @include responsive (tabs) {
+        @include mixins.responsive (tabs) {
             padding-bottom:1rem;
         }
     }
@@ -26,22 +29,22 @@ main {
 
 .reservation {
     text-align:center;
-    @include relative (10);
-    @include responsive (tabs) {
-        @include shadow-box (91%);
+    @include mixins.relative (10);
+    @include mixins.responsive (tabs) {
+        @include mixins.shadow-box (91%);
         border-radius: 0rem 0rem 1rem 1rem;
         padding-bottom:0rem;
     }
-    @include responsive (desktop-xl) {
+    @include mixins.responsive (desktop-xl) {
         grid-column:2;
-        box-shadow:0px 5px 0px map-get($colors-palette, lightshadow );
+        box-shadow:0px 5px 0px map-get(maps.$colors-palette, lightshadow );
         border-radius:0rem;
     }
 
     &__localise {
         padding: 1rem;
-        background:map-get($colors-palette, darkshadow);
-        font-weight:map-get($txt-weight, txt-med);
+        background:map-get(maps.$colors-palette, darkshadow);
+        font-weight:map-get(maps.$txt-weight, txt-med);
     }
     span {
         margin-right:1rem;
@@ -50,60 +53,60 @@ main {
     }
     &__explore {
         padding:0.5rem 1rem 3rem 1rem;
-        background: map-get($colors-palette, lightshadow);
-        @include responsive (tabs) {
+        background: map-get(maps.$colors-palette, lightshadow);
+        @include mixins.responsive (tabs) {
             height:273px;
         } 
-        @include responsive (desktop-xl) {
+        @include mixins.responsive (desktop-xl) {
             height:173px;
         }     
     }
     &__explore p {
         padding-bottom:1.5rem;
-        @include responsive (tabs) {
+        @include mixins.responsive (tabs) {
             padding-bottom:2.5rem;
         }
     }
     h1 {
         padding:1.5rem 3rem 0.5rem 3rem;
-        font-size:map-get($txt-size , txt-xl);
-        font-weight:map-get($txt-weight, txt-bold);   
+        font-size:map-get(maps.$txt-size , txt-xl);
+        font-weight:map-get(maps.$txt-weight, txt-bold);   
     }
 }
 
 /* SECTION FUNCTIONING */
 
 .functioning {
-    @include padding-page;
-    @include flex-column;
-    @include responsive (tabs) {
+    @include mixins.padding-page;
+    @include mixins.flex-column;
+    @include mixins.responsive (tabs) {
         justify-content: space-between;
     }
-    @include responsive (desktop) {
+    @include mixins.responsive (desktop) {
         grid-row:2;
     }
-    @include responsive (desktop-xl) {
+    @include mixins.responsive (desktop-xl) {
         grid-column:2;
-        background: map-get($colors-palette , lightshadow);
+        background: map-get(maps.$colors-palette , lightshadow);
         padding-bottom:0rem;
     }
     ol {
-        font-weight:map-get($txt-weight, txt-med);
-        @include flex-column;
-        @include responsive (tabs) {
+        font-weight:map-get(maps.$txt-weight, txt-med);
+        @include mixins.flex-column;
+        @include mixins.responsive (tabs) {
             justify-content: space-between;
             padding-bottom:0.5rem;
         }
-        @include responsive (desktop-xl) {
+        @include mixins.responsive (desktop-xl) {
             padding-bottom:0rem;
         }
     }
     h2 {
-        @include responsive (tabs) {
+        @include mixins.responsive (tabs) {
             text-align:center;
             padding-bottom:1.9rem;
         }
-        @include responsive (desktop) {
+        @include mixins.responsive (desktop) {
             padding-bottom:3rem;
             padding-top:3rem;
         }    
@@ -114,12 +117,12 @@ main {
     margin-bottom:1rem;
     margin-left:1rem;
     border-radius:1rem;
-    background:map-get($colors-palette, lightshadow);
+    background:map-get(maps.$colors-palette, lightshadow);
     display:flex;
     align-items:center;
-    @include shadow-box (90%);
-    @include relative (30);
-    @include responsive (tabs) {
+    @include mixins.shadow-box (90%);
+    @include mixins.relative (30);
+    @include mixins.responsive (tabs) {
         flex-direction:column;
         align-items:center;
         margin-left:0rem;
@@ -127,37 +130,37 @@ main {
         text-align:center;
         padding:1.5rem 2rem 0.8rem 2rem;
     }
-    @include responsive (desktop) {
+    @include mixins.responsive (desktop) {
         margin-bottom:2rem;
         padding:2rem 2rem 1.2rem 2rem;
     } 
-    @include responsive (desktop-xl) {
+    @include mixins.responsive (desktop-xl) {
         margin-bottom:0.5rem;
         padding:1.5rem 2rem 2.5rem 2rem;
     }               
     &:nth-child(3) {
-        background: map-get($colors-palette, lightpurple);
+        background: map-get(maps.$colors-palette, lightpurple);
     }
 }
 .step__number {
-    color:map-get($colors-palette, white);
-    background:map-get($colors-palette, purple);
+    color:map-get(maps.$colors-palette, white);
+    background:map-get(maps.$colors-palette, purple);
     border-radius:1rem;
-    font-weight:map-get($txt-weight, txt-light);
+    font-weight:map-get(maps.$txt-weight, txt-light);
     display:inline-block;
     width:1.4rem;
     height:1.4rem;
     line-height: 1.4rem;
-    font-size:map-get($txt-size,txt-xs);
+    font-size:map-get(maps.$txt-size,txt-xs);
     text-align: center;
-    @include absolute (40);
+    @include mixins.absolute (40);
     left:-11px;
-    @include responsive (tabs) {
+    @include mixins.responsive (tabs) {
         left:inherit;
         top:-10px;
         width:4rem;
     } 
-    @include responsive (desktop-xl) {
+    @include mixins.responsive (desktop-xl) {
         top:-0.9rem;
         
     }       
@@ -165,12 +168,12 @@ main {
 }
 .step__icon {
     width:40px;
-    font-size:map-get($txt-size, txt-l); 
+    font-size:map-get(maps.$txt-size, txt-l); 
     &--grey {
-        color:lighten(map-get($colors-palette, dark), 50%);
+        color:lighten(map-get(maps.$colors-palette, dark), 50%);
     }
     &--purple {
-        color:map-get($colors-palette, purple);
+        color:map-get(maps.$colors-palette, purple);
     }
 }    
     
@@ -178,42 +181,42 @@ main {
 /* SECTION RESTAURANTS */
 
 .restaurants {
-    @include padding-page;
-    background: map-get($colors-palette, lightshadow);
+    @include mixins.padding-page;
+    background: map-get(maps.$colors-palette, lightshadow);
     padding-top:2rem;
-    @include responsive (tabs) {
+    @include mixins.responsive (tabs) {
         grid-column: 1 / span 2;
-        background: map-get($colors-palette, white );
+        background: map-get(maps.$colors-palette, white );
         padding-top:0rem;
     }
-    @include responsive (desktop) {
+    @include mixins.responsive (desktop) {
         grid-row:1 / span 3;
         grid-column:2;
-        @include flex-column;
+        @include mixins.flex-column;
         justify-content: space-around;
     }
-    @include responsive (desktop-xl) {
+    @include mixins.responsive (desktop-xl) {
         grid-column:2;
         grid-row:3 / span 3;
     }
     h2 {
-        @include responsive (tabs) {
+        @include mixins.responsive (tabs) {
             text-align:center;
             padding-bottom:2rem;
         }    
-        @include responsive (desktop) {
+        @include mixins.responsive (desktop) {
             padding-top:0.8rem;
             padding-bottom:2rem;
         }        
     }
     &-flexbox {
-        @include flex-column;
+        @include mixins.flex-column;
         flex-wrap:wrap;
-        @include responsive (tabs) {
+        @include mixins.responsive (tabs) {
             flex-direction:row;
             justify-content: space-between;
         }
-        @include responsive (desktop-xl) {
+        @include mixins.responsive (desktop-xl) {
             flex-direction:column;
         }
 
@@ -223,54 +226,54 @@ main {
         border-radius:1rem;
         overflow:hidden;
         margin-bottom:1.1rem;
-        @include shadow-box (90);
-        @include relative (40);
+        @include mixins.shadow-box (90);
+        @include mixins.relative (40);
         transition:0.3s;
-        @include responsive (tabs) {
+        @include mixins.responsive (tabs) {
             width:48%;
             margin-bottom:1.5rem;
         }
-        @include responsive (desktop) {
+        @include mixins.responsive (desktop) {
             margin-bottom:3rem;
         }
-        @include responsive (desktop-xl) {
+        @include mixins.responsive (desktop-xl) {
             width:100%;
         }
         &:hover {
-            color:map-get($colors-palette, purple );
-            @include shadow-box (80);
+            color:map-get(maps.$colors-palette, purple );
+            @include mixins.shadow-box (80);
         }
     }
 }
 .card__img img {
     height:200px;
-    @include responsive (tabs) {
+    @include mixins.responsive (tabs) {
         height:220px;
     }    
-    @include responsive (desktop) {
+    @include mixins.responsive (desktop) {
         height:232px;
     }
-    @include responsive (desktop-xl) {
+    @include mixins.responsive (desktop-xl) {
         height:350px;
     }                
 }
 .card__caption {
     padding:0.6rem 0.8rem 0.8rem 0.8rem;
     line-height:1.5rem;
-    background: map-get($colors-palette, white);
-    @include responsive (desktop-xl) {
+    background: map-get(maps.$colors-palette, white);
+    @include mixins.responsive (desktop-xl) {
         text-align:center;
         padding:0.6rem 0rem 2rem 0rem;
     }    
 }
 .link-menu__sticker-new {
-    @include absolute(40);
+    @include mixins.absolute(40);
     top:1rem;
     right:1rem;
-    background:map-get($colors-palette, mint);
-    font-size:map-get($txt-size, txt-xs);
-    font-weight:map-get($txt-weight, txt-med);
-    color:darken(map-get($colors-palette, mint),40%);
+    background:map-get(maps.$colors-palette, mint);
+    font-size:map-get(maps.$txt-size, txt-xs);
+    font-weight:map-get(maps.$txt-weight, txt-med);
+    color:darken(map-get(maps.$colors-palette, mint),40%);
     width:5rem;
     height: 1.8rem;
     line-height:1.8rem;
@@ -278,11 +281,11 @@ main {
     border-radius:0.1rem;
 }
 .link-menu__icon {
-    @include absolute (50);
-    font-size:map-get($txt-size, txt-xl);
+    @include mixins.absolute (50);
+    font-size:map-get(maps.$txt-size, txt-xl);
     bottom:1.7rem;
     right:1.2rem;
-    @include responsive (desktop-xl) {
+    @include mixins.responsive (desktop-xl) {
         bottom:0.5rem;
         left:50%;
         margin-left:-0.6rem;
@@ -291,7 +294,7 @@ main {
         opacity:1;
     }
     &--full {
-        color:map-get($colors-palette, pink);
+        color:map-get(maps.$colors-palette, pink);
         opacity:1;
     }
 }

@@ -1,3 +1,4 @@
+@use "./maps";
 
 %font-roboto {
     font-family:'Roboto',sans-serif;
@@ -8,8 +9,8 @@
     padding:0;
 }
 %font-bold {
-    font-weight:map-get($txt-weight, txt-bold);
+    font-weight:map-get(maps.$txt-weight, txt-bold);
 }
 %txt-footer-white {
-    color:map-get($colors-palette, white);
+    color:map-get(maps.$colors-palette, white);
 }
