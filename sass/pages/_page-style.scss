@@ -128,8 +128,8 @@ main {
         padding:1.5rem 2rem 0.8rem 2rem;
     }
     @include responsive (desktop) {
-        margin-bottom:3rem;
-        padding:2rem 2rem 2rem 2rem;
+        margin-bottom:2rem;
+        padding:2rem 2rem 1.2rem 2rem;
     } 
     @include responsive (desktop-xl) {
         margin-bottom:0.5rem;

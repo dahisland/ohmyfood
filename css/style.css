@@ -366,8 +366,8 @@ footer span {
 }
 @media screen and (min-width: 1224px) {
   .instructions__step {
-    margin-bottom: 3rem;
-    padding: 2rem 2rem 2rem 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem 2rem 1.2rem 2rem;
   }
 }
 @media screen and (min-width: 2000px) {
