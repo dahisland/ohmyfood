@@ -367,7 +367,7 @@ footer span {
 @media screen and (min-width: 1224px) {
   .instructions__step {
     margin-bottom: 3rem;
-    padding: 1.5rem 2rem 1rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
   }
 }
 @media screen and (min-width: 2000px) {
@@ -400,6 +400,11 @@ footer span {
     left: inherit;
     top: -10px;
     width: 4rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .step__number {
+    top: -0.9rem;
   }
 }
 
@@ -560,7 +565,7 @@ footer span {
   .link-menu__icon {
     bottom: 0.5rem;
     left: 50%;
-    margin-left: -0.5rem;
+    margin-left: -0.6rem;
   }
 }
 .link-menu__icon--empty {

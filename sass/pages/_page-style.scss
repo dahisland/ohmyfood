@@ -129,7 +129,7 @@ main {
     }
     @include responsive (desktop) {
         margin-bottom:3rem;
-        padding:1.5rem 2rem 1rem 2rem;
+        padding:2rem 2rem 2rem 2rem;
     } 
     @include responsive (desktop-xl) {
         margin-bottom:0.5rem;
@@ -156,7 +156,11 @@ main {
         left:inherit;
         top:-10px;
         width:4rem;
-    }    
+    } 
+    @include responsive (desktop-xl) {
+        top:-0.9rem;
+        
+    }       
 
 }
 .step__icon {
@@ -281,7 +285,7 @@ main {
     @include responsive (desktop-xl) {
         bottom:0.5rem;
         left:50%;
-        margin-left:-0.5rem;
+        margin-left:-0.6rem;
     }    
     &--empty {
         opacity:1;
