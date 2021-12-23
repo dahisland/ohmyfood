@@ -123,7 +123,7 @@ header {
 @media screen and (min-width: 1224px) {
   header {
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 30% 70%;
   }
 }
 header img {
