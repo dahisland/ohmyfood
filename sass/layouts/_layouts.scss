@@ -7,7 +7,15 @@ header {
     @include responsive (desktop) {
         display:grid;
         grid-template-columns: 30% 70%;
-    }        
+    }   
+    @include responsive (desktop-xl) {
+        grid-template-columns: 15% 70% 15%;
+    } 
+    picture {
+        @include responsive (desktop-xl) {
+            grid-column:2;
+        }     
+    }     
     img {
         width:map-get($width-palette, x-small);
         max-width:180px;
@@ -20,7 +28,11 @@ footer {
     background:lighten(map-get($colors-palette, dark),25%);
     @include responsive (tabs) {
         text-align:center;
-    }  
+    } 
+    @include responsive (desktop-xl) {
+        display:flex;
+        flex-direction:column;
+    }
     p {
         @extend%txt-footer-white;
         font-family:'Shrikhand', cursive;
@@ -37,10 +49,17 @@ footer {
         @include responsive (tabs) {
             display:flex;
             justify-content: space-around;
-        }    
+        }
+        @include responsive (desktop-xl) {
+            justify-content: center;
+        }        
     }
     li {
         padding-bottom:0.4rem;
+        @include responsive (desktop-xl) {
+            margin-left:1rem;
+            margin-right:1rem;
+        }        
     }
     li:nth-child(1), li:nth-child(2) {
         font-weight:map-get($txt-weight, txt-med);

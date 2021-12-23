@@ -131,6 +131,16 @@ header {
     grid-template-columns: 30% 70%;
   }
 }
+@media screen and (min-width: 2000px) {
+  header {
+    grid-template-columns: 15% 70% 15%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  header picture {
+    grid-column: 2;
+  }
+}
 header img {
   width: 45%;
   max-width: 180px;
@@ -143,6 +153,12 @@ footer {
 @media screen and (min-width: 640px) {
   footer {
     text-align: center;
+  }
+}
+@media screen and (min-width: 2000px) {
+  footer {
+    display: flex;
+    flex-direction: column;
   }
 }
 footer p {
@@ -159,8 +175,19 @@ footer a:hover {
     justify-content: space-around;
   }
 }
+@media screen and (min-width: 2000px) {
+  footer ul {
+    justify-content: center;
+  }
+}
 footer li {
   padding-bottom: 0.4rem;
+}
+@media screen and (min-width: 2000px) {
+  footer li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 footer li:nth-child(1), footer li:nth-child(2) {
   font-weight: 500;
@@ -191,6 +218,13 @@ footer span {
     grid-row-gap: 1.2rem;
   }
 }
+@media screen and (min-width: 2000px) {
+  main {
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 200px 370px auto;
+    grid-row-gap: 1.2rem;
+  }
+}
 @media screen and (min-width: 640px) {
   main section {
     padding-bottom: 1rem;
@@ -210,6 +244,13 @@ footer span {
     padding-bottom: 0rem;
   }
 }
+@media screen and (min-width: 2000px) {
+  .reservation {
+    grid-column: 2;
+    box-shadow: 0px 5px 0px #f6f6f6;
+    border-radius: 0rem;
+  }
+}
 .reservation__localise {
   padding: 1rem;
   background: #eaeaea;
@@ -226,12 +267,12 @@ footer span {
 }
 @media screen and (min-width: 640px) {
   .reservation__explore {
-    height: 280px;
+    height: 273px;
   }
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 2000px) {
   .reservation__explore {
-    height: 273px;
+    height: 173px;
   }
 }
 .reservation__explore p {
@@ -265,6 +306,13 @@ footer span {
     grid-row: 2;
   }
 }
+@media screen and (min-width: 2000px) {
+  .functioning {
+    grid-column: 2;
+    background: #f6f6f6;
+    padding-bottom: 0rem;
+  }
+}
 .functioning ol {
   font-weight: 500;
   display: flex;
@@ -274,6 +322,11 @@ footer span {
   .functioning ol {
     justify-content: space-between;
     padding-bottom: 0.5rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .functioning ol {
+    padding-bottom: 0rem;
   }
 }
 @media screen and (min-width: 640px) {
@@ -315,6 +368,12 @@ footer span {
   .instructions__step {
     margin-bottom: 3rem;
     padding: 1.5rem 2rem 1rem 2rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .instructions__step {
+    margin-bottom: 0.5rem;
+    padding: 1.5rem 2rem 2.5rem 2rem;
   }
 }
 .instructions__step:nth-child(3) {
@@ -378,6 +437,12 @@ footer span {
     justify-content: space-around;
   }
 }
+@media screen and (min-width: 2000px) {
+  .restaurants {
+    grid-column: 2;
+    grid-row: 3/span 3;
+  }
+}
 @media screen and (min-width: 640px) {
   .restaurants h2 {
     text-align: center;
@@ -401,6 +466,11 @@ footer span {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 2000px) {
+  .restaurants-flexbox {
+    flex-direction: column;
+  }
+}
 .restaurants__link-menu {
   display: block;
   border-radius: 1rem;
@@ -422,6 +492,11 @@ footer span {
     margin-bottom: 3rem;
   }
 }
+@media screen and (min-width: 2000px) {
+  .restaurants__link-menu {
+    width: 100%;
+  }
+}
 .restaurants__link-menu:hover {
   color: #9356DC;
   box-shadow: 0px 5px 8px #cccccc;
@@ -440,11 +515,22 @@ footer span {
     height: 232px;
   }
 }
+@media screen and (min-width: 2000px) {
+  .card__img img {
+    height: 350px;
+  }
+}
 
 .card__caption {
   padding: 0.6rem 0.8rem 0.8rem 0.8rem;
   line-height: 1.5rem;
   background: #fff;
+}
+@media screen and (min-width: 2000px) {
+  .card__caption {
+    text-align: center;
+    padding: 0.6rem 0rem 2rem 0rem;
+  }
 }
 
 .link-menu__sticker-new {
@@ -469,6 +555,13 @@ footer span {
   font-size: 1.4rem;
   bottom: 1.7rem;
   right: 1.2rem;
+}
+@media screen and (min-width: 2000px) {
+  .link-menu__icon {
+    bottom: 0.5rem;
+    left: 50%;
+    margin-left: -0.5rem;
+  }
 }
 .link-menu__icon--empty {
   opacity: 1;

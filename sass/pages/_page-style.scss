@@ -10,6 +10,11 @@ main {
         grid-template-rows:300px 370px auto;
         grid-row-gap:1.2rem;
     }
+    @include responsive (desktop-xl) {
+        grid-template-columns: 15% 70% 15%;
+        grid-template-rows: 200px 370px auto;
+        grid-row-gap:1.2rem;
+    }
     section {
         @include responsive (tabs) {
             padding-bottom:1rem;
@@ -27,6 +32,12 @@ main {
         border-radius: 0rem 0rem 1rem 1rem;
         padding-bottom:0rem;
     }
+    @include responsive (desktop-xl) {
+        grid-column:2;
+        box-shadow:0px 5px 0px map-get($colors-palette, lightshadow );
+        border-radius:0rem;
+    }
+
     &__localise {
         padding: 1rem;
         background:map-get($colors-palette, darkshadow);
@@ -41,11 +52,11 @@ main {
         padding:0.5rem 1rem 3rem 1rem;
         background: map-get($colors-palette, lightshadow);
         @include responsive (tabs) {
-            height:280px;
-        }   
-        @include responsive (tabs) {
             height:273px;
-        }   
+        } 
+        @include responsive (desktop-xl) {
+            height:173px;
+        }     
     }
     &__explore p {
         padding-bottom:1.5rem;
@@ -71,12 +82,20 @@ main {
     @include responsive (desktop) {
         grid-row:2;
     }
+    @include responsive (desktop-xl) {
+        grid-column:2;
+        background: map-get($colors-palette , lightshadow);
+        padding-bottom:0rem;
+    }
     ol {
         font-weight:map-get($txt-weight, txt-med);
         @include flex-column;
         @include responsive (tabs) {
             justify-content: space-between;
             padding-bottom:0.5rem;
+        }
+        @include responsive (desktop-xl) {
+            padding-bottom:0rem;
         }
     }
     h2 {
@@ -111,7 +130,11 @@ main {
     @include responsive (desktop) {
         margin-bottom:3rem;
         padding:1.5rem 2rem 1rem 2rem;
-    }        
+    } 
+    @include responsive (desktop-xl) {
+        margin-bottom:0.5rem;
+        padding:1.5rem 2rem 2.5rem 2rem;
+    }               
     &:nth-child(3) {
         background: map-get($colors-palette, lightpurple);
     }
@@ -165,6 +188,10 @@ main {
         @include flex-column;
         justify-content: space-around;
     }
+    @include responsive (desktop-xl) {
+        grid-column:2;
+        grid-row:3 / span 3;
+    }
     h2 {
         @include responsive (tabs) {
             text-align:center;
@@ -182,6 +209,10 @@ main {
             flex-direction:row;
             justify-content: space-between;
         }
+        @include responsive (desktop-xl) {
+            flex-direction:column;
+        }
+
     }
     &__link-menu {
         display:block;
@@ -198,6 +229,9 @@ main {
         @include responsive (desktop) {
             margin-bottom:3rem;
         }
+        @include responsive (desktop-xl) {
+            width:100%;
+        }
         &:hover {
             color:map-get($colors-palette, purple );
             @include shadow-box (80);
@@ -211,12 +245,19 @@ main {
     }    
     @include responsive (desktop) {
         height:232px;
-    }        
+    }
+    @include responsive (desktop-xl) {
+        height:350px;
+    }                
 }
 .card__caption {
     padding:0.6rem 0.8rem 0.8rem 0.8rem;
     line-height:1.5rem;
-    background: map-get($colors-palette, white); 
+    background: map-get($colors-palette, white);
+    @include responsive (desktop-xl) {
+        text-align:center;
+        padding:0.6rem 0rem 2rem 0rem;
+    }    
 }
 .link-menu__sticker-new {
     @include absolute(40);
@@ -237,6 +278,11 @@ main {
     font-size:map-get($txt-size, txt-xl);
     bottom:1.7rem;
     right:1.2rem;
+    @include responsive (desktop-xl) {
+        bottom:0.5rem;
+        left:50%;
+        margin-left:-0.5rem;
+    }    
     &--empty {
         opacity:1;
     }
