@@ -182,7 +182,7 @@ footer span {
 @media screen and (min-width: 1224px) {
   main {
     grid-template-columns: 30% 70%;
-    grid-template-rows: 270px 370px auto;
+    grid-template-rows: 300px 370px auto;
     grid-row-gap: 1.2rem;
   }
 }
@@ -227,11 +227,6 @@ footer span {
 @media screen and (min-width: 640px) {
   .reservation__explore {
     height: 273px;
-  }
-}
-@media screen and (min-width: 1224px) {
-  .reservation__explore {
-    height: 250px;
   }
 }
 .reservation__explore p {
@@ -385,9 +380,8 @@ footer span {
 }
 @media screen and (min-width: 1224px) {
   .restaurants h2 {
-    margin-bottom: 3rem;
     padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+    padding-bottom: 2rem;
   }
 }
 .restaurants-flexbox {
@@ -437,7 +431,7 @@ footer span {
 }
 @media screen and (min-width: 1224px) {
   .card__img img {
-    height: 270px;
+    height: 232px;
   }
 }
 

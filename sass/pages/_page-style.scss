@@ -7,7 +7,7 @@ main {
     }
     @include responsive (desktop) {
         grid-template-columns: 30% 70%;
-        grid-template-rows:270px 370px auto;
+        grid-template-rows:300px 370px auto;
         grid-row-gap:1.2rem;
     }
     section {
@@ -45,9 +45,6 @@ main {
         }   
         @include responsive (tabs) {
             height:273px;
-        }   
-        @include responsive (desktop) {
-            height:250px;
         }   
     }
     &__explore p {
@@ -173,9 +170,8 @@ main {
             padding-bottom:2rem;
         }    
         @include responsive (desktop) {
-            margin-bottom:3rem;
             padding-top:0.8rem;
-            padding-bottom:0.8rem;
+            padding-bottom:2rem;
         }        
     }
     &-flexbox {
@@ -213,7 +209,7 @@ main {
         height:220px;
     }    
     @include responsive (desktop) {
-        height:270px;
+        height:232px;
     }        
 }
 .card__caption {
