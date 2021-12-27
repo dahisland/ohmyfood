@@ -1,29 +1,63 @@
-/* MAPS*/
-/* MIXINS */
-/* @mixin align-height ($hgt==$lght) {
-    height:$hgt;
-    line-height:$lght;
+body, button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
 
-} */
-/* EXTENSIONS */
-.reservation h1, p, h3, h2, figure, ul, ol {
+h1, h2, h3, p, ul, ol, figure {
   margin: 0;
   padding: 0;
 }
 
-/* RESET CSS */
+h2, h3 {
+  font-weight: 700;
+}
+
+footer p, footer a {
+  color: #fff;
+}
+
+/* BASE CSS */
 * {
   box-sizing: border-box;
 }
 
 html {
   font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1224px) {
+  html {
+    font-size: 13px;
+  }
 }
 
 body {
   margin: 0 auto;
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: grid;
+  flex-grow: 1;
+}
+
+h2 {
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  padding-bottom: 1.3rem;
+}
+
+h3 {
+  font-size: 1.1rem;
 }
 
 ul, ol {
@@ -56,40 +90,25 @@ section {
 
 footer {
   padding-top: 1rem;
-  padding-bottom: 2.5rem;
-}
-
-h2 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  padding-top: 1rem;
-  padding-bottom: 1.3rem;
-}
-
-h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
+  padding-bottom: 2rem;
 }
 
 button {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
   border: none;
   cursor: pointer;
 }
 
-/* COMPONENTS */
 /* Buttons with linear gradient animated on hover */
 .btn-gradient {
   display: block;
   width: fit-content;
+  color: #fff;
   padding: 0.8rem 1.5rem;
   border-radius: 5rem;
   margin: 0 auto;
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
-  color: #fff;
-  font-weight: 500;
   box-shadow: 0px 5px 8px #cccccc;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  font-weight: 500;
   opacity: 1;
 }
 .btn-gradient:hover {
@@ -124,6 +143,7 @@ header {
 }
 @media screen and (min-width: 1224px) {
   header {
+    display: grid;
     grid-template-columns: 30% 70%;
   }
 }
@@ -138,51 +158,52 @@ header {
   }
 }
 header img {
-  width: 50%;
+  width: 45%;
   max-width: 180px;
-}
-header a {
-  position: absolute;
-  z-index: 30;
-  left: 1.5rem;
-  font-size: 1.2rem;
-}
-@media screen and (min-width: 640px) {
-  header a {
-    font-size: 1.3rem;
-  }
-}
-@media screen and (min-width: 1224px) {
-  header a {
-    font-size: 1.4rem;
-  }
-}
-@media screen and (min-width: 2000px) {
-  header a {
-    font-size: 1.5rem;
-  }
-}
-header a:hover {
-  color: #FF79DA;
 }
 
 /* FOOTER */
 footer {
-  color: #fff;
   background: #404040;
+}
+@media screen and (min-width: 640px) {
+  footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 2000px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
 }
 footer p {
   font-family: "Shrikhand", cursive;
   padding-bottom: 1rem;
-}
-footer a {
-  color: #fff;
+  font-size: 1.2rem;
 }
 footer a:hover {
   color: #FF79DA;
 }
+@media screen and (min-width: 640px) {
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 2000px) {
+  footer ul {
+    justify-content: center;
+  }
+}
 footer li {
   padding-bottom: 0.4rem;
+}
+@media screen and (min-width: 2000px) {
+  footer li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 footer li:nth-child(1), footer li:nth-child(2) {
   font-weight: 500;
@@ -193,12 +214,58 @@ footer li:nth-child(2) span {
 footer span {
   margin-right: 1rem;
 }
+@media screen and (min-width: 640px) {
+  footer span {
+    margin-right: 0.4rem;
+  }
+}
+
+/* MAIN */
+@media screen and (min-width: 640px) {
+  main {
+    grid-template-columns: 50% 50%;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1224px) {
+  main {
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 300px 370px auto;
+    grid-row-gap: 1.2rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  main {
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 200px 370px auto;
+    grid-row-gap: 1.2rem;
+  }
+}
+@media screen and (min-width: 640px) {
+  main section {
+    padding-bottom: 1rem;
+  }
+}
 
 /* SECTION RESERVATION */
 .reservation {
   text-align: center;
   position: relative;
   z-index: 10;
+}
+@media screen and (min-width: 640px) {
+  .reservation {
+    box-shadow: 0px 5px 8px #e8e8e8;
+    border-radius: 0rem 0rem 1rem 1rem;
+    padding-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .reservation {
+    grid-column: 2;
+    box-shadow: 0px 5px 0px #f6f6f6;
+    border-radius: 0rem;
+  }
 }
 .reservation__localise {
   padding: 1rem;
@@ -207,15 +274,30 @@ footer span {
 }
 .reservation span {
   margin-right: 1rem;
-  margin-left: -1.7rem;
+  margin-left: -1rem;
   vertical-align: top;
 }
 .reservation__explore {
   padding: 0.5rem 1rem 3rem 1rem;
   background: #f6f6f6;
 }
+@media screen and (min-width: 640px) {
+  .reservation__explore {
+    height: 273px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .reservation__explore {
+    height: 173px;
+  }
+}
 .reservation__explore p {
   padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 640px) {
+  .reservation__explore p {
+    padding-bottom: 2.5rem;
+  }
 }
 .reservation h1 {
   padding: 1.5rem 3rem 0.5rem 3rem;
@@ -227,26 +309,94 @@ footer span {
 .functioning {
   padding-left: 1rem;
   padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 640px) {
+  .functioning {
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .functioning {
+    grid-row: 2;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .functioning {
+    grid-column: 2;
+    background: #f6f6f6;
+    padding-bottom: 0rem;
+  }
 }
 .functioning ol {
   font-weight: 500;
-}
-.functioning .instructions__step {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 640px) {
+  .functioning ol {
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .functioning ol {
+    padding-bottom: 0rem;
+  }
+}
+@media screen and (min-width: 640px) {
+  .functioning h2 {
+    text-align: center;
+    padding-bottom: 1.9rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .functioning h2 {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+}
+
+.instructions__step {
   padding: 1.5rem 2rem 1.5rem 2rem;
   margin-bottom: 1rem;
   margin-left: 1rem;
   border-radius: 1rem;
   background: #f6f6f6;
+  display: flex;
+  align-items: center;
   box-shadow: 0px 5px 8px #e6e6e6;
   position: relative;
   z-index: 30;
 }
-.functioning .instructions__step:nth-child(3) {
+@media screen and (min-width: 640px) {
+  .instructions__step {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding: 1.5rem 2rem 0.8rem 2rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .instructions__step {
+    margin-bottom: 2rem;
+    padding: 2rem 2rem 1.2rem 2rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .instructions__step {
+    margin-bottom: 0.5rem;
+    padding: 1.5rem 2rem 2.5rem 2rem;
+  }
+}
+.instructions__step:nth-child(3) {
   background: #f5edff;
 }
-.functioning .step__number {
+
+.step__number {
   color: #fff;
   background: #9356DC;
   border-radius: 1rem;
@@ -261,15 +411,27 @@ footer span {
   z-index: 40;
   left: -11px;
 }
-.functioning .step__icon {
-  margin-right: 2rem;
-  width: 22px;
+@media screen and (min-width: 640px) {
+  .step__number {
+    left: inherit;
+    top: -10px;
+    width: 4rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .step__number {
+    top: -0.9rem;
+  }
+}
+
+.step__icon {
+  width: 40px;
   font-size: 1.1rem;
 }
-.functioning .step__icon--grey {
+.step__icon--grey {
   color: gray;
 }
-.functioning .step__icon--purple {
+.step__icon--purple {
   color: #9356DC;
 }
 
@@ -280,12 +442,57 @@ footer span {
   background: #f6f6f6;
   padding-top: 2rem;
 }
-.restaurants .restaurants-flexbox {
+@media screen and (min-width: 640px) {
+  .restaurants {
+    grid-column: 1/span 2;
+    background: #fff;
+    padding-top: 0rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .restaurants {
+    grid-row: 1/span 3;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .restaurants {
+    grid-column: 2;
+    grid-row: 3/span 3;
+  }
+}
+@media screen and (min-width: 640px) {
+  .restaurants h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .restaurants h2 {
+    padding-top: 0.8rem;
+    padding-bottom: 2rem;
+  }
+}
+.restaurants-flexbox {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-.restaurants .restaurants__link-menu {
+@media screen and (min-width: 640px) {
+  .restaurants-flexbox {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .restaurants-flexbox {
+    flex-direction: column;
+  }
+}
+.restaurants__link-menu {
   display: block;
   border-radius: 1rem;
   overflow: hidden;
@@ -295,14 +502,59 @@ footer span {
   z-index: 40;
   transition: 0.3s;
 }
-.restaurants .restaurants__link-menu:hover {
+@media screen and (min-width: 640px) {
+  .restaurants__link-menu {
+    width: 48%;
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .restaurants__link-menu {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .restaurants__link-menu {
+    width: 100%;
+  }
+}
+.restaurants__link-menu:hover {
   color: #9356DC;
   box-shadow: 0px 5px 8px #cccccc;
 }
-.restaurants .card__img img {
+
+.card__img img {
   height: 200px;
 }
-.restaurants .link-menu__sticker-new {
+@media screen and (min-width: 640px) {
+  .card__img img {
+    height: 220px;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .card__img img {
+    height: 232px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .card__img img {
+    height: 350px;
+  }
+}
+
+.card__caption {
+  padding: 0.6rem 0.8rem 0.8rem 0.8rem;
+  line-height: 1.5rem;
+  background: #fff;
+}
+@media screen and (min-width: 2000px) {
+  .card__caption {
+    text-align: center;
+    padding: 0.6rem 0rem 2rem 0rem;
+  }
+}
+
+.link-menu__sticker-new {
   position: absolute;
   z-index: 40;
   top: 1rem;
@@ -315,9 +567,13 @@ footer span {
   height: 1.8rem;
   line-height: 1.8rem;
   text-align: center;
+  border-radius: 0.1rem;
 }
 
 .link-menu__icon {
+  position: absolute;
+  z-index: 50;
+  font-size: 1.4rem;
   bottom: 1.7rem;
   right: 1.2rem;
 }
@@ -327,6 +583,13 @@ footer span {
     left: 50%;
     margin-left: -0.6rem;
   }
+}
+.link-menu__icon--empty {
+  opacity: 1;
+}
+.link-menu__icon--full {
+  color: #FF79DA;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

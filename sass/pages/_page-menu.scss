@@ -1,0 +1,94 @@
+@use "../utils/maps";
+@use "../utils/mixins";
+
+
+
+/* MAIN */
+
+main {
+    img {
+        height:270px;
+        object-position: bottom;
+    }
+}
+
+/* SECTION MENU RESTAURANTS */
+
+.menu-restaurant {
+    background:map-get(maps.$colors-palette, darkshadow);
+    @include mixins.padding-page;
+    padding-top:2rem;
+    padding-bottom:5rem;
+    border-radius:2rem 2rem 0rem 0rem;
+    margin-top:-3rem;
+    h1 {
+        @include mixins.relative (40);
+        font-family: 'shrikhand', sans-serif;
+        font-weight:initial;
+        font-size:1.5rem;
+        margin-bottom:0.8rem;
+        .link-menu__icon {
+            font-size:1.5rem;
+            bottom:0.5rem;
+            right:1rem;
+        }
+    }
+    .btn-gradient {
+        padding:0.8rem 3rem;
+        margin-top:3rem;
+    }
+}
+.menu-restaurant__dish-type {
+    margin-bottom:2rem;
+    h2 {
+        width:2rem;
+        font-size:map-get(maps.$txt-size, txt-l);
+        font-weight:map-get(maps.$txt-weight, txt-light);
+        padding-bottom:0.2rem;
+        margin-bottom:1rem;
+        border-bottom:4px solid map-get(maps.$colors-palette, mint);
+    }
+    a {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        background: map-get(maps.$colors-palette, white);
+        border-radius: map-get(maps.$txt-size, txt-m);
+        overflow:hidden;
+        cursor:pointer;
+        margin-bottom: map-get(maps.$txt-size, txt-m);
+        .dish__icon {
+            background: map-get(maps.$colors-palette, mint);
+            padding:1.5rem 0rem;
+            color:map-get(maps.$colors-palette, white);
+            font-size:1.5rem;
+            text-align:center;
+            width:0px;
+            transition:0.5s;
+        }
+        &:hover .dish__icon {
+            width:80px;
+        }
+    }
+}
+.dish__dish-description {
+    width:100%;
+    padding:0rem 1rem 0rem 0.5rem;
+    h3 {
+        font-size:map-get(maps.$txt-size, txt-l);
+        height:1.4rem;
+        overflow:hidden;
+        text-overflow: ellipsis;
+    }
+    .dish-description__price {
+        display:flex;
+        justify-content:space-between;
+        height:1.4rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        p:nth-child(2) {
+            font-weight:map-get(maps.$txt-weight, txt-bold);
+        }
+
+    }
+}

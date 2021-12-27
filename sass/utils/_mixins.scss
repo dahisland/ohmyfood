@@ -1,0 +1,29 @@
+@use "./maps";
+
+@mixin center-margin {
+    margin:0 auto;
+}
+@mixin padding-page {
+    padding-left:1rem;
+    padding-right:1rem;
+}
+@mixin relative ($zindex) {
+    position:relative;
+    z-index:$zindex;
+}
+@mixin absolute ($zindex) {
+    position:absolute;
+    z-index:$zindex;
+}
+@mixin shadow-box ($lighting:80%) {
+    box-shadow: 0px 5px 8px lighten(map-get(maps.$colors-palette, dark),$lighting);
+}
+@mixin responsive ($screen) {
+    @media screen and (min-width:map-get(maps.$breakpoints, $screen)) {
+        @content;
+    }
+}
+@mixin flex-column {
+    display:flex;
+    flex-direction:column;
+}

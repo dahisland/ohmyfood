@@ -134,9 +134,9 @@ button {
 
 /* HEADER */
 header {
-  text-align: center;
   display: grid;
   align-items: center;
+  text-align: center;
   box-shadow: 0px 2px 3px #cccccc;
   position: relative;
   z-index: 20;
@@ -157,32 +157,32 @@ header {
   }
 }
 header img {
-  width: 50%;
+  width: 45%;
   max-width: 180px;
 }
 header a {
   position: absolute;
   z-index: 30;
-  left: 1.5rem;
-  font-size: 1.2rem;
+  left: 1rem;
+  font-size: 1.1rem;
 }
 @media screen and (min-width: 640px) {
   header a {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 1224px) {
   header a {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 @media screen and (min-width: 2000px) {
   header a {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 header a:hover {
-  color: #FF79DA;
+  color: #9356DC;
 }
 
 /* FOOTER */

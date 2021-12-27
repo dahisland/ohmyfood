@@ -1,9 +1,6 @@
-@import "./utils/variables";
-@import "./base/bases";
-@import "./components/components";
-@import "./layouts/layouts";
-@import "./pages/page-style.scss";
-
-
-
+@use "./utils/index";
+@use "./base/bases";
+@use "./components/components";
+@use "./layouts/layouts";
+@use "./pages/page-style";
 

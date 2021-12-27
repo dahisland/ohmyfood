@@ -1,9 +1,13 @@
+@use "../utils/maps";
+@use "../utils/mixins";
+@use "../utils/extensions";
+
 /* HEADER */
 
 header {
-    text-align:center;
     display:grid;
     align-items:center;
+    text-align:center;
     box-shadow: 0px 2px 3px lighten(map-get(maps.$colors-palette, dark),80%);
     @include mixins.relative (20);
     @include mixins.responsive (desktop) {
@@ -19,52 +23,78 @@ header {
     }     
     img {
         width:map-get(maps.$width-palette, x-small);
-        max-width:180px;    
+        max-width:180px;
     }
     a {
         @include mixins.absolute (30);
-        left:1.5rem;
-        font-size:1.2rem;
+        left:1rem;
+        font-size:1.1rem;
         @include mixins.responsive (tabs) {
-            font-size:1.3rem;
-        };
+            font-size:1.2rem;
+        }
         @include mixins.responsive (desktop) {
-            font-size:1.4rem;
+            font-size:1.3rem;
         }
         @include mixins.responsive (desktop-xl) {
-            font-size:1.5rem;
+            font-size:1.4rem;
         }
         &:hover {
-            color:map-get(maps.$colors-palette, pink);
+            color:map-get(maps.$colors-palette, purple);
+
         }
+
     }
 }
 
 /* FOOTER */
 
 footer {
-    color:map-get($colors-palette, white);
-    background:lighten(map-get($colors-palette, dark),25%);
+    background:lighten(map-get(maps.$colors-palette, dark),25%);
+    @include mixins.responsive (tabs) {
+        text-align:center;
+    } 
+    @include mixins.responsive (desktop-xl) {
+        display:flex;
+        flex-direction:column;
+    }
     p {
+        @extend%txt-footer-white;
         font-family:'Shrikhand', cursive;
         padding-bottom:1rem;
+        font-size:1.2rem;
     }
     a {
-        color:map-get($colors-palette, white);
+        @extend%txt-footer-white;
         &:hover {
-            color:map-get($colors-palette, pink );
+            color:map-get(maps.$colors-palette, pink );
         }
+    }
+    ul {
+        @include mixins.responsive (tabs) {
+            display:flex;
+            justify-content: space-around;
+        }
+        @include mixins.responsive (desktop-xl) {
+            justify-content: center;
+        }        
     }
     li {
         padding-bottom:0.4rem;
+        @include mixins.responsive (desktop-xl) {
+            margin-left:1rem;
+            margin-right:1rem;
+        }        
     }
     li:nth-child(1), li:nth-child(2) {
-        font-weight:map-get($txt-weight, txt-med);
+        font-weight:map-get(maps.$txt-weight, txt-med);
     }
     li:nth-child(2) span {
         font-size:0.7rem;
     }
     span {
         margin-right:1rem;
+        @include mixins.responsive (tabs) {
+            margin-right:0.4rem;
+        }    
     }
 }
