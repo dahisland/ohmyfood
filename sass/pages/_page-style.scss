@@ -115,22 +115,29 @@
         height: 1.8rem;
         line-height:1.8rem;
         text-align:center;
-    }
-    .card__caption {
-        padding:0.6rem 0.8rem 0.8rem 0.8rem;
-        line-height:1.5rem;
-        background: map-get($colors-palette, white); 
-    }
-    .link-menu__icon {
-        @include absolute (50);
-        font-size:map-get($txt-size, txt-xl);
-        bottom:1.7rem;
-        right:1.2rem;
-        &--empty {
-        }
-        &--full {
-            color:map-get($colors-palette, pink);
-            opacity:1;
-        }
-    }
+        padding:0.6rem 0rem 2rem 0rem;
+    }    
+}
+.link-menu__sticker-new {
+    @include mixins.absolute(40);
+    top:1rem;
+    right:1rem;
+    background:map-get(maps.$colors-palette, mint);
+    font-size:map-get(maps.$txt-size, txt-xs);
+    font-weight:map-get(maps.$txt-weight, txt-med);
+    color:darken(map-get(maps.$colors-palette, mint),40%);
+    width:5rem;
+    height: 1.8rem;
+    line-height:1.8rem;
+    text-align:center;
+    border-radius:0.1rem;
+}
+.link-menu__icon {
+    bottom:1.7rem;
+    right:1.2rem;
+    @include mixins.responsive (desktop-xl) {
+        bottom:0.5rem;
+        left:50%;
+        margin-left:-0.6rem;
+    }    
 }

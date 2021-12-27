@@ -1,3 +1,335 @@
+body, button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
 
+h1, h2, h3, p, ul, ol, figure {
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3 {
+  font-weight: 700;
+}
+
+footer p, footer a {
+  color: #fff;
+}
+
+/* BASE CSS */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1224px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+body {
+  margin: 0 auto;
+  font-weight: 300;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: grid;
+  flex-grow: 1;
+}
+
+h2 {
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  padding-bottom: 1.3rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+header, footer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+header {
+  padding-top: 1.2rem;
+  padding-bottom: 0.4rem;
+}
+
+section {
+  padding-bottom: 3rem;
+}
+
+footer {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Buttons with linear gradient animated on hover */
+.btn-gradient {
+  display: block;
+  width: fit-content;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5rem;
+  margin: 0 auto;
+  box-shadow: 0px 5px 8px #cccccc;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  font-weight: 500;
+  opacity: 1;
+}
+.btn-gradient:hover {
+  transition-duration: 0.4s;
+  box-shadow: 0px 5px 8px #999999;
+  opacity: 0.8;
+}
+
+/* Icons "Like" */
+.link-menu__icon {
+  position: absolute;
+  z-index: 50;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.link-menu__icon--empty {
+  opacity: 1;
+}
+.link-menu__icon--full {
+  color: #FF79DA;
+  opacity: 1;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  display: grid;
+  align-items: center;
+  box-shadow: 0px 2px 3px #cccccc;
+  position: relative;
+  z-index: 20;
+}
+@media screen and (min-width: 1224px) {
+  header {
+    grid-template-columns: 30% 70%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  header {
+    grid-template-columns: 15% 70% 15%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  header picture {
+    grid-column: 2;
+  }
+}
+header img {
+  width: 50%;
+  max-width: 180px;
+}
+header a {
+  position: absolute;
+  z-index: 30;
+  left: 1.5rem;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 640px) {
+  header a {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  header a {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  header a {
+    font-size: 1.5rem;
+  }
+}
+header a:hover {
+  color: #FF79DA;
+}
+
+/* FOOTER */
+footer {
+  background: #404040;
+}
+@media screen and (min-width: 640px) {
+  footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 2000px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer p {
+  font-family: "Shrikhand", cursive;
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+}
+footer a:hover {
+  color: #FF79DA;
+}
+@media screen and (min-width: 640px) {
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 2000px) {
+  footer ul {
+    justify-content: center;
+  }
+}
+footer li {
+  padding-bottom: 0.4rem;
+}
+@media screen and (min-width: 2000px) {
+  footer li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+footer li:nth-child(1), footer li:nth-child(2) {
+  font-weight: 500;
+}
+footer li:nth-child(2) span {
+  font-size: 0.7rem;
+}
+footer span {
+  margin-right: 1rem;
+}
+@media screen and (min-width: 640px) {
+  footer span {
+    margin-right: 0.4rem;
+  }
+}
+
+/* MAIN */
+main img {
+  height: 270px;
+  object-position: bottom;
+}
+
+/* SECTION MENU RESTAURANTS */
+.menu-restaurant {
+  background: #eaeaea;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  border-radius: 2rem 2rem 0rem 0rem;
+  margin-top: -3rem;
+}
+.menu-restaurant h1 {
+  position: relative;
+  z-index: 40;
+  font-family: "shrikhand", sans-serif;
+  font-weight: initial;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+.menu-restaurant h1 .link-menu__icon {
+  font-size: 1.5rem;
+  bottom: 0.5rem;
+  right: 1rem;
+}
+.menu-restaurant .btn-gradient {
+  padding: 0.8rem 3rem;
+  margin-top: 3rem;
+}
+
+.menu-restaurant__dish-type {
+  margin-bottom: 2rem;
+}
+.menu-restaurant__dish-type h2 {
+  width: 2rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding-bottom: 0.2rem;
+  margin-bottom: 1rem;
+  border-bottom: 4px solid #99E2D0;
+}
+.menu-restaurant__dish-type a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.menu-restaurant__dish-type a .dish__icon {
+  background: #99E2D0;
+  padding: 1.5rem 0rem;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 0px;
+  transition: 0.5s;
+}
+.menu-restaurant__dish-type a:hover .dish__icon {
+  width: 80px;
+}
+
+.dish__dish-description {
+  width: 100%;
+  padding: 0rem 1rem 0rem 0.5rem;
+}
+.dish__dish-description h3 {
+  font-size: 1.1rem;
+  height: 1.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dish__dish-description .dish-description__price {
+  display: flex;
+  justify-content: space-between;
+  height: 1.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dish__dish-description .dish-description__price p:nth-child(2) {
+  font-weight: 700;
+}
 
 /*# sourceMappingURL=menu.css.map */

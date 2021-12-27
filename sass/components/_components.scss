@@ -19,3 +19,18 @@
         opacity:0.8;
     }
 }
+
+/* Icons "Like" */
+
+.link-menu__icon {
+    @include mixins.absolute (50);
+    font-size:map-get(maps.$txt-size, txt-xl);
+    cursor:pointer;
+    &--empty {
+        opacity:1;
+    }
+    &--full {
+        color:map-get(maps.$colors-palette, pink);
+        opacity:1;
+    }
+}

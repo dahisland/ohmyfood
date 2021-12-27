@@ -98,16 +98,72 @@ button {
   opacity: 0.8;
 }
 
+/* Icons "Like" */
+.link-menu__icon {
+  position: absolute;
+  z-index: 50;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.link-menu__icon--empty {
+  opacity: 1;
+}
+.link-menu__icon--full {
+  color: #FF79DA;
+  opacity: 1;
+}
+
 /* HEADER */
 header {
   text-align: center;
+  display: grid;
+  align-items: center;
   box-shadow: 0px 2px 3px #cccccc;
   position: relative;
   z-index: 20;
 }
+@media screen and (min-width: 1224px) {
+  header {
+    grid-template-columns: 30% 70%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  header {
+    grid-template-columns: 15% 70% 15%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  header picture {
+    grid-column: 2;
+  }
+}
 header img {
-  width: 45%;
-  max-width: 300px;
+  width: 50%;
+  max-width: 180px;
+}
+header a {
+  position: absolute;
+  z-index: 30;
+  left: 1.5rem;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 640px) {
+  header a {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  header a {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  header a {
+    font-size: 1.5rem;
+  }
+}
+header a:hover {
+  color: #FF79DA;
 }
 
 /* FOOTER */
@@ -260,21 +316,17 @@ footer span {
   line-height: 1.8rem;
   text-align: center;
 }
-.restaurants .card__caption {
-  padding: 0.6rem 0.8rem 0.8rem 0.8rem;
-  line-height: 1.5rem;
-  background: #fff;
-}
-.restaurants .link-menu__icon {
-  position: absolute;
-  z-index: 50;
-  font-size: 1.4rem;
+
+.link-menu__icon {
   bottom: 1.7rem;
   right: 1.2rem;
 }
-.restaurants .link-menu__icon--full {
-  color: #FF79DA;
-  opacity: 1;
+@media screen and (min-width: 2000px) {
+  .link-menu__icon {
+    bottom: 0.5rem;
+    left: 50%;
+    margin-left: -0.6rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
