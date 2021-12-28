@@ -40,7 +40,7 @@ html {
 body {
   margin: 0 auto;
   font-weight: 300;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -48,6 +48,17 @@ body {
 main {
   display: grid;
   flex-grow: 1;
+}
+@media screen and (min-width: 640px) {
+  main {
+    grid-template-columns: 50% 50%;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1224px) {
+  main {
+    grid-template-columns: 30% 70%;
+  }
 }
 
 h2 {
@@ -244,23 +255,16 @@ footer span {
 }
 
 /* MAIN */
-@media screen and (min-width: 640px) {
-  main {
-    grid-template-columns: 50% 50%;
-    align-items: flex-start;
-  }
-}
 @media screen and (min-width: 1224px) {
   main {
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 300px 370px auto;
+    grid-template-rows: 236px auto;
     grid-row-gap: 1.2rem;
   }
 }
 @media screen and (min-width: 2000px) {
   main {
     grid-template-columns: 15% 70% 15%;
-    grid-template-rows: 200px 370px auto;
+    grid-template-rows: 220px auto auto;
     grid-row-gap: 1.2rem;
   }
 }
@@ -309,6 +313,11 @@ footer span {
     height: 273px;
   }
 }
+@media screen and (min-width: 1224px) {
+  .reservation__explore {
+    height: auto;
+  }
+}
 @media screen and (min-width: 2000px) {
   .reservation__explore {
     height: 173px;
@@ -342,13 +351,16 @@ footer span {
 }
 @media screen and (min-width: 1224px) {
   .functioning {
+    padding-left: 0rem;
+    padding-right: 0rem;
     grid-row: 2;
   }
 }
 @media screen and (min-width: 2000px) {
   .functioning {
     grid-column: 2;
-    background: #f6f6f6;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-bottom: 0rem;
   }
 }
@@ -411,7 +423,7 @@ footer span {
 }
 @media screen and (min-width: 2000px) {
   .instructions__step {
-    margin-bottom: 0.5rem;
+    margin-bottom: 2.5rem;
     padding: 1.5rem 2rem 2.5rem 2rem;
   }
 }
@@ -556,7 +568,7 @@ footer span {
 }
 @media screen and (min-width: 1224px) {
   .card__img img {
-    height: 232px;
+    height: 200px;
   }
 }
 @media screen and (min-width: 2000px) {

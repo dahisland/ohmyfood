@@ -21,13 +21,21 @@ body {
     @include mixins.center-margin;
     @extend%font-roboto;
     font-weight:map-get(maps.$txt-weight, txt-light);
-    height:100vh;
+    min-height:100vh;
     display:flex;
     flex-direction: column;
 }
 main {
     display:grid;
     flex-grow:1;
+    @include mixins.responsive (tabs) {
+        grid-template-columns: 50% 50%;
+        align-items:flex-start;
+    }
+    @include mixins.responsive (desktop) {
+        grid-template-columns: 30% 70%;
+    }
+
 }
 h1 {
     @extend%reset-margin;

@@ -5,14 +5,42 @@
 /* HEADER */
 header {
     box-shadow:initial;
+    @include mixins.responsive (desktop) {
+        box-shadow: 0px 2px 3px lighten(map-get(maps.$colors-palette, dark),80%);
+    }
 }
 
 /* MAIN */
 
 main {
+    background:map-get(maps.$colors-palette, darkshadow);
+    @include mixins.responsive (tabs) {
+        background: map-get(maps.$colors-palette, white);
+    }       
+    @include mixins.responsive (desktop) {
+        grid-template-rows: 75px auto;
+        padding-bottom: 4rem; 
+    }       
+    picture {
+        @include mixins.responsive (tabs) {
+            grid-column:1 / span 2;
+        }
+        @include mixins.responsive (desktop) {
+            grid-column:1;
+            @include mixins.relative (30);
+        }
+    }
     img {
         height:270px;
         object-position: bottom;
+        @include mixins.responsive (tabs) {
+            height:350px;
+            object-position: center;
+        }
+        @include mixins.responsive (desktop) {
+            height:490px;
+            object-position: center;
+        }
     }
 }
 
@@ -25,8 +53,22 @@ main {
     padding-bottom:5rem;
     border-radius:2rem 2rem 0rem 0rem;
     margin-top:-3rem;
+    @include mixins.responsive (tabs) {
+        grid-column:1 / span 2;
+        margin-top:-5rem;
+        background:map-get(maps.$colors-palette, white);
+    }
+    @include mixins.responsive (desktop) {
+        grid-row:1;
+        display:grid;
+        grid-template-columns:30% 70%;
+        margin-top:0rem;
+        padding-top:0rem;
+        padding-left:0rem;
+        padding-right:0rem;
+    }
     h1 {
-        @include mixins.relative (40);
+        @include mixins.relative (10);
         font-family: 'shrikhand', sans-serif;
         font-weight:initial;
         font-size:1.5rem;
@@ -35,15 +77,54 @@ main {
             font-size:1.5rem;
             bottom:0.5rem;
             right:1rem;
+            @include mixins.responsive (desktop) {
+                font-size:1.5rem;
+                top:2.2rem;
+                left:1rem;
+                bottom:initial;
+                right:initial;
+            }    
+        }
+        @include mixins.responsive (tabs) {
+            text-align:center;
+            margin-bottom:2rem;
+        }
+        @include mixins.responsive (desktop) {
+            background: map-get(maps.$colors-palette, darkshadow);
+            padding-top:2rem;
+            height:75px;
+        }
+    }
+    .menu-restaurant-flexbox {
+        @include mixins.responsive (tabs) {
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:space-between;
+            align-items:center;
+        }
+        @include mixins.responsive (desktop) {
+            margin-left:1rem;
+            margin-right:1rem;
+        }
+    }
+    .menu-restaurant__btn-order {
+        @include mixins.responsive (tabs) {
+            width:49%;
         }
     }
     .btn-gradient {
         padding:0.8rem 3rem;
         margin-top:3rem;
+        @include mixins.responsive (tabs) {
+            margin-top:0rem;
+        }
     }
 }
 .menu-restaurant__dish-type {
     margin-bottom:2rem;
+    @include mixins.responsive (tabs) {
+        width:49%;
+    }
     h2 {
         width:2rem;
         font-size:map-get(maps.$txt-size, txt-l);
@@ -61,6 +142,9 @@ main {
         overflow:hidden;
         cursor:pointer;
         margin-bottom: map-get(maps.$txt-size, txt-m);
+        @include mixins.responsive (tabs) {
+            @include mixins.shadow-box;
+        }
         .dish__icon {
             background: map-get(maps.$colors-palette, mint);
             padding:1.5rem 0rem;

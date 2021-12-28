@@ -40,7 +40,7 @@ html {
 body {
   margin: 0 auto;
   font-weight: 300;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -48,6 +48,17 @@ body {
 main {
   display: grid;
   flex-grow: 1;
+}
+@media screen and (min-width: 640px) {
+  main {
+    grid-template-columns: 50% 50%;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1224px) {
+  main {
+    grid-template-columns: 30% 70%;
+  }
 }
 
 h2 {
@@ -247,11 +258,54 @@ footer span {
 header {
   box-shadow: initial;
 }
+@media screen and (min-width: 1224px) {
+  header {
+    box-shadow: 0px 2px 3px #cccccc;
+  }
+}
 
 /* MAIN */
+main {
+  background: #eaeaea;
+}
+@media screen and (min-width: 640px) {
+  main {
+    background: #fff;
+  }
+}
+@media screen and (min-width: 1224px) {
+  main {
+    grid-template-rows: 75px auto;
+    padding-bottom: 4rem;
+  }
+}
+@media screen and (min-width: 640px) {
+  main picture {
+    grid-column: 1/span 2;
+  }
+}
+@media screen and (min-width: 1224px) {
+  main picture {
+    grid-column: 1;
+    position: relative;
+    z-index: 30;
+  }
+}
 main img {
   height: 270px;
   object-position: bottom;
+}
+@media screen and (min-width: 640px) {
+  main img {
+    height: 350px;
+    object-position: center;
+  }
+}
+@media screen and (min-width: 1224px) {
+  main img {
+    height: 490px;
+    object-position: center;
+  }
 }
 
 /* SECTION MENU RESTAURANTS */
@@ -264,9 +318,27 @@ main img {
   border-radius: 2rem 2rem 0rem 0rem;
   margin-top: -3rem;
 }
+@media screen and (min-width: 640px) {
+  .menu-restaurant {
+    grid-column: 1/span 2;
+    margin-top: -5rem;
+    background: #fff;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .menu-restaurant {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 0rem;
+    padding-top: 0rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
 .menu-restaurant h1 {
   position: relative;
-  z-index: 40;
+  z-index: 10;
   font-family: "shrikhand", sans-serif;
   font-weight: initial;
   font-size: 1.5rem;
@@ -277,13 +349,64 @@ main img {
   bottom: 0.5rem;
   right: 1rem;
 }
+@media screen and (min-width: 1224px) {
+  .menu-restaurant h1 .link-menu__icon {
+    font-size: 1.5rem;
+    top: 2.2rem;
+    left: 1rem;
+    bottom: initial;
+    right: initial;
+  }
+}
+@media screen and (min-width: 640px) {
+  .menu-restaurant h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .menu-restaurant h1 {
+    background: #eaeaea;
+    padding-top: 2rem;
+    height: 75px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .menu-restaurant .menu-restaurant-flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .menu-restaurant .menu-restaurant-flexbox {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media screen and (min-width: 640px) {
+  .menu-restaurant .menu-restaurant__btn-order {
+    width: 49%;
+  }
+}
 .menu-restaurant .btn-gradient {
   padding: 0.8rem 3rem;
   margin-top: 3rem;
 }
+@media screen and (min-width: 640px) {
+  .menu-restaurant .btn-gradient {
+    margin-top: 0rem;
+  }
+}
 
 .menu-restaurant__dish-type {
   margin-bottom: 2rem;
+}
+@media screen and (min-width: 640px) {
+  .menu-restaurant__dish-type {
+    width: 49%;
+  }
 }
 .menu-restaurant__dish-type h2 {
   width: 2rem;
@@ -302,6 +425,11 @@ main img {
   overflow: hidden;
   cursor: pointer;
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 640px) {
+  .menu-restaurant__dish-type a {
+    box-shadow: 0px 5px 8px #cccccc;
+  }
 }
 .menu-restaurant__dish-type a .dish__icon {
   background: #99E2D0;

@@ -4,18 +4,13 @@
 /* MAIN */
 
 main {
-    @include mixins.responsive (tabs) {
-        grid-template-columns: 50% 50%;
-        align-items:flex-start;
-    }
     @include mixins.responsive (desktop) {
-        grid-template-columns: 30% 70%;
-        grid-template-rows:300px 370px auto;
+        grid-template-rows:236px auto;
         grid-row-gap:1.2rem;
     }
     @include mixins.responsive (desktop-xl) {
         grid-template-columns: 15% 70% 15%;
-        grid-template-rows: 200px 370px auto;
+        grid-template-rows: 220px auto auto;
         grid-row-gap:1.2rem;
     }
     section {
@@ -56,7 +51,10 @@ main {
         background: map-get(maps.$colors-palette, lightshadow);
         @include mixins.responsive (tabs) {
             height:273px;
-        } 
+        }
+        @include mixins.responsive (desktop) {
+            height:auto;
+        }
         @include mixins.responsive (desktop-xl) {
             height:173px;
         }     
@@ -83,11 +81,13 @@ main {
         justify-content: space-between;
     }
     @include mixins.responsive (desktop) {
+        padding-left:0rem;
+        padding-right:0rem;
         grid-row:2;
     }
     @include mixins.responsive (desktop-xl) {
         grid-column:2;
-        background: map-get(maps.$colors-palette , lightshadow);
+        @include mixins.padding-page;
         padding-bottom:0rem;
     }
     ol {
@@ -135,7 +135,7 @@ main {
         padding:2rem 2rem 1.2rem 2rem;
     } 
     @include mixins.responsive (desktop-xl) {
-        margin-bottom:0.5rem;
+        margin-bottom:2.5rem;
         padding:1.5rem 2rem 2.5rem 2rem;
     }               
     &:nth-child(3) {
@@ -251,7 +251,7 @@ main {
         height:220px;
     }    
     @include mixins.responsive (desktop) {
-        height:232px;
+        height:200px;
     }
     @include mixins.responsive (desktop-xl) {
         height:350px;
