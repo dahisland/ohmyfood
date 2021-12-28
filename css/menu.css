@@ -260,7 +260,7 @@ header {
 }
 @media screen and (min-width: 1224px) {
   header {
-    box-shadow: 0px 2px 3px #cccccc;
+    box-shadow: 0px 2px 3px #d7c0f2;
   }
 }
 
@@ -276,7 +276,6 @@ main {
 @media screen and (min-width: 1224px) {
   main {
     grid-template-rows: 75px auto;
-    padding-bottom: 4rem;
   }
 }
 @media screen and (min-width: 640px) {
@@ -287,6 +286,7 @@ main {
 @media screen and (min-width: 1224px) {
   main picture {
     grid-column: 1;
+    grid-row: 2;
     position: relative;
     z-index: 30;
   }
@@ -303,8 +303,10 @@ main img {
 }
 @media screen and (min-width: 1224px) {
   main img {
-    height: 490px;
+    height: 491px;
     object-position: center;
+    border-radius: 0rem 0rem 1.5rem 0rem;
+    box-shadow: 0px 5px 8px #b3b3b3;
   }
 }
 
@@ -327,7 +329,7 @@ main img {
 }
 @media screen and (min-width: 1224px) {
   .menu-restaurant {
-    grid-row: 1;
+    grid-row: 1/span 2;
     display: grid;
     grid-template-columns: 30% 70%;
     margin-top: 0rem;
@@ -351,8 +353,8 @@ main img {
 }
 @media screen and (min-width: 1224px) {
   .menu-restaurant h1 .link-menu__icon {
-    font-size: 1.5rem;
-    top: 2.2rem;
+    font-size: 1.6rem;
+    top: 2.1rem;
     left: 1rem;
     bottom: initial;
     right: initial;
@@ -366,7 +368,8 @@ main img {
 }
 @media screen and (min-width: 1224px) {
   .menu-restaurant h1 {
-    background: #eaeaea;
+    background: linear-gradient(to top, #ffeefa, #d1b7f0);
+    /*background:lighten(map-get(maps.$colors-palette, purple),25%);*/
     padding-top: 2rem;
     height: 75px;
   }
@@ -425,10 +428,11 @@ main img {
   overflow: hidden;
   cursor: pointer;
   margin-bottom: 1rem;
+  box-shadow: 0px 5px 8px #d6d6d6;
 }
 @media screen and (min-width: 640px) {
   .menu-restaurant__dish-type a {
-    box-shadow: 0px 5px 8px #cccccc;
+    box-shadow: 0px 5px 8px #e6e6e6;
   }
 }
 .menu-restaurant__dish-type a .dish__icon {
@@ -439,6 +443,14 @@ main img {
   text-align: center;
   width: 0px;
   transition: 0.6s;
+}
+.menu-restaurant__dish-type a:hover {
+  box-shadow: 0px 5px 8px #bfbfbf;
+}
+@media screen and (min-width: 640px) {
+  .menu-restaurant__dish-type a:hover {
+    box-shadow: 0px 5px 8px #d9d9d9;
+  }
 }
 .menu-restaurant__dish-type a:hover .dish__icon {
   width: 80px;
