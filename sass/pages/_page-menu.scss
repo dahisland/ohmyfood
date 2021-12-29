@@ -97,9 +97,10 @@ main {
         font-weight:initial;
         font-size:1.5rem;
         margin-bottom:0.8rem;
-        .link-menu__icon {
+        .icon-like {
             font-size:1.5rem;
-            bottom:0.5rem;
+            line-height:1.5rem;
+            bottom:0.6rem;
             right:1rem;
             @include mixins.responsive (desktop) {
                 font-size:1.4rem;

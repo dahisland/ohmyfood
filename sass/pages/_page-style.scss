@@ -42,14 +42,40 @@ main {
     }
 
     &__localise {
-        padding: 1rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 1rem;
         background:map-get(maps.$colors-palette, darkshadow);
-        font-weight:map-get(maps.$txt-weight, txt-med);
+        input {
+            background:map-get(maps.$colors-palette, darkshadow);
+            font-family: 'Roboto', sans-serif;
+            font-size:map-get(maps.$txt-size, txt-m);
+            line-height: map-get(maps.$txt-size, txt-m) + 0.5rem;
+            font-weight:map-get(maps.$txt-weight, txt-med); 
+            width:140px;  
+            border:none;
+            border-radius:1rem;
+            padding:0.5rem;
+            &::placeholder {
+                font-size:map-get(maps.$txt-size, txt-xs);
+                font-style: italic;
+            }
+            &:focus {
+                outline:thin dashed map-get(maps.$colors-palette, purple);
+            }
+        }
     }
-    span {
-        margin-right:1rem;
-        margin-left:-1rem;
+    label {
+        margin-left:0.5rem;
+        padding:0rem 0.5rem;
         vertical-align: top;
+        @include mixins.responsive (tabs) {
+            margin-left:1.5rem;
+        }
+        @include mixins.responsive (desktop-xl) {
+            margin-left:0.5rem;
+        }
     }
     &__explore {
         padding:0.5rem 1rem 3rem 1rem;
@@ -241,8 +267,10 @@ main {
             width:100%;
         }
         &:hover {
-            color:map-get(maps.$colors-palette, purple );
             @include mixins.shadow-box (80);
+        }
+        &:hover figcaption {
+            color:map-get(maps.$colors-palette, purple );
         }
     }
 }
@@ -281,22 +309,20 @@ main {
     text-align:center;
     border-radius:0.1rem;
 }
-.link-menu__icon {
-    @include mixins.absolute (50);
+.icons-like {
+    cursor:pointer;
+    &:hover .icon-like--full {
+        transform:scale(1);
+    }
+}
+.icon-like {
     font-size:map-get(maps.$txt-size, txt-xl);
     bottom:1.7rem;
     right:1.2rem;
     @include mixins.responsive (desktop-xl) {
         bottom:0.5rem;
-        left:50%;
-        margin-left:-0.6rem;
+        right:50%;
+        margin-right:-0.6rem;
     }    
-    &--empty {
-        opacity:1;
-    }
-    &--full {
-        color:map-get(maps.$colors-palette, pink);
-        opacity:1;
-    }
 }
 

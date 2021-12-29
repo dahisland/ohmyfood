@@ -134,18 +134,25 @@ button {
 }
 
 /* Icons "Like" */
-.link-menu__icon {
-  position: absolute;
-  z-index: 50;
-  font-size: 1.4rem;
+.icons-like {
   cursor: pointer;
 }
-.link-menu__icon--empty {
-  opacity: 1;
+.icons-like:hover .icon-like--full {
+  transform: scale(1);
 }
-.link-menu__icon--full {
-  color: #FF79DA;
-  opacity: 1;
+
+.icon-like {
+  position: absolute;
+  z-index: 50;
+}
+.icon-like--full {
+  color: transparent;
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: scale(0);
+  transform-origin: bottom;
+  transition: 0.4s;
 }
 
 /* HEADER */
@@ -306,14 +313,44 @@ footer span {
   }
 }
 .reservation__localise {
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
   background: #eaeaea;
-  font-weight: 500;
 }
-.reservation span {
-  margin-right: 1rem;
-  margin-left: -1rem;
+.reservation__localise input {
+  background: #eaeaea;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  width: 140px;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+.reservation__localise input::placeholder {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+.reservation__localise input:focus {
+  outline: thin dashed #9356DC;
+}
+.reservation label {
+  margin-left: 0.5rem;
+  padding: 0rem 0.5rem;
   vertical-align: top;
+}
+@media screen and (min-width: 640px) {
+  .reservation label {
+    margin-left: 1.5rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .reservation label {
+    margin-left: 0.5rem;
+  }
 }
 .reservation__explore {
   padding: 0.5rem 1rem 3rem 1rem;
@@ -560,8 +597,10 @@ footer span {
   }
 }
 .restaurants__link-menu:hover {
-  color: #9356DC;
   box-shadow: 0px 5px 8px #cccccc;
+}
+.restaurants__link-menu:hover figcaption {
+  color: #9356DC;
 }
 
 .card__img img {
@@ -611,26 +650,24 @@ footer span {
   border-radius: 0.1rem;
 }
 
-.link-menu__icon {
-  position: absolute;
-  z-index: 50;
+.icons-like {
+  cursor: pointer;
+}
+.icons-like:hover .icon-like--full {
+  transform: scale(1);
+}
+
+.icon-like {
   font-size: 1.4rem;
   bottom: 1.7rem;
   right: 1.2rem;
 }
 @media screen and (min-width: 2000px) {
-  .link-menu__icon {
+  .icon-like {
     bottom: 0.5rem;
-    left: 50%;
-    margin-left: -0.6rem;
+    right: 50%;
+    margin-right: -0.6rem;
   }
-}
-.link-menu__icon--empty {
-  opacity: 1;
-}
-.link-menu__icon--full {
-  color: #FF79DA;
-  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

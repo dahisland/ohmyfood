@@ -23,15 +23,21 @@
 
 /* Icons "Like" */
 
-.link-menu__icon {
-    @include mixins.absolute (50);
-    font-size:map-get(maps.$txt-size, txt-xl);
+.icons-like {
     cursor:pointer;
-    &--empty {
-        opacity:1;
+    &:hover .icon-like--full {
+        transform:scale(1);
     }
+}
+.icon-like {
+    @include mixins.absolute (50);
     &--full {
-        color:map-get(maps.$colors-palette, pink);
-        opacity:1;
+        color:transparent;
+        background-image: linear-gradient(to bottom, map-get(maps.$colors-palette,purple), map-get(maps.$colors-palette,pink));
+        background-clip:text;
+        -webkit-background-clip:text;
+        transform:scale(0);
+        transform-origin:bottom;
+        transition:0.4s;
     }
 }
