@@ -1,17 +1,22 @@
 @use "../utils/maps";
 @use "../utils/mixins";
 
+/* HEADER */
+header {
+    @include mixins.responsive (desktop-xl) {
+        box-shadow: initial;
+    }       
+}
+
 /* MAIN */
 
 main {
     @include mixins.responsive (desktop) {
-        grid-template-rows:236px auto;
+        grid-template-rows:265px auto;
         grid-row-gap:1.2rem;
     }
     @include mixins.responsive (desktop-xl) {
-        grid-template-columns: 15% 70% 15%;
-        grid-template-rows: 220px auto auto;
-        grid-row-gap:1.2rem;
+        grid-template-rows: repeat(3, auto);
     }
     section {
         @include mixins.responsive (tabs) {
@@ -55,9 +60,6 @@ main {
         @include mixins.responsive (desktop) {
             height:auto;
         }
-        @include mixins.responsive (desktop-xl) {
-            height:173px;
-        }     
     }
     &__explore p {
         padding-bottom:1.5rem;
@@ -136,7 +138,7 @@ main {
     } 
     @include mixins.responsive (desktop-xl) {
         margin-bottom:2.5rem;
-        padding:1.5rem 2rem 2.5rem 2rem;
+        padding:1.5rem 2rem 1.5rem 2rem;
     }               
     &:nth-child(3) {
         background: map-get(maps.$colors-palette, lightpurple);
@@ -161,8 +163,7 @@ main {
         width:4rem;
     } 
     @include mixins.responsive (desktop-xl) {
-        top:-0.9rem;
-        
+        top:-0.7rem;
     }       
 
 }
@@ -251,7 +252,7 @@ main {
         height:220px;
     }    
     @include mixins.responsive (desktop) {
-        height:200px;
+        height:228px;
     }
     @include mixins.responsive (desktop-xl) {
         height:350px;

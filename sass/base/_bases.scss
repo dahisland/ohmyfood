@@ -13,8 +13,8 @@ html {
     @include mixins.responsive (tabs) {
         font-size:15px;
     }
-    @include mixins.responsive (desktop) {
-        font-size:13px;
+    @include mixins.responsive (desktop-xl) {
+        font-size:17px;
     }
 }
 body {
@@ -35,7 +35,9 @@ main {
     @include mixins.responsive (desktop) {
         grid-template-columns: 30% 70%;
     }
-
+    @include mixins.responsive (desktop-xl) {
+        grid-template-columns: 15% 70% 15%;
+    }
 }
 h1 {
     @extend%reset-margin;

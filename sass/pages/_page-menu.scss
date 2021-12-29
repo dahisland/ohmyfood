@@ -7,7 +7,10 @@ header {
     box-shadow:initial;
     @include mixins.responsive (desktop) {
         box-shadow: 0px 2px 3px lighten(map-get(maps.$colors-palette, purple),25%);
-    }
+    } 
+    @include mixins.responsive (desktop-xl) {
+        box-shadow: initial;
+    }       
 }
 
 /* MAIN */
@@ -19,7 +22,10 @@ main {
     }       
     @include mixins.responsive (desktop) {
         grid-template-rows: 75px auto;
-    }       
+    } 
+    @include mixins.responsive (desktop-xl) {
+        grid-template-rows: auto auto;
+    }             
     picture {
         @include mixins.responsive (tabs) {
             grid-column:1 / span 2;
@@ -28,6 +34,11 @@ main {
             grid-column:1;
             grid-row:2;
             @include mixins.relative (30);
+        }
+        @include mixins.responsive (desktop-xl) {
+            grid-column:2;
+            grid-row:1;
+            @include mixins.relative (10);
         }
     }
     img {
@@ -38,10 +49,15 @@ main {
             object-position: center;
         }
         @include mixins.responsive (desktop) {
-            height:491px;
+            height:683px;
             object-position: center;
             border-radius:0rem 0rem 1.5rem 0rem;
             @include mixins.shadow-box (70%);
+        }
+        @include mixins.responsive (desktop-xl) {
+            height:560px;
+            border-radius:initial;
+            box-shadow:initial;
         }
     }
 }
@@ -69,6 +85,12 @@ main {
         padding-left:0rem;
         padding-right:0rem;
     }
+    @include mixins.responsive (desktop-xl) {
+        grid-row:2;
+        grid-column:2;
+        grid-template-columns:100%;
+        margin-top:-5rem;
+    }
     h1 {
         @include mixins.relative (10);
         font-family: 'shrikhand', sans-serif;
@@ -86,6 +108,9 @@ main {
                 bottom:initial;
                 right:initial;
             }
+            @include mixins.responsive (desktop-xl) {
+                left:1.5rem;
+            }
         }
         @include mixins.responsive (tabs) {
             text-align:center;
@@ -93,9 +118,15 @@ main {
         }
         @include mixins.responsive (desktop) {
             background:linear-gradient(to top, lighten(map-get(maps.$colors-palette,pink),23%), lighten(map-get(maps.$colors-palette, purple),23%));
-            /*background:lighten(map-get(maps.$colors-palette, purple),25%);*/
-            padding-top:2rem;
+            padding-top:1.5rem;
             height:75px;
+        }
+        @include mixins.responsive (desktop-xl) {
+            padding-top:2rem;
+            padding-bottom:2rem;
+            height:auto;
+            border-radius: 0rem 0rem 1.5rem 1.5rem;
+            margin-bottom:6rem;
         }
     }
     .menu-restaurant-flexbox {
@@ -108,6 +139,9 @@ main {
         @include mixins.responsive (desktop) {
             margin-left:1rem;
             margin-right:1rem;
+        }
+        @include mixins.responsive (desktop-xl) {
+            flex-direction:column;
         }
     }
     .menu-restaurant__btn-order {
@@ -128,6 +162,12 @@ main {
     @include mixins.responsive (tabs) {
         width:49%;
     }
+    @include mixins.responsive (desktop-xl) {
+        width:100%;
+        padding-left:8%;
+        position:relative;
+        margin-bottom:5rem;
+    }
     h2 {
         width:2rem;
         font-size:map-get(maps.$txt-size, txt-l);
@@ -135,6 +175,23 @@ main {
         padding-bottom:0.2rem;
         margin-bottom:1rem;
         border-bottom:4px solid map-get(maps.$colors-palette, mint);
+        @include mixins.responsive (desktop) {
+            margin-bottom:2rem;
+        }
+        @include mixins.responsive (desktop-xl) {
+            transform:rotate(270deg);
+            font-size:2.5rem;
+            width:277px;
+            padding-bottom:1rem;
+            position:absolute;
+            left:-5.5rem;
+            bottom:75px;
+            text-align:center;
+            background:lighten(map-get(maps.$colors-palette, mint),20%);
+            border-bottom:initial;
+            border-left:4px solid map-get(maps.$colors-palette, mint);
+            border-radius: 0rem 1rem 1rem 0rem;
+        }    
     }
     a {
         display:flex;
@@ -148,6 +205,12 @@ main {
         @include mixins.shadow-box (84);
         @include mixins.responsive (tabs) {
             @include mixins.shadow-box (90);
+        }
+        @include mixins.responsive (desktop) {
+            margin-bottom:2rem;
+        }
+        @include mixins.responsive (desktop-xl) {
+            margin-bottom: map-get(maps.$txt-size, txt-m);
         }
         .dish__icon {
             background: map-get(maps.$colors-palette, mint);

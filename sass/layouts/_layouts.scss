@@ -36,6 +36,7 @@ header {
             font-size:1.3rem;
         }
         @include mixins.responsive (desktop-xl) {
+            grid-column:2;
             font-size:1.4rem;
         }
         &:hover {
