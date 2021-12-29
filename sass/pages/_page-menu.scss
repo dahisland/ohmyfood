@@ -102,13 +102,15 @@ main {
             bottom:0.5rem;
             right:1rem;
             @include mixins.responsive (desktop) {
-                font-size:1.6rem;
-                top:2.1rem;
+                font-size:1.4rem;
+                top:1.8rem;
                 left:1rem;
                 bottom:initial;
                 right:initial;
             }
             @include mixins.responsive (desktop-xl) {
+                font-size:1.6rem;
+                top:2.1rem;
                 left:1.5rem;
             }
         }

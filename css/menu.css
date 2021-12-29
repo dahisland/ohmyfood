@@ -392,8 +392,8 @@ main img {
 }
 @media screen and (min-width: 1224px) {
   .menu-restaurant h1 .link-menu__icon {
-    font-size: 1.6rem;
-    top: 2.1rem;
+    font-size: 1.4rem;
+    top: 1.8rem;
     left: 1rem;
     bottom: initial;
     right: initial;
@@ -401,6 +401,8 @@ main img {
 }
 @media screen and (min-width: 2000px) {
   .menu-restaurant h1 .link-menu__icon {
+    font-size: 1.6rem;
+    top: 2.1rem;
     left: 1.5rem;
   }
 }
