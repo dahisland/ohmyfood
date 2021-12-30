@@ -55,14 +55,17 @@ main {
             font-weight:map-get(maps.$txt-weight, txt-med); 
             width:150px;  
             border:none;
-            border-radius:1rem;
-            padding:0.5rem;
+            border-radius:0.5rem;
+            padding:0.3rem 0.5rem;
             &::placeholder {
-                font-size:map-get(maps.$txt-size, txt-xs);
+                font-size:0.9rem;
                 font-style: italic;
+                color:darken(map-get(maps.$colors-palette, darkshadow),60%);
             }
             &:focus {
-                outline:thin dashed map-get(maps.$colors-palette, purple);
+                outline:none;
+                color:darken(map-get(maps.$colors-palette, darkshadow),30%);
+                background:lighten(map-get(maps.$colors-palette, darkshadow),4%);
             }
         }
     }

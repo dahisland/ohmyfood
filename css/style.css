@@ -333,15 +333,18 @@ footer span {
   font-weight: 500;
   width: 150px;
   border: none;
-  border-radius: 1rem;
-  padding: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.5rem;
 }
 .reservation__localise input::placeholder {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-style: italic;
+  color: #515151;
 }
 .reservation__localise input:focus {
-  outline: thin dashed #9356DC;
+  outline: none;
+  color: #9e9e9e;
+  background: #f4f4f4;
 }
 .reservation label {
   margin-left: 0.5rem;
