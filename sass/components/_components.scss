@@ -24,6 +24,9 @@
 /* Icons "Like" */
 
 .icons-like {
+    @include mixins.absolute (50);
+    width:2rem;
+    height:2rem;
     cursor:pointer;
     &:hover .icon-like--full {
         transform:scale(1);
@@ -31,6 +34,8 @@
 }
 .icon-like {
     @include mixins.absolute (50);
+    bottom:0.3rem;
+    right:0.3rem;
     &--full {
         color:transparent;
         background-image: linear-gradient(to bottom, map-get(maps.$colors-palette,purple), map-get(maps.$colors-palette,pink));

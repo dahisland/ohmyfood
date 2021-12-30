@@ -135,6 +135,10 @@ button {
 
 /* Icons "Like" */
 .icons-like {
+  position: absolute;
+  z-index: 50;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
 }
 .icons-like:hover .icon-like--full {
@@ -144,6 +148,8 @@ button {
 .icon-like {
   position: absolute;
   z-index: 50;
+  bottom: 0.3rem;
+  right: 0.3rem;
 }
 .icon-like--full {
   color: transparent;
@@ -392,26 +398,37 @@ main img {
   font-size: 1.5rem;
   margin-bottom: 0.8rem;
 }
+.menu-restaurant h1 .icons-like {
+  top: 0rem;
+  right: 1.2rem;
+}
+@media screen and (min-width: 640px) {
+  .menu-restaurant h1 .icons-like {
+    right: initial;
+    left: 0rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .menu-restaurant h1 .icons-like {
+    top: 1.6rem;
+    left: 0.8rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .menu-restaurant h1 .icons-like {
+    top: 2rem;
+    left: 1.5rem;
+  }
+}
 .menu-restaurant h1 .icon-like {
   font-size: 1.5rem;
   line-height: 1.5rem;
-  bottom: 0.6rem;
-  right: 1rem;
+  bottom: 0.3rem;
+  right: 0.3rem;
 }
 @media screen and (min-width: 1224px) {
   .menu-restaurant h1 .icon-like {
     font-size: 1.4rem;
-    top: 1.8rem;
-    left: 1rem;
-    bottom: initial;
-    right: initial;
-  }
-}
-@media screen and (min-width: 2000px) {
-  .menu-restaurant h1 .icon-like {
-    font-size: 1.6rem;
-    top: 2.1rem;
-    left: 1.5rem;
   }
 }
 @media screen and (min-width: 640px) {

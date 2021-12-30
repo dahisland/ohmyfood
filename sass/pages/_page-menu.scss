@@ -97,22 +97,29 @@ main {
         font-weight:initial;
         font-size:1.5rem;
         margin-bottom:0.8rem;
+        .icons-like {
+            top:0rem;
+            right:1.2rem;
+            @include mixins.responsive (tabs) {
+                right:initial;
+                left:0rem;
+                }
+            @include mixins.responsive (desktop) {
+                top:1.6rem;
+                left:0.8rem;
+            }
+            @include mixins.responsive (desktop-xl) {
+                top:2rem;
+                left:1.5rem;
+            }
+        }
         .icon-like {
             font-size:1.5rem;
             line-height:1.5rem;
-            bottom:0.6rem;
-            right:1rem;
+            bottom:0.3rem;
+            right:0.3rem;
             @include mixins.responsive (desktop) {
                 font-size:1.4rem;
-                top:1.8rem;
-                left:1rem;
-                bottom:initial;
-                right:initial;
-            }
-            @include mixins.responsive (desktop-xl) {
-                font-size:1.6rem;
-                top:2.1rem;
-                left:1.5rem;
             }
         }
         @include mixins.responsive (tabs) {

@@ -53,7 +53,7 @@ main {
             font-size:map-get(maps.$txt-size, txt-m);
             line-height: map-get(maps.$txt-size, txt-m) + 0.5rem;
             font-weight:map-get(maps.$txt-weight, txt-med); 
-            width:140px;  
+            width:150px;  
             border:none;
             border-radius:1rem;
             padding:0.5rem;
@@ -310,19 +310,23 @@ main {
     border-radius:0.1rem;
 }
 .icons-like {
-    cursor:pointer;
+    bottom:1.7rem;
+    right:1.2rem;
     &:hover .icon-like--full {
         transform:scale(1);
     }
+    @include mixins.responsive (desktop-xl) {
+        bottom:0.2rem;
+        right:50%;
+        margin-right:-1rem;
+    }    
 }
 .icon-like {
     font-size:map-get(maps.$txt-size, txt-xl);
-    bottom:1.7rem;
-    right:1.2rem;
     @include mixins.responsive (desktop-xl) {
-        bottom:0.5rem;
-        right:50%;
-        margin-right:-0.6rem;
-    }    
+        font-size:1.6rem;
+        bottom:0.2rem;
+        right:0.2rem;
+        }    
 }
 
