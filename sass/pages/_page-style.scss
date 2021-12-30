@@ -278,7 +278,7 @@ main {
     }
 }
 .card__img img {
-    height:200px;
+    height:180px;
     @include mixins.responsive (tabs) {
         height:220px;
     }    

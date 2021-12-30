@@ -400,7 +400,7 @@ main img {
 }
 .menu-restaurant h1 .icons-like {
   top: 0rem;
-  right: 1.2rem;
+  left: 92%;
 }
 @media screen and (min-width: 640px) {
   .menu-restaurant h1 .icons-like {
@@ -421,7 +421,7 @@ main img {
   }
 }
 .menu-restaurant h1 .icon-like {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.5rem;
   bottom: 0.3rem;
   right: 0.3rem;
