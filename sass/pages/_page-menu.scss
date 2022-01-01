@@ -6,55 +6,80 @@
 header {
     box-shadow:initial;
     @include mixins.responsive (desktop) {
+        /* Media queries Desktop 
+        for <header> */
         box-shadow: 0px 2px 3px lighten(map-get(maps.$colors-palette, purple),25%);
     } 
     @include mixins.responsive (desktop-xl) {
+        /* Media queries Large screens desktops 
+        for <header> */
         box-shadow: initial;
     }       
 }
 
 /* MAIN */
-
 main {
     background:map-get(maps.$colors-palette, darkshadow);
     @include mixins.responsive (tabs) {
+        /* Media queries Tabloids 
+        for <main> */
         background: map-get(maps.$colors-palette, white);
     }       
     @include mixins.responsive (desktop) {
+        /* Media queries Desktop 
+        for <main> */
         grid-template-rows: 75px auto;
     } 
     @include mixins.responsive (desktop-xl) {
+        /* Media queries Large screens desktops 
+        for <main> */
         grid-template-rows: auto auto;
     }             
     picture {
+        /* <picture> - picture illustration of page 
+        in <main> */
         @include mixins.responsive (tabs) {
+            /* Media queries Tabloids 
+            for <main> --> <picture> */
             grid-column:1 / span 2;
         }
         @include mixins.responsive (desktop) {
+            /* Media queries Desktop 
+            for <main> --> <picture> */
             grid-column:1;
             grid-row:2;
             @include mixins.relative (30);
         }
         @include mixins.responsive (desktop-xl) {
+            /* Media queries Large screens desktops 
+            for <main> --> <picture> */
             grid-column:2;
             grid-row:1;
             @include mixins.relative (10);
         }
     }
     img {
+        /* <img> - image 
+        in <main> + <picture> */
         height:270px;
         object-position: bottom;
         @include mixins.responsive (tabs) {
+            /* Media queries Tabloids 
+            for <main> + <picture> --> <img> */
             height:350px;
             object-position: center;
         }
         @include mixins.responsive (desktop) {
+            /* Media queries Desktop 
+            for <main> + <picture> --> <img> */
             height:683px;
             object-position: center;
             border-radius:0rem 0rem 1.5rem 0rem;
             @include mixins.shadow-box (70%);
         }
         @include mixins.responsive (desktop-xl) {
+            /* Media queries Large screens desktops 
+            for <main> + <picture> --> <img> */
             height:560px;
             border-radius:initial;
             box-shadow:initial;
@@ -65,6 +90,7 @@ main {
 /* SECTION MENU RESTAURANTS */
 
 .menu-restaurant {
+    /* <section> - section menu for restaurants */
     background:map-get(maps.$colors-palette, darkshadow);
     @include mixins.padding-page;
     padding-top:2rem;
@@ -72,11 +98,15 @@ main {
     border-radius:2rem 2rem 0rem 0rem;
     margin-top:-3rem;
     @include mixins.responsive (tabs) {
+        /* Media queries Tabloids 
+        for <section menu restaurants> */
         grid-column:1 / span 2;
         margin-top:-5rem;
         background:map-get(maps.$colors-palette, white);
     }
     @include mixins.responsive (desktop) {
+        /* Media queries Desktop 
+        for <section menu restaurants> */
         grid-row:1 / span 2;
         display:grid;
         grid-template-columns:30% 70%;
@@ -86,99 +116,144 @@ main {
         padding-right:0rem;
     }
     @include mixins.responsive (desktop-xl) {
+        /* Media queries Large screens desktops 
+        for <section menu restaurants> */
         grid-row:2;
         grid-column:2;
         grid-template-columns:100%;
         margin-top:-5rem;
     }
     h1 {
+        /* <h1> - title section 
+        in <section menu restaurants> */
         @include mixins.relative (10);
         font-family: 'shrikhand', sans-serif;
         font-weight:initial;
         font-size:1.5rem;
         margin-bottom:0.8rem;
-        .icons-like {
-            top:0rem;
-            left:92%;
-            @include mixins.responsive (tabs) {
-                right:initial;
-                left:0rem;
-                }
-            @include mixins.responsive (desktop) {
-                top:1.6rem;
-                left:0.8rem;
-            }
-            @include mixins.responsive (desktop-xl) {
-                top:2rem;
-                left:1.5rem;
-            }
-        }
-        .icon-like {
-            font-size:1.4rem;
-            line-height:1.5rem;
-            bottom:0.3rem;
-            right:0.3rem;
-            @include mixins.responsive (desktop) {
-                font-size:1.4rem;
-            }
-        }
         @include mixins.responsive (tabs) {
+            /* Media queries Tabloids 
+            for <section menu restaurants> --> <h1> */
             text-align:center;
             margin-bottom:2rem;
         }
         @include mixins.responsive (desktop) {
+            /* Media queries Desktop 
+            for <section menu restaurants> --> <h1> */
             background:linear-gradient(to top, lighten(map-get(maps.$colors-palette,pink),23%), lighten(map-get(maps.$colors-palette, purple),23%));
             padding-top:1.5rem;
             height:75px;
         }
         @include mixins.responsive (desktop-xl) {
+            /* Media queries Large screens desktops 
+            for <section menu restaurants> --> <h1> */
             padding-top:2rem;
             padding-bottom:2rem;
             height:auto;
             border-radius: 0rem 0rem 1.5rem 1.5rem;
             margin-bottom:6rem;
         }
+        .icons-like {
+            /* <div> - container for icons "Like" 
+            in <section menu-restaurants> + <h1> */
+            top:0rem;
+            left:92%;
+            @include mixins.responsive (tabs) {
+                /* Media queries Tabloids 
+                for <section menu restaurants> --> <div icons like> */
+                right:initial;
+                left:0rem;
+                }
+            @include mixins.responsive (desktop) {
+                /* Media queries Desktop 
+                for <section menu restaurants> --> <div icons like> */
+                top:1.6rem;
+                left:0.8rem;
+            }
+            @include mixins.responsive (desktop-xl) {
+                /* Media queries Large screens desktops 
+                for <section menu restaurants> --> <div icons like> */
+                top:2rem;
+                left:1.5rem;
+            }
+        }
+        .icon-like {
+            /* <span> - icon "Like" 
+            in <section menu-restaurants> + <h1> + <div icons like> */
+            font-size:1.4rem;
+            line-height:1.5rem;
+            bottom:0.3rem;
+            right:0.3rem;
+            @include mixins.responsive (desktop) {
+                /* Media queries Desktop 
+                for <section menu restaurants> + <div icons like> --> <span icon like> */
+                font-size:1.4rem;
+            }
+        }
     }
     .menu-restaurant-flexbox {
+        /* <div> - container flexbox for articles 
+        in <section menu restaurants> */
         @include mixins.responsive (tabs) {
+            /* Media queries Tabloids 
+            for <section menu restaurants> --> <div flexbox> */
             display:flex;
             flex-wrap:wrap;
             justify-content:space-between;
             align-items:center;
         }
         @include mixins.responsive (desktop) {
+            /* Media queries Desktop 
+            for <section menu restaurants> --> <div flexbox> */
             margin-left:1rem;
             margin-right:1rem;
         }
         @include mixins.responsive (desktop-xl) {
+            /* Media queries Large screens desktops 
+            for <section menu restaurants> --> <div flexbox> */
             flex-direction:column;
         }
     }
     .menu-restaurant__btn-order {
+        /* <div> - container for button order 
+        in <section menu restaurants> + <div flexbox> */
         @include mixins.responsive (tabs) {
+            /* Media queries Tabloids for <section menu restaurants> + <div flexbox> --> <div for button> */
             width:49%;
         }
     }
     .btn-gradient {
+        /* <button> - button with background linear-gradient for order 
+        in <section menu restaurants> + <div flexbox> + <div for button> */
         padding:0.8rem 3rem;
         margin-top:3rem;
         @include mixins.responsive (tabs) {
+            /* Media queries Tabloids 
+            for <section menu restaurants> + <div flexbox> + <div for button> --> <button gradient> */
             margin-top:0rem;
         }
     }
 }
 .menu-restaurant__dish-type {
+    /* <article> - container for types of dishes 
+    in <section menu restaurants> + <div flexbox> */
     margin-bottom:2rem;
     @include mixins.responsive (tabs) {
+        /* Media queries Tabloids 
+        for <section menu restaurants> + <div flexbox> --> <article type dish> */
         width:49%;
     }
     @include mixins.responsive (desktop-xl) {
+        /* Media queries Large screens desktops 
+        for <section menu restaurants> + <div flexbox> --> <article type dish> */
         width:100%;
         padding-left:8%;
         position:relative;
         margin-bottom:5rem;
     }
     h2 {
+        /* <h2> - title of article 
+        in <section menu restaurants> + <div flexbox> + <article type dish> */
         width:2rem;
         font-size:map-get(maps.$txt-size, txt-l);
         font-weight:map-get(maps.$txt-weight, txt-light);
@@ -186,9 +261,13 @@ main {
         margin-bottom:1rem;
         border-bottom:4px solid map-get(maps.$colors-palette, mint);
         @include mixins.responsive (desktop) {
+            /* Media queries Desktop 
+            for <section menu restaurants> + <div flexbox> + <article type dish> --> <h2> */
             margin-bottom:2rem;
         }
         @include mixins.responsive (desktop-xl) {
+            /* Media queries Large screens desktops 
+            for <section menu restaurants> + <div flexbox> + <article type dish> --> <h2> */
             transform:rotate(270deg);
             font-size:2.5rem;
             width:277px;
@@ -204,6 +283,8 @@ main {
         }    
     }
     a {
+        /* <a> - link dish 
+        in <section menu restaurants> + <div flexbox> + <article type dish> */
         display:flex;
         justify-content: space-between;
         align-items: center;
@@ -214,26 +295,40 @@ main {
         margin-bottom: map-get(maps.$txt-size, txt-m);
         @include mixins.shadow-box (84);
         @include mixins.responsive (tabs) {
+            /* Media queries Tabloids 
+            for <section menu restaurants> + <div flexbox> + <article type dish> --> <a dish> */
             @include mixins.shadow-box (90);
         }
         @include mixins.responsive (desktop) {
+            /* Media queries Desktop 
+            for <section menu restaurants> + <div flexbox> + <article type dish> --> <a dish> */
             margin-bottom:2rem;
         }
         @include mixins.responsive (desktop-xl) {
+            /* Media queries Large screens desktops 
+            for <section menu restaurants> + <div flexbox> + <article type dish> --> <a dish> */
             margin-bottom: map-get(maps.$txt-size, txt-m);
         }
         .dish__icon {
+            /* <div> - container for icon selection dish 
+            in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
             background: map-get(maps.$colors-palette, mint);
             padding:1.5rem 0rem;
             color:map-get(maps.$colors-palette, white);
             font-size:1.5rem;
             text-align:center;
             width:0px;
-            transition:0.6s;
+            transition:0.6s ease-in-out;
+        }
+        .icon__checked {
+            transition:transform 0.6s ease-in-out;
+            transform:rotate(0turn);
         }
         &:hover {
             @include mixins.shadow-box (75);
             @include mixins.responsive (tabs) {
+                /* Media queries Tabloids
+                for <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> --> <div icon dish> */
                 @include mixins.shadow-box (85);
             }       
         }
@@ -241,27 +336,36 @@ main {
             width:80px;
         }
         &:hover .icon__checked {
-            transition:transform 0.6s ease-in-out;
+            /* <span> - icon checked
+            in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div icon dish> */
             transform:rotate(2turn);
         }
     }
 }
 .dish__dish-description {
+    /* <div> - text description of dish 
+    in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
     width:100%;
     padding:0rem 1rem 0rem 0.5rem;
     h3 {
+        /* <h3> - title of dish description 
+        in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> */
         font-size:map-get(maps.$txt-size, txt-l);
         height:1.4rem;
         overflow:hidden;
         text-overflow: ellipsis;
     }
     .dish-description__price {
+        /* <div> - container for text description + price of dish 
+        in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> */
         display:flex;
         justify-content:space-between;
         height:1.4rem;
         overflow: hidden;
         text-overflow: ellipsis;
         p:nth-child(2) {
+            /* <p> - text of price 
+            in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> + <div price> */
             font-weight:map-get(maps.$txt-weight, txt-bold);
         }
 

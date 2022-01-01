@@ -279,11 +279,15 @@ header {
 }
 @media screen and (min-width: 1224px) {
   header {
+    /* Media queries Desktop 
+    for <header> */
     box-shadow: 0px 2px 3px #d7c0f2;
   }
 }
 @media screen and (min-width: 2000px) {
   header {
+    /* Media queries Large screens desktops 
+    for <header> */
     box-shadow: initial;
   }
 }
@@ -294,26 +298,40 @@ main {
 }
 @media screen and (min-width: 640px) {
   main {
+    /* Media queries Tabloids 
+    for <main> */
     background: #fff;
   }
 }
 @media screen and (min-width: 1224px) {
   main {
+    /* Media queries Desktop 
+    for <main> */
     grid-template-rows: 75px auto;
   }
 }
 @media screen and (min-width: 2000px) {
   main {
+    /* Media queries Large screens desktops 
+    for <main> */
     grid-template-rows: auto auto;
   }
 }
+main picture {
+  /* <picture> - picture illustration of page 
+  in <main> */
+}
 @media screen and (min-width: 640px) {
   main picture {
+    /* Media queries Tabloids 
+    for <main> --> <picture> */
     grid-column: 1/span 2;
   }
 }
 @media screen and (min-width: 1224px) {
   main picture {
+    /* Media queries Desktop 
+    for <main> --> <picture> */
     grid-column: 1;
     grid-row: 2;
     position: relative;
@@ -322,6 +340,8 @@ main {
 }
 @media screen and (min-width: 2000px) {
   main picture {
+    /* Media queries Large screens desktops 
+    for <main> --> <picture> */
     grid-column: 2;
     grid-row: 1;
     position: relative;
@@ -329,17 +349,23 @@ main {
   }
 }
 main img {
+  /* <img> - image 
+  in <main> + <picture> */
   height: 270px;
   object-position: bottom;
 }
 @media screen and (min-width: 640px) {
   main img {
+    /* Media queries Tabloids 
+    for <main> + <picture> --> <img> */
     height: 350px;
     object-position: center;
   }
 }
 @media screen and (min-width: 1224px) {
   main img {
+    /* Media queries Desktop 
+    for <main> + <picture> --> <img> */
     height: 683px;
     object-position: center;
     border-radius: 0rem 0rem 1.5rem 0rem;
@@ -348,6 +374,8 @@ main img {
 }
 @media screen and (min-width: 2000px) {
   main img {
+    /* Media queries Large screens desktops 
+    for <main> + <picture> --> <img> */
     height: 560px;
     border-radius: initial;
     box-shadow: initial;
@@ -356,6 +384,7 @@ main img {
 
 /* SECTION MENU RESTAURANTS */
 .menu-restaurant {
+  /* <section> - section menu for restaurants */
   background: #eaeaea;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -366,6 +395,8 @@ main img {
 }
 @media screen and (min-width: 640px) {
   .menu-restaurant {
+    /* Media queries Tabloids 
+    for <section menu restaurants> */
     grid-column: 1/span 2;
     margin-top: -5rem;
     background: #fff;
@@ -373,6 +404,8 @@ main img {
 }
 @media screen and (min-width: 1224px) {
   .menu-restaurant {
+    /* Media queries Desktop 
+    for <section menu restaurants> */
     grid-row: 1/span 2;
     display: grid;
     grid-template-columns: 30% 70%;
@@ -384,6 +417,8 @@ main img {
 }
 @media screen and (min-width: 2000px) {
   .menu-restaurant {
+    /* Media queries Large screens desktops 
+    for <section menu restaurants> */
     grid-row: 2;
     grid-column: 2;
     grid-template-columns: 100%;
@@ -391,6 +426,8 @@ main img {
   }
 }
 .menu-restaurant h1 {
+  /* <h1> - title section 
+  in <section menu restaurants> */
   position: relative;
   z-index: 10;
   font-family: "shrikhand", sans-serif;
@@ -398,47 +435,18 @@ main img {
   font-size: 1.5rem;
   margin-bottom: 0.8rem;
 }
-.menu-restaurant h1 .icons-like {
-  top: 0rem;
-  left: 92%;
-}
-@media screen and (min-width: 640px) {
-  .menu-restaurant h1 .icons-like {
-    right: initial;
-    left: 0rem;
-  }
-}
-@media screen and (min-width: 1224px) {
-  .menu-restaurant h1 .icons-like {
-    top: 1.6rem;
-    left: 0.8rem;
-  }
-}
-@media screen and (min-width: 2000px) {
-  .menu-restaurant h1 .icons-like {
-    top: 2rem;
-    left: 1.5rem;
-  }
-}
-.menu-restaurant h1 .icon-like {
-  font-size: 1.4rem;
-  line-height: 1.5rem;
-  bottom: 0.3rem;
-  right: 0.3rem;
-}
-@media screen and (min-width: 1224px) {
-  .menu-restaurant h1 .icon-like {
-    font-size: 1.4rem;
-  }
-}
 @media screen and (min-width: 640px) {
   .menu-restaurant h1 {
+    /* Media queries Tabloids 
+    for <section menu restaurants> --> <h1> */
     text-align: center;
     margin-bottom: 2rem;
   }
 }
 @media screen and (min-width: 1224px) {
   .menu-restaurant h1 {
+    /* Media queries Desktop 
+    for <section menu restaurants> --> <h1> */
     background: linear-gradient(to top, #ffeefa, #d1b7f0);
     padding-top: 1.5rem;
     height: 75px;
@@ -446,6 +454,8 @@ main img {
 }
 @media screen and (min-width: 2000px) {
   .menu-restaurant h1 {
+    /* Media queries Large screens desktops 
+    for <section menu restaurants> --> <h1> */
     padding-top: 2rem;
     padding-bottom: 2rem;
     height: auto;
@@ -453,8 +463,59 @@ main img {
     margin-bottom: 6rem;
   }
 }
+.menu-restaurant h1 .icons-like {
+  /* <div> - container for icons "Like" 
+  in <section menu-restaurants> + <h1> */
+  top: 0rem;
+  left: 92%;
+}
+@media screen and (min-width: 640px) {
+  .menu-restaurant h1 .icons-like {
+    /* Media queries Tabloids 
+    for <section menu restaurants> --> <div icons like> */
+    right: initial;
+    left: 0rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .menu-restaurant h1 .icons-like {
+    /* Media queries Desktop 
+    for <section menu restaurants> --> <div icons like> */
+    top: 1.6rem;
+    left: 0.8rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .menu-restaurant h1 .icons-like {
+    /* Media queries Large screens desktops 
+    for <section menu restaurants> --> <div icons like> */
+    top: 2rem;
+    left: 1.5rem;
+  }
+}
+.menu-restaurant h1 .icon-like {
+  /* <span> - icon "Like" 
+  in <section menu-restaurants> + <h1> + <div icons like> */
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  bottom: 0.3rem;
+  right: 0.3rem;
+}
+@media screen and (min-width: 1224px) {
+  .menu-restaurant h1 .icon-like {
+    /* Media queries Desktop 
+    for <section menu restaurants> + <div icons like> --> <span icon like> */
+    font-size: 1.4rem;
+  }
+}
+.menu-restaurant .menu-restaurant-flexbox {
+  /* <div> - container flexbox for articles 
+  in <section menu restaurants> */
+}
 @media screen and (min-width: 640px) {
   .menu-restaurant .menu-restaurant-flexbox {
+    /* Media queries Tabloids 
+    for <section menu restaurants> --> <div flexbox> */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -463,40 +524,59 @@ main img {
 }
 @media screen and (min-width: 1224px) {
   .menu-restaurant .menu-restaurant-flexbox {
+    /* Media queries Desktop 
+    for <section menu restaurants> --> <div flexbox> */
     margin-left: 1rem;
     margin-right: 1rem;
   }
 }
 @media screen and (min-width: 2000px) {
   .menu-restaurant .menu-restaurant-flexbox {
+    /* Media queries Large screens desktops 
+    for <section menu restaurants> --> <div flexbox> */
     flex-direction: column;
   }
 }
+.menu-restaurant .menu-restaurant__btn-order {
+  /* <div> - container for button order 
+  in <section menu restaurants> + <div flexbox> */
+}
 @media screen and (min-width: 640px) {
   .menu-restaurant .menu-restaurant__btn-order {
+    /* Media queries Tabloids for <section menu restaurants> + <div flexbox> --> <div for button> */
     width: 49%;
   }
 }
 .menu-restaurant .btn-gradient {
+  /* <button> - button with background linear-gradient for order 
+  in <section menu restaurants> + <div flexbox> + <div for button> */
   padding: 0.8rem 3rem;
   margin-top: 3rem;
 }
 @media screen and (min-width: 640px) {
   .menu-restaurant .btn-gradient {
+    /* Media queries Tabloids 
+    for <section menu restaurants> + <div flexbox> + <div for button> --> <button gradient> */
     margin-top: 0rem;
   }
 }
 
 .menu-restaurant__dish-type {
+  /* <article> - container for types of dishes 
+  in <section menu restaurants> + <div flexbox> */
   margin-bottom: 2rem;
 }
 @media screen and (min-width: 640px) {
   .menu-restaurant__dish-type {
+    /* Media queries Tabloids 
+    for <section menu restaurants> + <div flexbox> --> <article type dish> */
     width: 49%;
   }
 }
 @media screen and (min-width: 2000px) {
   .menu-restaurant__dish-type {
+    /* Media queries Large screens desktops 
+    for <section menu restaurants> + <div flexbox> --> <article type dish> */
     width: 100%;
     padding-left: 8%;
     position: relative;
@@ -504,6 +584,8 @@ main img {
   }
 }
 .menu-restaurant__dish-type h2 {
+  /* <h2> - title of article 
+  in <section menu restaurants> + <div flexbox> + <article type dish> */
   width: 2rem;
   font-size: 1.1rem;
   font-weight: 300;
@@ -513,11 +595,15 @@ main img {
 }
 @media screen and (min-width: 1224px) {
   .menu-restaurant__dish-type h2 {
+    /* Media queries Desktop 
+    for <section menu restaurants> + <div flexbox> + <article type dish> --> <h2> */
     margin-bottom: 2rem;
   }
 }
 @media screen and (min-width: 2000px) {
   .menu-restaurant__dish-type h2 {
+    /* Media queries Large screens desktops 
+    for <section menu restaurants> + <div flexbox> + <article type dish> --> <h2> */
     transform: rotate(270deg);
     font-size: 2.5rem;
     width: 277px;
@@ -533,6 +619,8 @@ main img {
   }
 }
 .menu-restaurant__dish-type a {
+  /* <a> - link dish 
+  in <section menu restaurants> + <div flexbox> + <article type dish> */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -545,33 +633,47 @@ main img {
 }
 @media screen and (min-width: 640px) {
   .menu-restaurant__dish-type a {
+    /* Media queries Tabloids 
+    for <section menu restaurants> + <div flexbox> + <article type dish> --> <a dish> */
     box-shadow: 0px 5px 8px #e6e6e6;
   }
 }
 @media screen and (min-width: 1224px) {
   .menu-restaurant__dish-type a {
+    /* Media queries Desktop 
+    for <section menu restaurants> + <div flexbox> + <article type dish> --> <a dish> */
     margin-bottom: 2rem;
   }
 }
 @media screen and (min-width: 2000px) {
   .menu-restaurant__dish-type a {
+    /* Media queries Large screens desktops 
+    for <section menu restaurants> + <div flexbox> + <article type dish> --> <a dish> */
     margin-bottom: 1rem;
   }
 }
 .menu-restaurant__dish-type a .dish__icon {
+  /* <div> - container for icon selection dish 
+  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
   background: #99E2D0;
   padding: 1.5rem 0rem;
   color: #fff;
   font-size: 1.5rem;
   text-align: center;
   width: 0px;
-  transition: 0.6s;
+  transition: 0.6s ease-in-out;
+}
+.menu-restaurant__dish-type a .icon__checked {
+  transition: transform 0.6s ease-in-out;
+  transform: rotate(0turn);
 }
 .menu-restaurant__dish-type a:hover {
   box-shadow: 0px 5px 8px #bfbfbf;
 }
 @media screen and (min-width: 640px) {
   .menu-restaurant__dish-type a:hover {
+    /* Media queries Tabloids
+    for <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> --> <div icon dish> */
     box-shadow: 0px 5px 8px #d9d9d9;
   }
 }
@@ -579,21 +681,28 @@ main img {
   width: 80px;
 }
 .menu-restaurant__dish-type a:hover .icon__checked {
-  transition: transform 0.6s ease-in-out;
+  /* <span> - icon checked
+  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div icon dish> */
   transform: rotate(2turn);
 }
 
 .dish__dish-description {
+  /* <div> - text description of dish 
+  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
   width: 100%;
   padding: 0rem 1rem 0rem 0.5rem;
 }
 .dish__dish-description h3 {
+  /* <h3> - title of dish description 
+  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> */
   font-size: 1.1rem;
   height: 1.4rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .dish__dish-description .dish-description__price {
+  /* <div> - container for text description + price of dish 
+  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> */
   display: flex;
   justify-content: space-between;
   height: 1.4rem;
@@ -601,6 +710,8 @@ main img {
   text-overflow: ellipsis;
 }
 .dish__dish-description .dish-description__price p:nth-child(2) {
+  /* <p> - text of price 
+  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> + <div price> */
   font-weight: 700;
 }
 
