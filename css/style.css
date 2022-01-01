@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body, button {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -276,6 +277,7 @@ footer span {
 /* HEADER */
 @media screen and (min-width: 2000px) {
   header {
+    /* Media queries Large screens desktops for <header> */
     box-shadow: initial;
   }
 }
@@ -283,29 +285,34 @@ footer span {
 /* MAIN */
 @media screen and (min-width: 1224px) {
   main {
+    /* Media queries Desktop for <main> */
     grid-template-rows: 265px auto;
     grid-row-gap: 1.2rem;
   }
 }
 @media screen and (min-width: 2000px) {
   main {
+    /* Media queries Large screens desktops for <main> */
     grid-template-rows: repeat(3, auto);
   }
 }
 @media screen and (min-width: 640px) {
   main section {
+    /* Media queries Tabloids for <main> --> <section> */
     padding-bottom: 1rem;
   }
 }
 
 /* SECTION RESERVATION */
 .reservation {
+  /* <section reservation> */
   text-align: center;
   position: relative;
   z-index: 10;
 }
 @media screen and (min-width: 640px) {
   .reservation {
+    /* Media queries Tabloids for <section reservation> */
     box-shadow: 0px 5px 8px #e8e8e8;
     border-radius: 0rem 0rem 1rem 1rem;
     padding-bottom: 0rem;
@@ -313,12 +320,14 @@ footer span {
 }
 @media screen and (min-width: 2000px) {
   .reservation {
+    /* Media queries Large screens desktops for <section reservation> */
     grid-column: 2;
     box-shadow: 0px 5px 0px #f6f6f6;
     border-radius: 0rem;
   }
 }
 .reservation__localise {
+  /* <form> - form for localisation search in <section reservation> */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,6 +335,7 @@ footer span {
   background: #eaeaea;
 }
 .reservation__localise input {
+  /* <input> - input type search in <section reservation> + <form localise> */
   background: #eaeaea;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -347,43 +357,52 @@ footer span {
   background: #f4f4f4;
 }
 .reservation label {
+  /* <label> - label for icon input in <section reservation> + <form localise> */
   margin-left: 0.5rem;
   padding: 0rem 0.5rem;
   vertical-align: top;
 }
 @media screen and (min-width: 640px) {
   .reservation label {
+    /* Media queries Tabloids for <section reservation> + <form localise> --> <label> */
     margin-left: 1.5rem;
   }
 }
 @media screen and (min-width: 2000px) {
   .reservation label {
+    /* Media queries Large screens desktops for <section reservation> + <form localise> --> <label> */
     margin-left: 0.5rem;
   }
 }
 .reservation__explore {
+  /* <div> - container for text and component exploration in <section reservation> */
   padding: 0.5rem 1rem 3rem 1rem;
   background: #f6f6f6;
 }
 @media screen and (min-width: 640px) {
   .reservation__explore {
+    /* Media queries Tabloids for <section reservation> --> <div explore> */
     height: 273px;
   }
 }
 @media screen and (min-width: 1224px) {
   .reservation__explore {
+    /* Media queries Desktop for <section reservation> --> <div explore> */
     height: auto;
   }
 }
 .reservation__explore p {
+  /* <p> - presentation text in <section reservation> + <div explore> */
   padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 640px) {
   .reservation__explore p {
+    /* Media queries Tabloids for <section reservation> + <div explore> --> <p> */
     padding-bottom: 2.5rem;
   }
 }
 .reservation h1 {
+  /* <h1> - Title for section in <section reservation> + <div explore> */
   padding: 1.5rem 3rem 0.5rem 3rem;
   font-size: 1.4rem;
   font-weight: 700;
@@ -391,6 +410,7 @@ footer span {
 
 /* SECTION FUNCTIONING */
 .functioning {
+  /* <section functioning> */
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
@@ -398,11 +418,13 @@ footer span {
 }
 @media screen and (min-width: 640px) {
   .functioning {
+    /* Media queries Tabloids for <section functioning> */
     justify-content: space-between;
   }
 }
 @media screen and (min-width: 1224px) {
   .functioning {
+    /* Media queries Desktops for <section functioning> */
     padding-left: 0rem;
     padding-right: 0rem;
     grid-row: 2;
@@ -410,6 +432,7 @@ footer span {
 }
 @media screen and (min-width: 2000px) {
   .functioning {
+    /* Media queries Large screens desktops for <section functioning> */
     grid-column: 2;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -417,35 +440,44 @@ footer span {
   }
 }
 .functioning ol {
+  /* <ol> - list of steps in <section functioning> */
   font-weight: 500;
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 640px) {
   .functioning ol {
+    /* Media queries Tabloids for <section functioning> --> <ol> */
     justify-content: space-between;
     padding-bottom: 0.5rem;
   }
 }
 @media screen and (min-width: 2000px) {
   .functioning ol {
+    /* Media queries Large screens desktops for <section functioning> --> <ol> */
     padding-bottom: 0rem;
   }
 }
+.functioning h2 {
+  /* <h2> - title of <section functioning> */
+}
 @media screen and (min-width: 640px) {
   .functioning h2 {
+    /* Media queries Tabloids for <section functioning> --> <h2> */
     text-align: center;
     padding-bottom: 1.9rem;
   }
 }
 @media screen and (min-width: 1224px) {
   .functioning h2 {
+    /* Media queries Desktops for <section functioning> --> <h2> */
     padding-bottom: 3rem;
     padding-top: 3rem;
   }
 }
 
 .instructions__step {
+  /* <li> - step in <section functioning> + <ol> */
   padding: 1.5rem 2rem 1.5rem 2rem;
   margin-bottom: 1rem;
   margin-left: 1rem;
@@ -459,6 +491,7 @@ footer span {
 }
 @media screen and (min-width: 640px) {
   .instructions__step {
+    /* Media queries Tabloids for <section functioning> + <ol> --> <li steps> */
     flex-direction: column;
     align-items: center;
     margin-left: 0rem;
@@ -469,21 +502,25 @@ footer span {
 }
 @media screen and (min-width: 1224px) {
   .instructions__step {
+    /* Media queries Desktop for <section functioning> + <ol> --> <li steps> */
     margin-bottom: 2rem;
     padding: 2rem 2rem 1.2rem 2rem;
   }
 }
 @media screen and (min-width: 2000px) {
   .instructions__step {
+    /* Media queries Large screens desktops for <section functioning> + <ol> --> <li steps> */
     margin-bottom: 2.5rem;
     padding: 1.5rem 2rem 1.5rem 2rem;
   }
 }
 .instructions__step:nth-child(3) {
+  /* <li> - third step "déguster" in <section functioning> + <ol> */
   background: #f5edff;
 }
 
 .step__number {
+  /* <span> - list numbers for steps in <section functioning> + <ol> + <li steps> */
   color: #fff;
   background: #9356DC;
   border-radius: 1rem;
@@ -500,6 +537,7 @@ footer span {
 }
 @media screen and (min-width: 640px) {
   .step__number {
+    /* Media queries Tabloids for <section functioning> + <ol> --> <li steps> */
     left: inherit;
     top: -10px;
     width: 4rem;
@@ -507,11 +545,13 @@ footer span {
 }
 @media screen and (min-width: 2000px) {
   .step__number {
+    /* Media queries Large screens desktops for <section functioning> + <ol> --> <li steps> */
     top: -0.7rem;
   }
 }
 
 .step__icon {
+  /* <span> - icons for steps in <section functioning> + <ol> + <li steps> */
   width: 40px;
   font-size: 1.1rem;
 }
@@ -524,6 +564,7 @@ footer span {
 
 /* SECTION RESTAURANTS */
 .restaurants {
+  /* <section restaurants> */
   padding-left: 1rem;
   padding-right: 1rem;
   background: #f6f6f6;
@@ -531,6 +572,7 @@ footer span {
 }
 @media screen and (min-width: 640px) {
   .restaurants {
+    /* Media queries Tabloids for <section restaurants> */
     grid-column: 1/span 2;
     background: #fff;
     padding-top: 0rem;
@@ -538,6 +580,7 @@ footer span {
 }
 @media screen and (min-width: 1224px) {
   .restaurants {
+    /* Media queries Desktop for <section restaurants> */
     grid-row: 1/span 3;
     grid-column: 2;
     display: flex;
@@ -547,39 +590,49 @@ footer span {
 }
 @media screen and (min-width: 2000px) {
   .restaurants {
+    /* Media queries Large screens desktops for <section restaurants> */
     grid-column: 2;
     grid-row: 3/span 3;
   }
 }
+.restaurants h2 {
+  /* <h2> title of <section restaurants> */
+}
 @media screen and (min-width: 640px) {
   .restaurants h2 {
+    /* Media queries Tabloids for <section restaurants> --> <h2> */
     text-align: center;
     padding-bottom: 2rem;
   }
 }
 @media screen and (min-width: 1224px) {
   .restaurants h2 {
+    /* Media queries Desktop for <section restaurants> --> <h2> */
     padding-top: 0.8rem;
     padding-bottom: 2rem;
   }
 }
 .restaurants-flexbox {
+  /* <div> - flexbox for cards in <section restaurants> */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 640px) {
   .restaurants-flexbox {
+    /* Media queries Tabloids for <section restaurants> --> <div flexbox> */
     flex-direction: row;
     justify-content: space-between;
   }
 }
 @media screen and (min-width: 2000px) {
   .restaurants-flexbox {
+    /* Media queries Large screens desktops for <section restaurants> --> <div flexbox> */
     flex-direction: column;
   }
 }
 .restaurants__link-menu {
+  /* <a> - card in <sections restaurants> + <div flexbox> */
   display: block;
   border-radius: 1rem;
   overflow: hidden;
@@ -591,17 +644,20 @@ footer span {
 }
 @media screen and (min-width: 640px) {
   .restaurants__link-menu {
+    /* Media queries Tabloids for <section restaurants> + <div flexbox> --> <a links cards> */
     width: 48%;
     margin-bottom: 1.5rem;
   }
 }
 @media screen and (min-width: 1224px) {
   .restaurants__link-menu {
+    /* Media queries Desktop for <section restaurants> + <div flexbox> --> <a links cards> */
     margin-bottom: 3rem;
   }
 }
 @media screen and (min-width: 2000px) {
   .restaurants__link-menu {
+    /* Media queries Large screens desktops for <section restaurants> + <div flexbox> --> <a links cards> */
     width: 100%;
   }
 }
@@ -613,37 +669,44 @@ footer span {
 }
 
 .card__img img {
+  /* <img> - image in <section restaurants> + <div flexbox> + <a links cards> + <figure> + <picture> */
   height: 180px;
 }
 @media screen and (min-width: 640px) {
   .card__img img {
+    /* Media queries Tabloids for <section restaurants> + <div flexbox> + <a links cards> + <figure> + <picture> --> <img> */
     height: 220px;
   }
 }
 @media screen and (min-width: 1224px) {
   .card__img img {
+    /* Media queries Desktop for <section restaurants> + <div flexbox> + <a links cards> + <figure> + <picture> --> <img> */
     height: 228px;
   }
 }
 @media screen and (min-width: 2000px) {
   .card__img img {
+    /* Media queries Large screens desktops for <section restaurants> + <div flexbox> + <a links cards> + <figure> + <picture> --> <img> */
     height: 350px;
   }
 }
 
 .card__caption {
+  /* <figcaption> - caption in <section restaurants> + <div flexbox> + <a links cards> + <figure> */
   padding: 0.6rem 0.8rem 0.8rem 0.8rem;
   line-height: 1.5rem;
   background: #fff;
 }
 @media screen and (min-width: 2000px) {
   .card__caption {
+    /* Media queries Large screens desktops for <section restaurants> + <div flexbox> + <a links cards> + <figure> --> <figcaption> */
     text-align: center;
     padding: 0.6rem 0rem 2rem 0rem;
   }
 }
 
 .link-menu__sticker-new {
+  /* <span> - sticker "New" in <section restaurants> + <div flexbox> + <a links cards> */
   position: absolute;
   z-index: 40;
   top: 1rem;
@@ -660,6 +723,7 @@ footer span {
 }
 
 .icons-like {
+  /* <div> - container for icons "Like" in <section restaurants> + <div flexbox> + <a links cards> */
   bottom: 1.7rem;
   right: 1.2rem;
 }
@@ -668,6 +732,7 @@ footer span {
 }
 @media screen and (min-width: 2000px) {
   .icons-like {
+    /* Media queries Large screens desktops for <section restaurants> + <div flexbox> + <a links cards> --> <div likes> */
     bottom: 0.2rem;
     right: 50%;
     margin-right: -1rem;
@@ -675,6 +740,7 @@ footer span {
 }
 
 .icon-like {
+  /* <span> - icons "Like" in <section restaurants> + <div flexbox> + <a links cards> + <div likes> */
   font-size: 1.4rem;
 }
 @media screen and (min-width: 2000px) {

@@ -4,50 +4,57 @@
 /* HEADER */
 header {
     @include mixins.responsive (desktop-xl) {
+        /* Media queries Large screens desktops for <header> */
         box-shadow: initial;
     }       
 }
 
 /* MAIN */
-
 main {
     @include mixins.responsive (desktop) {
+        /* Media queries Desktop for <main> */
         grid-template-rows:265px auto;
         grid-row-gap:1.2rem;
     }
     @include mixins.responsive (desktop-xl) {
+        /* Media queries Large screens desktops for <main> */
         grid-template-rows: repeat(3, auto);
     }
     section {
         @include mixins.responsive (tabs) {
+            /* Media queries Tabloids for <main> --> <section> */
             padding-bottom:1rem;
         }
     }
 }
 
 /* SECTION RESERVATION */
-
 .reservation {
+    /* <section reservation> */
     text-align:center;
     @include mixins.relative (10);
     @include mixins.responsive (tabs) {
+        /* Media queries Tabloids for <section reservation> */
         @include mixins.shadow-box (91%);
         border-radius: 0rem 0rem 1rem 1rem;
         padding-bottom:0rem;
     }
     @include mixins.responsive (desktop-xl) {
+        /* Media queries Large screens desktops for <section reservation> */
         grid-column:2;
         box-shadow:0px 5px 0px map-get(maps.$colors-palette, lightshadow );
         border-radius:0rem;
     }
 
     &__localise {
+        /* <form> - form for localisation search in <section reservation> */
         display:flex;
         justify-content: center;
         align-items: center;
         padding: 0.5rem 1rem;
         background:map-get(maps.$colors-palette, darkshadow);
         input {
+            /* <input> - input type search in <section reservation> + <form localise> */
             background:map-get(maps.$colors-palette, darkshadow);
             font-family: 'Roboto', sans-serif;
             font-size:map-get(maps.$txt-size, txt-m);
@@ -70,33 +77,42 @@ main {
         }
     }
     label {
+        /* <label> - label for icon input in <section reservation> + <form localise> */
         margin-left:0.5rem;
         padding:0rem 0.5rem;
         vertical-align: top;
         @include mixins.responsive (tabs) {
+            /* Media queries Tabloids for <section reservation> + <form localise> --> <label> */
             margin-left:1.5rem;
         }
         @include mixins.responsive (desktop-xl) {
+            /* Media queries Large screens desktops for <section reservation> + <form localise> --> <label> */
             margin-left:0.5rem;
         }
     }
     &__explore {
+        /* <div> - container for text and component exploration in <section reservation> */
         padding:0.5rem 1rem 3rem 1rem;
         background: map-get(maps.$colors-palette, lightshadow);
         @include mixins.responsive (tabs) {
+             /* Media queries Tabloids for <section reservation> --> <div explore> */
             height:273px;
         }
         @include mixins.responsive (desktop) {
+            /* Media queries Desktop for <section reservation> --> <div explore> */
             height:auto;
         }
     }
     &__explore p {
+        /* <p> - presentation text in <section reservation> + <div explore> */
         padding-bottom:1.5rem;
         @include mixins.responsive (tabs) {
+            /* Media queries Tabloids for <section reservation> + <div explore> --> <p> */
             padding-bottom:2.5rem;
         }
     }
     h1 {
+        /* <h1> - Title for section in <section reservation> + <div explore> */
         padding:1.5rem 3rem 0.5rem 3rem;
         font-size:map-get(maps.$txt-size , txt-xl);
         font-weight:map-get(maps.$txt-weight, txt-bold);   
@@ -104,46 +120,57 @@ main {
 }
 
 /* SECTION FUNCTIONING */
-
 .functioning {
+    /* <section functioning> */
     @include mixins.padding-page;
     @include mixins.flex-column;
     @include mixins.responsive (tabs) {
+        /* Media queries Tabloids for <section functioning> */
         justify-content: space-between;
     }
     @include mixins.responsive (desktop) {
+        /* Media queries Desktops for <section functioning> */
         padding-left:0rem;
         padding-right:0rem;
         grid-row:2;
     }
     @include mixins.responsive (desktop-xl) {
+        /* Media queries Large screens desktops for <section functioning> */
         grid-column:2;
         @include mixins.padding-page;
         padding-bottom:0rem;
     }
-    ol {
+    
+    ol { 
+        /* <ol> - list of steps in <section functioning> */
         font-weight:map-get(maps.$txt-weight, txt-med);
         @include mixins.flex-column;
         @include mixins.responsive (tabs) {
+            /* Media queries Tabloids for <section functioning> --> <ol> */
             justify-content: space-between;
             padding-bottom:0.5rem;
         }
         @include mixins.responsive (desktop-xl) {
+            /* Media queries Large screens desktops for <section functioning> --> <ol> */
             padding-bottom:0rem;
         }
     }
     h2 {
+        /* <h2> - title of <section functioning> */
         @include mixins.responsive (tabs) {
+            /* Media queries Tabloids for <section functioning> --> <h2> */
             text-align:center;
             padding-bottom:1.9rem;
         }
         @include mixins.responsive (desktop) {
+            /* Media queries Desktops for <section functioning> --> <h2> */
             padding-bottom:3rem;
             padding-top:3rem;
         }    
     }
 }
 .instructions__step {
+    /* <li> - step in <section functioning> + <ol> */
     padding:1.5rem 2rem 1.5rem 2rem;
     margin-bottom:1rem;
     margin-left:1rem;
@@ -154,6 +181,7 @@ main {
     @include mixins.shadow-box (90%);
     @include mixins.relative (30);
     @include mixins.responsive (tabs) {
+        /* Media queries Tabloids for <section functioning> + <ol> --> <li steps> */
         flex-direction:column;
         align-items:center;
         margin-left:0rem;
@@ -162,18 +190,22 @@ main {
         padding:1.5rem 2rem 0.8rem 2rem;
     }
     @include mixins.responsive (desktop) {
+        /* Media queries Desktop for <section functioning> + <ol> --> <li steps> */
         margin-bottom:2rem;
         padding:2rem 2rem 1.2rem 2rem;
     } 
     @include mixins.responsive (desktop-xl) {
+        /* Media queries Large screens desktops for <section functioning> + <ol> --> <li steps> */
         margin-bottom:2.5rem;
         padding:1.5rem 2rem 1.5rem 2rem;
-    }               
+    }
     &:nth-child(3) {
+        /* <li> - third step "déguster" in <section functioning> + <ol> */               
         background: map-get(maps.$colors-palette, lightpurple);
     }
 }
 .step__number {
+    /* <span> - list numbers for steps in <section functioning> + <ol> + <li steps> */
     color:map-get(maps.$colors-palette, white);
     background:map-get(maps.$colors-palette, purple);
     border-radius:1rem;
@@ -187,16 +219,19 @@ main {
     @include mixins.absolute (40);
     left:-11px;
     @include mixins.responsive (tabs) {
+        /* Media queries Tabloids for <section functioning> + <ol> --> <li steps> */
         left:inherit;
         top:-10px;
         width:4rem;
     } 
     @include mixins.responsive (desktop-xl) {
+        /* Media queries Large screens desktops for <section functioning> + <ol> --> <li steps> */
         top:-0.7rem;
     }       
 
 }
 .step__icon {
+    /* <span> - icons for steps in <section functioning> + <ol> + <li steps> */
     width:40px;
     font-size:map-get(maps.$txt-size, txt-l); 
     &--grey {
@@ -211,47 +246,58 @@ main {
 /* SECTION RESTAURANTS */
 
 .restaurants {
+    /* <section restaurants> */
     @include mixins.padding-page;
     background: map-get(maps.$colors-palette, lightshadow);
     padding-top:2rem;
     @include mixins.responsive (tabs) {
+        /* Media queries Tabloids for <section restaurants> */
         grid-column: 1 / span 2;
         background: map-get(maps.$colors-palette, white );
         padding-top:0rem;
     }
     @include mixins.responsive (desktop) {
+        /* Media queries Desktop for <section restaurants> */
         grid-row:1 / span 3;
         grid-column:2;
         @include mixins.flex-column;
         justify-content: space-around;
     }
     @include mixins.responsive (desktop-xl) {
+        /* Media queries Large screens desktops for <section restaurants> */
         grid-column:2;
         grid-row:3 / span 3;
     }
     h2 {
+         /* <h2> title of <section restaurants> */
         @include mixins.responsive (tabs) {
+            /* Media queries Tabloids for <section restaurants> --> <h2> */
             text-align:center;
             padding-bottom:2rem;
         }    
         @include mixins.responsive (desktop) {
+            /* Media queries Desktop for <section restaurants> --> <h2> */
             padding-top:0.8rem;
             padding-bottom:2rem;
         }        
     }
     &-flexbox {
+        /* <div> - flexbox for cards in <section restaurants> */
         @include mixins.flex-column;
         flex-wrap:wrap;
         @include mixins.responsive (tabs) {
+            /* Media queries Tabloids for <section restaurants> --> <div flexbox> */
             flex-direction:row;
             justify-content: space-between;
         }
         @include mixins.responsive (desktop-xl) {
+            /* Media queries Large screens desktops for <section restaurants> --> <div flexbox> */
             flex-direction:column;
         }
 
     }
     &__link-menu {
+        /* <a> - card in <sections restaurants> + <div flexbox> */
         display:block;
         border-radius:1rem;
         overflow:hidden;
@@ -260,13 +306,16 @@ main {
         @include mixins.relative (40);
         transition:0.3s;
         @include mixins.responsive (tabs) {
+            /* Media queries Tabloids for <section restaurants> + <div flexbox> --> <a links cards> */
             width:48%;
             margin-bottom:1.5rem;
         }
         @include mixins.responsive (desktop) {
+            /* Media queries Desktop for <section restaurants> + <div flexbox> --> <a links cards> */
             margin-bottom:3rem;
         }
         @include mixins.responsive (desktop-xl) {
+            /* Media queries Large screens desktops for <section restaurants> + <div flexbox> --> <a links cards> */
             width:100%;
         }
         &:hover {
@@ -278,27 +327,34 @@ main {
     }
 }
 .card__img img {
+    /* <img> - image in <section restaurants> + <div flexbox> + <a links cards> + <figure> + <picture> */ 
     height:180px;
     @include mixins.responsive (tabs) {
+        /* Media queries Tabloids for <section restaurants> + <div flexbox> + <a links cards> + <figure> + <picture> --> <img> */
         height:220px;
     }    
     @include mixins.responsive (desktop) {
+        /* Media queries Desktop for <section restaurants> + <div flexbox> + <a links cards> + <figure> + <picture> --> <img> */
         height:228px;
     }
     @include mixins.responsive (desktop-xl) {
+        /* Media queries Large screens desktops for <section restaurants> + <div flexbox> + <a links cards> + <figure> + <picture> --> <img> */
         height:350px;
     }                
 }
 .card__caption {
+    /* <figcaption> - caption in <section restaurants> + <div flexbox> + <a links cards> + <figure> */
     padding:0.6rem 0.8rem 0.8rem 0.8rem;
     line-height:1.5rem;
     background: map-get(maps.$colors-palette, white);
     @include mixins.responsive (desktop-xl) {
+        /* Media queries Large screens desktops for <section restaurants> + <div flexbox> + <a links cards> + <figure> --> <figcaption> */
         text-align:center;
         padding:0.6rem 0rem 2rem 0rem;
     }    
 }
 .link-menu__sticker-new {
+    /* <span> - sticker "New" in <section restaurants> + <div flexbox> + <a links cards> */
     @include mixins.absolute(40);
     top:1rem;
     right:1rem;
@@ -313,18 +369,21 @@ main {
     border-radius:0.1rem;
 }
 .icons-like {
+    /* <div> - container for icons "Like" in <section restaurants> + <div flexbox> + <a links cards> */
     bottom:1.7rem;
     right:1.2rem;
     &:hover .icon-like--full {
         transform:scale(1);
     }
     @include mixins.responsive (desktop-xl) {
+        /* Media queries Large screens desktops for <section restaurants> + <div flexbox> + <a links cards> --> <div likes> */
         bottom:0.2rem;
         right:50%;
         margin-right:-1rem;
     }    
 }
 .icon-like {
+    /* <span> - icons "Like" in <section restaurants> + <div flexbox> + <a links cards> + <div likes> */
     font-size:map-get(maps.$txt-size, txt-xl);
     @include mixins.responsive (desktop-xl) {
         font-size:1.6rem;
@@ -332,4 +391,3 @@ main {
         right:0.2rem;
         }    
 }
-
