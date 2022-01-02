@@ -1,0 +1,28 @@
+@use '../utils' as utils;
+
+/* Icons "Like" */
+
+.icons-like {
+    @include utils.absolute (50);
+    width:2rem;
+    height:2rem;
+    cursor:pointer;
+    &:hover .icon-like--full {
+        transform:scale(1);
+    }
+}
+
+.icon-like {
+    @include utils.absolute (50);
+    bottom:0.3rem;
+    right:0.3rem;
+    &--full {
+        color:transparent;
+        background-image: linear-gradient(to bottom, map-get(utils.$colors-palette,purple), map-get(utils.$colors-palette,pink));
+        background-clip:text;
+        -webkit-background-clip:text;
+        transform:scale(0);
+        transform-origin:bottom;
+        transition:0.4s;
+    }
+}

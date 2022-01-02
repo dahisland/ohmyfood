@@ -179,6 +179,7 @@ header {
 @media screen and (min-width: 2000px) {
   header {
     grid-template-columns: 15% 70% 15%;
+    box-shadow: initial;
   }
 }
 @media screen and (min-width: 2000px) {
@@ -274,14 +275,6 @@ footer span {
   }
 }
 
-/* HEADER */
-@media screen and (min-width: 2000px) {
-  header {
-    /* Media queries Large screens desktops for <header> */
-    box-shadow: initial;
-  }
-}
-
 /* MAIN */
 @media screen and (min-width: 1224px) {
   main {
@@ -346,6 +339,11 @@ footer span {
   border-radius: 0.5rem;
   padding: 0.3rem 0.5rem;
 }
+@media screen and (min-width: 2000px) {
+  .reservation__localise input {
+    width: 175px;
+  }
+}
 .reservation__localise input::placeholder {
   font-size: 0.9rem;
   font-style: italic;
@@ -396,6 +394,12 @@ footer span {
   padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 640px) {
+  .reservation__explore p {
+    /* Media queries Tabloids for <section reservation> + <div explore> --> <p> */
+    padding-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 1224px) {
   .reservation__explore p {
     /* Media queries Tabloids for <section reservation> + <div explore> --> <p> */
     padding-bottom: 1.5rem;

@@ -1,0 +1,22 @@
+@use '../utils' as utils;
+
+
+/* Buttons with linear gradient animated on hover */
+
+.btn-gradient {
+    display:block;
+    width:fit-content;
+    color:map-get(utils.$colors-palette, white);
+    padding:0.8rem 1.5rem;
+    border-radius:5rem;
+    @include utils.center-margin;
+    @include utils.shadow-box;
+    background:linear-gradient(to top left, map-get(utils.$colors-palette,purple), map-get(utils.$colors-palette, pink));
+    font-weight:map-get(utils.$txt-weight, txt-med);
+    opacity: 1;
+    &:hover {
+        transition-duration:0.4s;
+        @include utils.shadow-box (60%);
+        opacity:0.8;
+    }
+}

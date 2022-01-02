@@ -178,6 +178,7 @@ header {
 @media screen and (min-width: 2000px) {
   header {
     grid-template-columns: 15% 70% 15%;
+    box-shadow: initial;
   }
 }
 @media screen and (min-width: 2000px) {
@@ -273,7 +274,7 @@ footer span {
   }
 }
 
-/* HEADER */
+/* HEADER specifications for pages menus*/
 header {
   box-shadow: initial;
 }
@@ -282,13 +283,6 @@ header {
     /* Media queries Desktop 
     for <header> */
     box-shadow: 0px 2px 3px #d7c0f2;
-  }
-}
-@media screen and (min-width: 2000px) {
-  header {
-    /* Media queries Large screens desktops 
-    for <header> */
-    box-shadow: initial;
   }
 }
 
@@ -314,7 +308,7 @@ main {
   main {
     /* Media queries Large screens desktops 
     for <main> */
-    grid-template-rows: auto auto;
+    grid-template-rows: repeat(2, auto);
   }
 }
 main picture {

@@ -1,7 +1,5 @@
 /* BASE CSS */
-@use "../utils/mixins";
-@use "../utils/maps";
-@use "../utils/extensions";
+@use '../utils' as utils;
 
 * {
     box-sizing:border-box;
@@ -10,17 +8,17 @@ html {
     font-size:15px;
     width:100%;
     height:100%;
-    @include mixins.responsive (tabs) {
+    @include utils.responsive (tabs) {
         font-size:16px;
     }
-    @include mixins.responsive (desktop-xl) {
+    @include utils.responsive (desktop-xl) {
         font-size:19px;
     }
 }
 body {
-    @include mixins.center-margin;
+    @include utils.center-margin;
     @extend%font-roboto;
-    font-weight:map-get(maps.$txt-weight, txt-light);
+    font-weight:map-get(utils.$txt-weight, txt-light);
     min-height:100vh;
     display:flex;
     flex-direction: column;
@@ -28,14 +26,14 @@ body {
 main {
     display:grid;
     flex-grow:1;
-    @include mixins.responsive (tabs) {
+    @include utils.responsive (tabs) {
         grid-template-columns: 50% 50%;
         align-items:flex-start;
     }
-    @include mixins.responsive (desktop) {
+    @include utils.responsive (desktop) {
         grid-template-columns: 30% 70%;
     }
-    @include mixins.responsive (desktop-xl) {
+    @include utils.responsive (desktop-xl) {
         grid-template-columns: 15% 70% 15%;
     }
 }
@@ -44,14 +42,14 @@ h1 {
 }
 h2 {
     @extend%reset-margin;
-    font-size:map-get(maps.$txt-size , txt-xl);
+    font-size:map-get(utils.$txt-size , txt-xl);
     @extend%font-bold;
     padding-top:1rem;
     padding-bottom:1.3rem;
 }
 h3 {
     @extend%reset-margin;
-    font-size:map-get(maps.$txt-size , txt-l);
+    font-size:map-get(utils.$txt-size , txt-l);
     @extend%font-bold;
 }
 p {
@@ -66,14 +64,14 @@ figure {
 }
 img {
     object-fit: cover;
-    width:map-get(maps.$width-palette, max);
+    width:map-get(utils.$width-palette, max);
 }
 a {
     text-decoration:none;
-    color:map-get(maps.$colors-palette, dark);
+    color:map-get(utils.$colors-palette, dark);
 }
 header, footer {
-    @include mixins.padding-page;
+    @include utils.padding-page;
 }
 header {
     padding-top:1.2rem;
