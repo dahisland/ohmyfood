@@ -13,7 +13,7 @@ header {
 main {
     @include mixins.responsive (desktop) {
         /* Media queries Desktop for <main> */
-        grid-template-rows:265px auto;
+        grid-template-rows:290px auto;
         grid-row-gap:1.2rem;
     }
     @include mixins.responsive (desktop-xl) {
@@ -96,7 +96,7 @@ main {
         background: map-get(maps.$colors-palette, lightshadow);
         @include mixins.responsive (tabs) {
              /* Media queries Tabloids for <section reservation> --> <div explore> */
-            height:273px;
+            height:295px;
         }
         @include mixins.responsive (desktop) {
             /* Media queries Desktop for <section reservation> --> <div explore> */
@@ -108,7 +108,7 @@ main {
         padding-bottom:1.5rem;
         @include mixins.responsive (tabs) {
             /* Media queries Tabloids for <section reservation> + <div explore> --> <p> */
-            padding-bottom:2.5rem;
+            padding-bottom:1.5rem;
         }
     }
     h1 {
@@ -335,7 +335,7 @@ main {
     }    
     @include mixins.responsive (desktop) {
         /* Media queries Desktop for <section restaurants> + <div flexbox> + <a links cards> + <figure> + <picture> --> <img> */
-        height:228px;
+        height:246px;
     }
     @include mixins.responsive (desktop-xl) {
         /* Media queries Large screens desktops for <section restaurants> + <div flexbox> + <a links cards> + <figure> + <picture> --> <img> */

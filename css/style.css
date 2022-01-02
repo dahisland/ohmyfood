@@ -23,18 +23,18 @@ footer p, footer a {
 }
 
 html {
-  font-size: 16px;
+  font-size: 15px;
   width: 100%;
   height: 100%;
 }
 @media screen and (min-width: 640px) {
   html {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 2000px) {
   html {
-    font-size: 17px;
+    font-size: 19px;
   }
 }
 
@@ -286,7 +286,7 @@ footer span {
 @media screen and (min-width: 1224px) {
   main {
     /* Media queries Desktop for <main> */
-    grid-template-rows: 265px auto;
+    grid-template-rows: 290px auto;
     grid-row-gap: 1.2rem;
   }
 }
@@ -382,7 +382,7 @@ footer span {
 @media screen and (min-width: 640px) {
   .reservation__explore {
     /* Media queries Tabloids for <section reservation> --> <div explore> */
-    height: 273px;
+    height: 295px;
   }
 }
 @media screen and (min-width: 1224px) {
@@ -398,7 +398,7 @@ footer span {
 @media screen and (min-width: 640px) {
   .reservation__explore p {
     /* Media queries Tabloids for <section reservation> + <div explore> --> <p> */
-    padding-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 .reservation h1 {
@@ -681,7 +681,7 @@ footer span {
 @media screen and (min-width: 1224px) {
   .card__img img {
     /* Media queries Desktop for <section restaurants> + <div flexbox> + <a links cards> + <figure> + <picture> --> <img> */
-    height: 228px;
+    height: 246px;
   }
 }
 @media screen and (min-width: 2000px) {

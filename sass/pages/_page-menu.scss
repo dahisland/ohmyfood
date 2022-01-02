@@ -72,7 +72,7 @@ main {
         @include mixins.responsive (desktop) {
             /* Media queries Desktop 
             for <main> + <picture> --> <img> */
-            height:683px;
+            height:800px;
             object-position: center;
             border-radius:0rem 0rem 1.5rem 0rem;
             @include mixins.shadow-box (70%);
@@ -285,9 +285,7 @@ main {
     a {
         /* <a> - link dish 
         in <section menu restaurants> + <div flexbox> + <article type dish> */
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
+        display:block;
         background: map-get(maps.$colors-palette, white);
         border-radius: map-get(maps.$txt-size, txt-m);
         overflow:hidden;
@@ -309,9 +307,32 @@ main {
             for <section menu restaurants> + <div flexbox> + <article type dish> --> <a dish> */
             margin-bottom: map-get(maps.$txt-size, txt-m);
         }
+        .dish__dish-description {
+            /* <div> - text description of dish 
+            in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
+            display:flex;
+            justify-content: space-between;        
+            padding:1.1rem 1rem 0rem 0.5rem;
+            max-width:100%;
+        }
+        .dish-description__price {
+            /* <p> - text for price of dish 
+            in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
+            font-weight:map-get(maps.$txt-weight, txt-bold);
+            align-self:flex-end;
+        }  
+        &:hover {
+            @include mixins.shadow-box (75);
+            @include mixins.responsive (tabs) {
+                /* Media queries Tabloids
+                for <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> --> <div icon dish> */
+                @include mixins.shadow-box (85);
+            }       
+        }          
         .dish__icon {
             /* <div> - container for icon selection dish 
             in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
+            float:right;
             background: map-get(maps.$colors-palette, mint);
             padding:1.5rem 0rem;
             color:map-get(maps.$colors-palette, white);
@@ -320,20 +341,17 @@ main {
             width:0px;
             transition:0.6s ease-in-out;
         }
+        &:hover .dish__icon {
+            width:70px;
+            @include mixins.responsive (desktop-xl) {
+                /* Media queries Large screens desktops
+                for <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> --> <div icon dish> */
+                width:100px;
+            }
+        }
         .icon__checked {
             transition:transform 0.6s ease-in-out;
             transform:rotate(0turn);
-        }
-        &:hover {
-            @include mixins.shadow-box (75);
-            @include mixins.responsive (tabs) {
-                /* Media queries Tabloids
-                for <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> --> <div icon dish> */
-                @include mixins.shadow-box (85);
-            }       
-        }
-        &:hover .dish__icon {
-            width:80px;
         }
         &:hover .icon__checked {
             /* <span> - icon checked
@@ -342,32 +360,23 @@ main {
         }
     }
 }
-.dish__dish-description {
-    /* <div> - text description of dish 
-    in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
-    width:100%;
-    padding:0rem 1rem 0rem 0.5rem;
+.dish-description__details {
+    /* <div> - details for dish
+    in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> */
+    overflow:hidden;
+    text-overflow:ellipsis;
     h3 {
         /* <h3> - title of dish description 
-        in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> */
+        in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> + <div dish details> */
         font-size:map-get(maps.$txt-size, txt-l);
-        height:1.4rem;
         overflow:hidden;
         text-overflow: ellipsis;
+        white-space: nowrap;
     }
-    .dish-description__price {
-        /* <div> - container for text description + price of dish 
-        in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> */
-        display:flex;
-        justify-content:space-between;
-        height:1.4rem;
-        overflow: hidden;
+    p {
+        display:inline;
+        overflow:hidden;
         text-overflow: ellipsis;
-        p:nth-child(2) {
-            /* <p> - text of price 
-            in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> + <div price> */
-            font-weight:map-get(maps.$txt-weight, txt-bold);
-        }
-
+        white-space: nowrap;
     }
 }

@@ -22,18 +22,18 @@ footer p, footer a {
 }
 
 html {
-  font-size: 16px;
+  font-size: 15px;
   width: 100%;
   height: 100%;
 }
 @media screen and (min-width: 640px) {
   html {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 2000px) {
   html {
-    font-size: 17px;
+    font-size: 19px;
   }
 }
 
@@ -366,7 +366,7 @@ main img {
   main img {
     /* Media queries Desktop 
     for <main> + <picture> --> <img> */
-    height: 683px;
+    height: 800px;
     object-position: center;
     border-radius: 0rem 0rem 1.5rem 0rem;
     box-shadow: 0px 5px 8px #b3b3b3;
@@ -621,9 +621,7 @@ main img {
 .menu-restaurant__dish-type a {
   /* <a> - link dish 
   in <section menu restaurants> + <div flexbox> + <article type dish> */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
   background: #fff;
   border-radius: 1rem;
   overflow: hidden;
@@ -652,20 +650,19 @@ main img {
     margin-bottom: 1rem;
   }
 }
-.menu-restaurant__dish-type a .dish__icon {
-  /* <div> - container for icon selection dish 
+.menu-restaurant__dish-type a .dish__dish-description {
+  /* <div> - text description of dish 
   in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
-  background: #99E2D0;
-  padding: 1.5rem 0rem;
-  color: #fff;
-  font-size: 1.5rem;
-  text-align: center;
-  width: 0px;
-  transition: 0.6s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.1rem 1rem 0rem 0.5rem;
+  max-width: 100%;
 }
-.menu-restaurant__dish-type a .icon__checked {
-  transition: transform 0.6s ease-in-out;
-  transform: rotate(0turn);
+.menu-restaurant__dish-type a .dish-description__price {
+  /* <p> - text for price of dish 
+  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
+  font-weight: 700;
+  align-self: flex-end;
 }
 .menu-restaurant__dish-type a:hover {
   box-shadow: 0px 5px 8px #bfbfbf;
@@ -677,8 +674,31 @@ main img {
     box-shadow: 0px 5px 8px #d9d9d9;
   }
 }
+.menu-restaurant__dish-type a .dish__icon {
+  /* <div> - container for icon selection dish 
+  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
+  float: right;
+  background: #99E2D0;
+  padding: 1.5rem 0rem;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 0px;
+  transition: 0.6s ease-in-out;
+}
 .menu-restaurant__dish-type a:hover .dish__icon {
-  width: 80px;
+  width: 70px;
+}
+@media screen and (min-width: 2000px) {
+  .menu-restaurant__dish-type a:hover .dish__icon {
+    /* Media queries Large screens desktops
+    for <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> --> <div icon dish> */
+    width: 100px;
+  }
+}
+.menu-restaurant__dish-type a .icon__checked {
+  transition: transform 0.6s ease-in-out;
+  transform: rotate(0turn);
 }
 .menu-restaurant__dish-type a:hover .icon__checked {
   /* <span> - icon checked
@@ -686,33 +706,25 @@ main img {
   transform: rotate(2turn);
 }
 
-.dish__dish-description {
-  /* <div> - text description of dish 
-  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
-  width: 100%;
-  padding: 0rem 1rem 0rem 0.5rem;
+.dish-description__details {
+  /* <div> - details for dish
+  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.dish__dish-description h3 {
+.dish-description__details h3 {
   /* <h3> - title of dish description 
-  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> */
+  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> + <div dish details> */
   font-size: 1.1rem;
-  height: 1.4rem;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.dish__dish-description .dish-description__price {
-  /* <div> - container for text description + price of dish 
-  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> */
-  display: flex;
-  justify-content: space-between;
-  height: 1.4rem;
+.dish-description__details p {
+  display: inline;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.dish__dish-description .dish-description__price p:nth-child(2) {
-  /* <p> - text of price 
-  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> + <div price> */
-  font-weight: 700;
+  white-space: nowrap;
 }
 
 /*# sourceMappingURL=menu.css.map */
