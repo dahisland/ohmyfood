@@ -661,7 +661,7 @@ footer span {
   box-shadow: 0px 5px 8px #e6e6e6;
   position: relative;
   z-index: 40;
-  transition: 0.3s;
+  transition: box-shadow 400ms ease-in-out;
 }
 @media screen and (min-width: 640px) {
   .restaurants__link-menu {
@@ -681,6 +681,10 @@ footer span {
     /* Media queries Large screens desktops for <section restaurants> + <div flexbox> --> <a links cards> */
     width: 100%;
   }
+}
+.restaurants__link-menu figcaption {
+  color: #000;
+  transition: color 300ms ease-in-out;
 }
 .restaurants__link-menu:hover {
   box-shadow: 0px 5px 8px #cccccc;

@@ -316,7 +316,7 @@ main {
         margin-bottom:1.1rem;
         @include utils.shadow-box (90);
         @include utils.relative (40);
-        transition:0.3s;
+        transition:box-shadow 400ms ease-in-out;
         @include utils.responsive (tabs) {
             /* Media queries Tabloids for <section restaurants> + <div flexbox> --> <a links cards> */
             width:48%;
@@ -329,6 +329,10 @@ main {
         @include utils.responsive (desktop-xl) {
             /* Media queries Large screens desktops for <section restaurants> + <div flexbox> --> <a links cards> */
             width:100%;
+        }
+        figcaption {
+            color:map-get(utils.$colors-palette, dark);
+            transition:color 300ms ease-in-out;
         }
         &:hover {
             @include utils.shadow-box (80);
