@@ -381,6 +381,7 @@ main img {
 .menu-restaurant {
   /* <section> - section menu for restaurants */
   background: #eaeaea;
+  width: 100vw;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 2rem;
@@ -392,6 +393,7 @@ main img {
   .menu-restaurant {
     /* Media queries Tabloids 
     for <section menu restaurants> */
+    width: 100%;
     grid-column: 1/span 2;
     margin-top: -5rem;
     background: #fff;
@@ -706,12 +708,7 @@ main img {
   in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> */
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 200px;
-}
-@media screen and (min-width: 360px) {
-  .dish-description__details {
-    max-width: 500px;
-  }
+  max-width: 100%;
 }
 .dish-description__details h3 {
   /* <h3> - title of dish description 

@@ -86,6 +86,7 @@ main {
 .menu-restaurant {
     /* <section> - section menu for restaurants */
     background:map-get(utils.$colors-palette, darkshadow);
+    width:100vw;
     @include utils.padding-page;
     padding-top:2rem;
     padding-bottom:5rem;
@@ -94,6 +95,7 @@ main {
     @include utils.responsive (tabs) {
         /* Media queries Tabloids 
         for <section menu restaurants> */
+        width:100%;
         grid-column:1 / span 2;
         margin-top:-5rem;
         background:map-get(utils.$colors-palette, white);
@@ -359,10 +361,7 @@ main {
     in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> */
     overflow:hidden;
     text-overflow:ellipsis;
-    max-width:200px;
-    @include utils.responsive (small-screen) {
-        max-width:500px;
-    }
+    max-width:100%;
     h3 {
         /* <h3> - title of dish description 
         in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> + <div dish details> */
