@@ -349,10 +349,14 @@ footer span {
   font-style: italic;
   color: #515151;
 }
-.reservation__localise input:focus {
+.reservation__localise input:focus, .reservation__localise input:active {
   outline: none;
-  color: #9e9e9e;
+  color: #000;
   background: #f4f4f4;
+}
+.reservation__localise input:not(:focus):invalid {
+  background: #e4d5f6;
+  border: 1px solid #9356DC;
 }
 .reservation label {
   /* <label> - label for icon input in <section reservation> + <form localise> */

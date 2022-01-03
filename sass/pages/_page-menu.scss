@@ -359,6 +359,10 @@ main {
     in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> */
     overflow:hidden;
     text-overflow:ellipsis;
+    max-width:200px;
+    @include utils.responsive (small-screen) {
+        max-width:500px;
+    }
     h3 {
         /* <h3> - title of dish description 
         in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> + <div dish details> */

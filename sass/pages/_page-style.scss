@@ -62,11 +62,15 @@ main {
                 font-size:0.9rem;
                 font-style: italic;
                 color:darken(map-get(utils.$colors-palette, darkshadow),60%);
-            }
-            &:focus {
+            }            
+            &:focus, &:active {
                 outline:none;
-                color:darken(map-get(utils.$colors-palette, darkshadow),30%);
+                color:map-get(utils.$colors-palette, dark);
                 background:lighten(map-get(utils.$colors-palette, darkshadow),4%);
+            }
+            &:not(:focus):invalid {
+                background:lighten(map-get(utils.$colors-palette, purple ),30%);
+                border:1px  solid map-get(utils.$colors-palette, purple );
             }
         }
     }
