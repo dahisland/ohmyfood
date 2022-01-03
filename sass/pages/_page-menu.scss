@@ -350,7 +350,7 @@ main {
         &:hover .icon__checked {
             /* <span> - icon checked
             in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div icon dish> */
-            transform:rotate(2turn);
+            transform:rotate(1turn);
         }
     }
 }
