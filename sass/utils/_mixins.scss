@@ -27,3 +27,12 @@
     display:flex;
     flex-direction:column;
 }
+@mixin opacity ($opacity) {
+    opacity:$opacity;
+    @if $opacity == 0 {
+        z-index:0;
+    }
+    @else {
+        z-index:200;
+    }
+}
