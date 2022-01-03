@@ -1,5 +1,21 @@
 @use '../utils' as utils;
 
+.loading-spinner {
+    width:100%;
+    height:100%;
+    background:white;
+    opacity:nth(utils.$opa,1);
+    transition:opacity 300ms;
+    position : fixed;
+    top:0px;
+    left:0px;
+    @if utils.$opa == 0 {
+        z-index:0;
+    }
+    @else {
+        z-index:200;
+    }
+}
 /* MAIN */
 main {
     @include utils.responsive (desktop) {
