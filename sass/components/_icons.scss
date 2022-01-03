@@ -23,6 +23,6 @@
         -webkit-background-clip:text;
         transform:scale(0);
         transform-origin:bottom;
-        transition:0.4s;
+        transition:transform 400ms cubic-bezier(.32,-0.01,.22,.82);
     }
 }

@@ -14,9 +14,10 @@
     background:linear-gradient(to top left, map-get(utils.$colors-palette,purple), map-get(utils.$colors-palette, pink));
     font-weight:map-get(utils.$txt-weight, txt-med);
     opacity: 1;
+    transition:opacity 300ms ease-in-out, box-shadow 400ms ease-in-out;
+    transition-delay:0,200ms;
     &:hover {
-        transition-duration:0.4s;
         @include utils.shadow-box (60%);
-        opacity:0.8;
+        opacity:0.85;
     }
 }

@@ -333,7 +333,7 @@ main {
             font-size:1.5rem;
             text-align:center;
             width:0px;
-            transition:0.6s ease-in-out;
+            transition:width 400ms ease-in-out;
         }
         &:hover .dish__icon {
             width:70px;
@@ -344,7 +344,7 @@ main {
             }
         }
         .icon__checked {
-            transition:transform 0.6s ease-in-out;
+            transition:transform 400ms 100ms cubic-bezier(.68,.1,.38,.81);
             transform:rotate(0turn);
         }
         &:hover .icon__checked {
