@@ -348,7 +348,7 @@ footer span {
   line-height: 1.5rem;
   font-weight: 500;
   width: 150px;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.5rem;
   padding: 0.3rem 0.5rem;
 }

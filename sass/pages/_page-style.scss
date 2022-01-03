@@ -62,7 +62,7 @@ main {
             line-height: map-get(utils.$txt-size, txt-m) + 0.5rem;
             font-weight:map-get(utils.$txt-weight, txt-med); 
             width:150px;  
-            border:none;
+            border:1px solid transparent;
             border-radius:0.5rem;
             padding:0.3rem 0.5rem;
             @include utils.responsive (desktop-xl) {
@@ -80,7 +80,7 @@ main {
             }
             &:not(:focus):invalid {
                 background:lighten(map-get(utils.$colors-palette, purple ),30%);
-                border:1px  solid map-get(utils.$colors-palette, purple );
+                border:1px solid map-get(utils.$colors-palette, purple );
             }
         }
     }
