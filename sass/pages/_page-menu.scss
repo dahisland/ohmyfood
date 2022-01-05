@@ -218,10 +218,9 @@ main {
             width:49%;
         }
     }
-    .btn-gradient {
+    .btn-gradient--order {
         /* <button> - button with background linear-gradient for order 
         in <section menu restaurants> + <div flexbox> + <div for button> */
-        padding:0.8rem 3rem;
         margin-top:3rem;
         @include utils.responsive (tabs) {
             /* Media queries Tabloids 
@@ -324,16 +323,12 @@ main {
                 for <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> --> <div icon dish> */
                 @include utils.shadow-box (85);
             }       
-        }          
+        }  
         .dish__icon {
             /* <div> - container for icon selection dish 
             in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
             float:right;
-            background: map-get(utils.$colors-palette, mint);
             padding:1.5rem 0rem;
-            color:map-get(utils.$colors-palette, white);
-            font-size:1.5rem;
-            text-align:center;
             width:0px;
             transition:width 400ms ease-in-out;
         }
@@ -353,27 +348,22 @@ main {
             /* <span> - icon checked
             in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div icon dish> */
             transform:rotate(1turn);
-        }
+        }        
     }
 }
 .dish-description__details {
     /* <div> - details for dish
     in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> */
-    overflow:hidden;
-    text-overflow:ellipsis;
+    @include utils.ellipsis(initial);
     max-width:100%;
     h3 {
         /* <h3> - title of dish description 
         in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> + <div dish details> */
         font-size:map-get(utils.$txt-size, txt-l);
-        overflow:hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        @include utils.ellipsis;
     }
     p {
-        display:inline;
-        overflow:hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        display:inline-block;
+        @include utils.ellipsis;
     }
 }

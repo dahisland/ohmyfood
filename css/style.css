@@ -115,9 +115,11 @@ button {
   cursor: pointer;
 }
 
-/* Buttons with linear gradient animated on hover */
-.btn-gradient {
+/* Buttons with linear gradient animated on hover for section exploration */
+.btn-gradient--explore {
   display: block;
+  position: relative;
+  z-index: 221;
   width: fit-content;
   color: #fff;
   padding: 0.8rem 1.5rem;
@@ -126,17 +128,66 @@ button {
   box-shadow: 0px 5px 8px #cccccc;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   font-weight: 500;
-  opacity: 1;
-  transition: opacity 300ms ease-in-out, box-shadow 400ms ease-in-out;
-  transition-delay: 0, 200ms;
 }
-.btn-gradient:hover {
+.btn-gradient--explore::after {
+  content: "Explorer nos restaurants";
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 0.8rem 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 219;
+  border-radius: 5rem;
   box-shadow: 0px 5px 8px #999999;
-  opacity: 0.85;
+  background: linear-gradient(to top left, #a16be0, #ff93e1);
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out, box-shadow 400ms ease-in-out;
+}
+.btn-gradient--explore:hover::after {
+  opacity: 1;
 }
 
-/* Icons "Like" */
+/* Buttons with linear gradient animated on hover for section menu-restaurant */
+.btn-gradient--order {
+  display: block;
+  position: relative;
+  z-index: 221;
+  width: fit-content;
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border-radius: 5rem;
+  margin: 0 auto;
+  box-shadow: 0px 5px 8px #cccccc;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  font-weight: 500;
+}
+.btn-gradient--order::after {
+  content: "Commander";
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 0.8rem 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 219;
+  border-radius: 5rem;
+  box-shadow: 0px 5px 8px #999999;
+  background: linear-gradient(to top left, #a16be0, #ff93e1);
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out, box-shadow 400ms ease-in-out;
+}
+.btn-gradient--order:hover::after {
+  opacity: 1;
+}
+
+/* Icons "Like" animated */
 .icons-like {
+  /* <div> - container for icons "Like" */
   position: absolute;
   z-index: 50;
   width: 2rem;
@@ -148,12 +199,14 @@ button {
 }
 
 .icon-like {
+  /* <span> - icon "Like" contained in <div icons-like> */
   position: absolute;
   z-index: 50;
   bottom: 0.3rem;
   right: 0.3rem;
 }
 .icon-like--full {
+  /* <span> - icon "Like" with background gradient contained in <div icons-like> */
   color: transparent;
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
   background-clip: text;
@@ -161,6 +214,97 @@ button {
   transform: scale(0);
   transform-origin: bottom;
   transition: transform 400ms cubic-bezier(0.32, -0.01, 0.22, 0.82);
+}
+
+/* Icons "checked" animated */
+.dish__icon {
+  /* <div> - container for icon selection dish 
+  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
+  background: #99E2D0;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background: white;
+  transition: opacity 300ms;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  display: none;
+  z-index: 0;
+}
+.loading-spinner .loading-spinner__elements {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loading-spinner .elements__position {
+  position: relative;
+  width: 450px;
+  font-family: "Shrikhand", cursive;
+  font-size: 5rem;
+}
+.loading-spinner .elements__position p:nth-child(1), .loading-spinner .elements__position span {
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.loading-spinner .elements__position p:nth-child(1) {
+  transform: scale(0) rotateX(0turn);
+  transition: transform 1000ms ease-in-out;
+}
+.loading-spinner .elements__position span {
+  display: inline-block;
+  position: relative;
+  z-index: 221;
+  width: 3.8rem;
+  transform: rotateY(0turn);
+  transition: transform 1000ms 1000ms ease-in-out;
+}
+.loading-spinner .elements__position span::after {
+  content: "O";
+  width: 3.8rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: 219;
+  color: #99E2D0;
+  transition: opacity 1000ms 1000ms ease-in-out;
+}
+.loading-spinner .elements__position p:nth-child(2) {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 25px;
+  background: #99E2D0;
+  position: absolute;
+  left: 1rem;
+  top: 3rem;
+  transform: translateX(0rem) translateY(0rem) scaleX(0) scaleY(1.15);
+  transition: all 500ms 1600ms cubic-bezier(0.7, 1.18, 0.9, 1);
+}
+.loading-spinner:hover p:nth-child(1) {
+  transform: scale(1) rotateX(1turn);
+}
+.loading-spinner:hover span {
+  transform: rotateY(3turn);
+}
+.loading-spinner:hover span::after {
+  opacity: 1;
+}
+.loading-spinner:hover p:nth-child(2) {
+  transform: translateX(-0.5rem) translateY(4.5rem) scaleX(1) scaleY(1);
 }
 
 /* HEADER */
@@ -274,87 +418,6 @@ footer span {
   footer span {
     margin-right: 0.4rem;
   }
-}
-
-.loading-spinner {
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-  background: white;
-  transition: opacity 300ms;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  opacity: 1;
-  display: block;
-  z-index: 200;
-}
-.loading-spinner .loading-spinner__elements {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.loading-spinner .elements__position {
-  position: relative;
-  width: 450px;
-  font-family: "Shrikhand", cursive;
-  font-size: 5rem;
-}
-.loading-spinner .elements__position p:nth-child(1), .loading-spinner .elements__position span {
-  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-.loading-spinner .elements__position p:nth-child(1) {
-  transform: scale(0) rotateX(0turn);
-  transition: transform 1000ms ease-in-out;
-}
-.loading-spinner .elements__position span {
-  display: inline-block;
-  position: relative;
-  z-index: 221;
-  width: 3.8rem;
-  transform: rotateY(0turn);
-  transition: transform 1000ms 1000ms ease-in-out;
-}
-.loading-spinner .elements__position span::after {
-  content: "O";
-  width: 3.8rem;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  z-index: 219;
-  color: #99E2D0;
-  transition: opacity 1000ms 1000ms ease-in-out;
-}
-.loading-spinner .elements__position p:nth-child(2) {
-  width: 1rem;
-  height: 1rem;
-  border-radius: 25px;
-  background: #99E2D0;
-  position: absolute;
-  left: 1rem;
-  top: 3rem;
-  transform: translateX(0rem) translateY(0rem) scaleX(0) scaleY(1.15);
-  transition: all 500ms 1600ms cubic-bezier(0.7, 1.18, 0.9, 1);
-}
-.loading-spinner:hover p:nth-child(1) {
-  transform: scale(1) rotateX(1turn);
-}
-.loading-spinner:hover span {
-  transform: rotateY(3turn);
-}
-.loading-spinner:hover span::after {
-  opacity: 1;
-}
-.loading-spinner:hover p:nth-child(2) {
-  transform: translateX(-0.5rem) translateY(4.5rem) scaleX(1) scaleY(1);
 }
 
 /* SECTION RESERVATION */
@@ -527,9 +590,6 @@ footer span {
     padding-bottom: 0rem;
   }
 }
-.functioning h2 {
-  /* <h2> - title of <section functioning> */
-}
 @media screen and (min-width: 640px) {
   .functioning h2 {
     /* Media queries Tabloids for <section functioning> --> <h2> */
@@ -663,9 +723,6 @@ footer span {
     grid-column: 2;
     grid-row: 3/span 3;
   }
-}
-.restaurants h2 {
-  /* <h2> title of <section restaurants> */
 }
 @media screen and (min-width: 640px) {
   .restaurants h2 {

@@ -1,10 +1,12 @@
 @use '../utils' as utils;
 
 
-/* Buttons with linear gradient animated on hover */
+/* Buttons with linear gradient animated on hover for section exploration */
 
-.btn-gradient {
+.btn-gradient--explore {
     display:block;
+    position:relative;
+    z-index:221;
     width:fit-content;
     color:map-get(utils.$colors-palette, white);
     padding:0.8rem 1.5rem;
@@ -13,11 +15,64 @@
     @include utils.shadow-box;
     background:linear-gradient(to top left, map-get(utils.$colors-palette,purple), map-get(utils.$colors-palette, pink));
     font-weight:map-get(utils.$txt-weight, txt-med);
-    opacity: 1;
-    transition:opacity 300ms ease-in-out, box-shadow 400ms ease-in-out;
-    transition-delay:0,200ms;
-    &:hover {
+    &::after {
+        content:"Explorer nos restaurants";
+        display:block;
+        @include utils.center-margin;
+        width:fit-content;
+        padding:0.8rem 1.5rem;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:219;
+        border-radius:5rem;
         @include utils.shadow-box (60%);
-        opacity:0.85;
+        background:linear-gradient(to top left, lighten(map-get(utils.$colors-palette,purple),5%),lighten(map-get(utils.$colors-palette, pink),5%));
+        font-weight:map-get(utils.$txt-weight, txt-med);
+        opacity: 0;
+        transition:opacity 300ms ease-in-out, box-shadow 400ms ease-in-out;
+    }
+    &:hover {
+        &::after {
+            opacity:1;
+        }
+    }
+}
+
+/* Buttons with linear gradient animated on hover for section menu-restaurant */
+
+.btn-gradient--order {
+    display:block;
+    position:relative;
+    z-index:221;
+    width:fit-content;
+    color:map-get(utils.$colors-palette, white);
+    padding:0.8rem 3rem;
+    border-radius:5rem;
+    @include utils.center-margin;
+    @include utils.shadow-box;
+    background:linear-gradient(to top left, map-get(utils.$colors-palette,purple), map-get(utils.$colors-palette, pink));
+    font-weight:map-get(utils.$txt-weight, txt-med);
+    &::after {
+        content:"Commander";
+        display:block;
+        @include utils.center-margin;
+        width:fit-content;
+        padding:0.8rem 3rem;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:219;
+        border-radius:5rem;
+        @include utils.shadow-box (60%);
+        background:linear-gradient(to top left, lighten(map-get(utils.$colors-palette,purple),5%),lighten(map-get(utils.$colors-palette, pink),5%));
+        font-weight:map-get(utils.$txt-weight, txt-med);
+        opacity: 0;
+        transition:opacity 300ms ease-in-out, box-shadow 400ms ease-in-out;
+    }
+    &:hover {
+        &::after {
+            opacity:1;
+        }
     }
 }

@@ -1,8 +1,9 @@
 @use '../utils' as utils;
 
-/* Icons "Like" */
+/* Icons "Like" animated */
 
 .icons-like {
+    /* <div> - container for icons "Like" */
     @include utils.absolute (50);
     width:2rem;
     height:2rem;
@@ -13,10 +14,12 @@
 }
 
 .icon-like {
+    /* <span> - icon "Like" contained in <div icons-like> */
     @include utils.absolute (50);
     bottom:0.3rem;
     right:0.3rem;
     &--full {
+        /* <span> - icon "Like" with background gradient contained in <div icons-like> */
         color:transparent;
         background-image: linear-gradient(to bottom, map-get(utils.$colors-palette,purple), map-get(utils.$colors-palette,pink));
         background-clip:text;
@@ -25,4 +28,15 @@
         transform-origin:bottom;
         transition:transform 400ms cubic-bezier(.32,-0.01,.22,.82);
     }
+}
+
+/* Icons "checked" animated */
+
+.dish__icon {
+    /* <div> - container for icon selection dish 
+    in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
+    background: map-get(utils.$colors-palette, mint);
+    color:map-get(utils.$colors-palette, white);
+    font-size:1.5rem;
+    text-align:center;
 }

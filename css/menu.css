@@ -114,9 +114,11 @@ button {
   cursor: pointer;
 }
 
-/* Buttons with linear gradient animated on hover */
-.btn-gradient {
+/* Buttons with linear gradient animated on hover for section exploration */
+.btn-gradient--explore {
   display: block;
+  position: relative;
+  z-index: 221;
   width: fit-content;
   color: #fff;
   padding: 0.8rem 1.5rem;
@@ -125,17 +127,66 @@ button {
   box-shadow: 0px 5px 8px #cccccc;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   font-weight: 500;
-  opacity: 1;
-  transition: opacity 300ms ease-in-out, box-shadow 400ms ease-in-out;
-  transition-delay: 0, 200ms;
 }
-.btn-gradient:hover {
+.btn-gradient--explore::after {
+  content: "Explorer nos restaurants";
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 0.8rem 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 219;
+  border-radius: 5rem;
   box-shadow: 0px 5px 8px #999999;
-  opacity: 0.85;
+  background: linear-gradient(to top left, #a16be0, #ff93e1);
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out, box-shadow 400ms ease-in-out;
+}
+.btn-gradient--explore:hover::after {
+  opacity: 1;
 }
 
-/* Icons "Like" */
+/* Buttons with linear gradient animated on hover for section menu-restaurant */
+.btn-gradient--order {
+  display: block;
+  position: relative;
+  z-index: 221;
+  width: fit-content;
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border-radius: 5rem;
+  margin: 0 auto;
+  box-shadow: 0px 5px 8px #cccccc;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  font-weight: 500;
+}
+.btn-gradient--order::after {
+  content: "Commander";
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 0.8rem 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 219;
+  border-radius: 5rem;
+  box-shadow: 0px 5px 8px #999999;
+  background: linear-gradient(to top left, #a16be0, #ff93e1);
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out, box-shadow 400ms ease-in-out;
+}
+.btn-gradient--order:hover::after {
+  opacity: 1;
+}
+
+/* Icons "Like" animated */
 .icons-like {
+  /* <div> - container for icons "Like" */
   position: absolute;
   z-index: 50;
   width: 2rem;
@@ -147,12 +198,14 @@ button {
 }
 
 .icon-like {
+  /* <span> - icon "Like" contained in <div icons-like> */
   position: absolute;
   z-index: 50;
   bottom: 0.3rem;
   right: 0.3rem;
 }
 .icon-like--full {
+  /* <span> - icon "Like" with background gradient contained in <div icons-like> */
   color: transparent;
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
   background-clip: text;
@@ -160,6 +213,16 @@ button {
   transform: scale(0);
   transform-origin: bottom;
   transition: transform 400ms cubic-bezier(0.32, -0.01, 0.22, 0.82);
+}
+
+/* Icons "checked" animated */
+.dish__icon {
+  /* <div> - container for icon selection dish 
+  in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
+  background: #99E2D0;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 /* HEADER */
@@ -544,14 +607,13 @@ main img {
     width: 49%;
   }
 }
-.menu-restaurant .btn-gradient {
+.menu-restaurant .btn-gradient--order {
   /* <button> - button with background linear-gradient for order 
   in <section menu restaurants> + <div flexbox> + <div for button> */
-  padding: 0.8rem 3rem;
   margin-top: 3rem;
 }
 @media screen and (min-width: 640px) {
-  .menu-restaurant .btn-gradient {
+  .menu-restaurant .btn-gradient--order {
     /* Media queries Tabloids 
     for <section menu restaurants> + <div flexbox> + <div for button> --> <button gradient> */
     margin-top: 0rem;
@@ -675,11 +737,7 @@ main img {
   /* <div> - container for icon selection dish 
   in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
   float: right;
-  background: #99E2D0;
   padding: 1.5rem 0rem;
-  color: #fff;
-  font-size: 1.5rem;
-  text-align: center;
   width: 0px;
   transition: width 400ms ease-in-out;
 }
@@ -708,6 +766,7 @@ main img {
   in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div dish description> */
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: initial;
   max-width: 100%;
 }
 .dish-description__details h3 {
@@ -719,7 +778,7 @@ main img {
   white-space: nowrap;
 }
 .dish-description__details p {
-  display: inline;
+  display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
