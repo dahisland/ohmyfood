@@ -35,11 +35,9 @@
 @mixin opacity ($opacity) {
     opacity:$opacity;
     @if $opacity == 0 {
-        display:none;
         z-index:0
     }
     @else {
-        display:block;
         z-index:200;
     }
 }

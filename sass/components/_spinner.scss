@@ -1,15 +1,18 @@
 @use '../utils' as utils;
+@use './animation-spinner' as anim;
 
 .loading-spinner {
     width:100vw;
     height:100vh;
     text-align:center;
     background:white;
-    transition:opacity 300ms;
     position : fixed;
     top:0px;
     left:0px;
-    @include utils.opacity(0);
+    @include utils.opacity(1);
+    animation:loader anim.$loader-duration;
+    animation-delay:anim.$loader-delay;
+    animation-fill-mode:forwards;
     .loading-spinner__elements {
         height:100vh;
         display:flex;
@@ -19,9 +22,13 @@
     }
     .elements__position {
         position:relative;
-        width:450px;
+        width:18rem;
         font-family:'Shrikhand', cursive;
-        font-size:map-get(utils.$txt-size, txt-spin);    
+        font-size:map-get(utils.$txt-size, txt-spin) - 2rem; 
+        @include utils.responsive (tabs) {
+            width:28rem;
+            font-size:map-get(utils.$txt-size, txt-spin); 
+        }   
         p:nth-child(1), span {
             background-image: linear-gradient(to bottom, map-get(utils.$colors-palette,purple), map-get(utils.$colors-palette,pink));
             background-clip:text;
@@ -29,19 +36,23 @@
             color:transparent;
         }
         p:nth-child(1) {
-            transform:scale(0) rotateX(0turn);
-            transition:transform 1000ms ease-in-out;
+            transform:scale(1) rotateX(0turn);
+            animation:logo-ohmyfood anim.$logo-duration;
         }
         span {
             display:inline-block;
             position:relative;
             z-index:221;
-            width:3.8rem;
+            width:2.4rem;
             transform:rotateY(0turn) ;
-            transition:transform 1000ms 1000ms ease-in-out;
+            animation:o-mint anim.$o-mint-duration;
+            animation-delay:anim.$o-mint-delay;
+            @include utils.responsive (tabs) {
+                width:3.8rem;
+            }       
             &::after {
                 content:"O";
-                width:3.8rem;
+                width:2.4rem;
                 position:absolute;
                 top:0;
                 bottom:0;
@@ -50,31 +61,32 @@
                 opacity:0;
                 z-index:219;
                 color:map-get(utils.$colors-palette, mint);
-                transition:opacity 1000ms 1000ms ease-in-out;
+                animation:o-mint-after anim.$mint-after-duration;
+                animation-delay:anim.$mint-after-delay;
+                animation-fill-mode:forwards;
+                @include utils.responsive (tabs) {
+                    width:3.8rem;
+                }           
             }
         }
         p:nth-child(2) {
-            width:1rem;
-            height:1rem;
-            border-radius:25px;
+            width:0.8rem;
+            height:0.8rem;
+            border-radius:50%;
             background:map-get(utils.$colors-palette, mint);
             position:absolute;
             left:1rem;
-            top:3rem;
+            top:1rem;
             transform:translateX(0rem) translateY(0rem) scaleX(0) scaleY(1.15);
-            transition:all 500ms 1600ms cubic-bezier(.7,1.18,.9,1);    
+            transform-origin: left;
+            animation:drop-ball anim.$drop-ball-duration;
+            animation-delay:anim.$drop-ball-delay;
+            animation-fill-mode:forwards;
+            @include utils.responsive (tabs) {
+                width:1rem;
+                height:1rem;
+                top:3rem;  
+            }       
         }
     }   
-    &:hover p:nth-child(1) {
-        transform:scale(1) rotateX(1turn);
-    }
-    &:hover span {
-        transform:rotateY(3turn) ;
-        &::after {
-            opacity:1;
-        }
-    }
-    &:hover p:nth-child(2) {
-        transform:translateX(-0.5rem) translateY(4.5rem) scaleX(1) scaleY(1);
-    }
 }

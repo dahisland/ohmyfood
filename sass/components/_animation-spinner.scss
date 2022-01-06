@@ -1,0 +1,88 @@
+@use '../utils' as utils;
+
+$logo-duration:1000ms;
+$o-mint-duration:700ms;
+$mint-after-duration:$o-mint-duration;
+$drop-ball-duration:800ms;
+$loader-duration:350ms;
+
+$o-mint-delay:$logo-duration;
+$mint-after-delay:$o-mint-delay;
+$drop-ball-delay:$logo-duration + $o-mint-duration - 200ms;
+$loader-delay:$logo-duration + $o-mint-duration + $drop-ball-duration + 150ms;
+
+/* Loading-spinner animation */
+@keyframes loader {
+    0%{
+        @include utils.opacity(1);
+    }
+    100% {
+        @include utils.opacity(0);
+    }
+}
+
+/* Text 'Ohmyfood' inside loading-spinner animation */
+@keyframes logo-ohmyfood {
+    0% {
+        transform:scale(0) rotateX(0turn);
+        opacity:0;
+    }
+    90% {
+        opacity:1;
+    }
+    100% {
+        transform:scale(1) rotateX(1turn);
+        opacity:1;
+    }
+}
+/* Rotation animation for the 'O' from text'Ohmyfood' inside loading-spinner */
+@keyframes o-mint {
+    0% {
+        transform:rotateY(0turn) ;
+    }
+    100% {
+        transform:rotateY(2turn) ;
+    }
+}
+
+/* Color animation for the 'O' from text'Ohmyfood' inside loading-spinner */
+@keyframes o-mint-after {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+/* ball dropped from 'O' animation inside loading-spinner */
+@keyframes drop-ball {
+    0% {
+        transform:translateX(0rem) translateY(0rem) scaleX(0) scaleY(1.15);
+    }
+    25% {
+        transform:translateX(-0.5rem) translateY(3.7rem) scaleX(1) scaleY(1);
+    }
+    35% {
+        transform:translateX(-0.5rem) translateY(3.7rem) scaleX(1) scaleY(1);
+    }
+    100% {
+        transform:translateX(-0.5rem) translateY(3.7rem) scaleX(20.2) scaleY(0.5);
+    }
+}
+@include utils.responsive (tabs) {
+    @keyframes drop-ball {
+        0% {
+            transform:translateX(0rem) translateY(0rem) scaleX(0) scaleY(1.15);
+        }
+        25% {
+            transform:translateX(-0.5rem) translateY(4.5rem) scaleX(1) scaleY(1);  
+        }
+        35% {
+            transform:translateX(-0.5rem) translateY(4.5rem) scaleX(1) scaleY(1);  
+        }
+        100% {
+            transform:translateX(-0.5rem) translateY(4.5rem) scaleX(27) scaleY(0.5);  
+        }
+    }
+}
