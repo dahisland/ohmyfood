@@ -36,7 +36,7 @@
 @mixin opacity ($opacity) {
     opacity:$opacity;
     @if $opacity == 0 {
-        z-index:0
+        z-index:-200
     }
     @else {
         z-index:200;
