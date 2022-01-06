@@ -1,4 +1,12 @@
 @charset "UTF-8";
+@keyframes anim-card {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body, button {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -272,12 +280,15 @@ button {
 /* ball dropped from 'O' animation inside loading-spinner */
 @keyframes drop-ball {
   0% {
-    transform: translateX(0rem) translateY(0rem) scaleX(0) scaleY(1.15);
+    transform: translateX(0rem) translateY(0rem) scaleX(0) scaleY(1);
   }
-  25% {
+  20% {
+    transform: translateX(0rem) translateY(0rem) scaleX(1) scaleY(1.7);
+  }
+  40% {
     transform: translateX(-0.5rem) translateY(3.7rem) scaleX(1) scaleY(1);
   }
-  35% {
+  45% {
     transform: translateX(-0.5rem) translateY(3.7rem) scaleX(1) scaleY(1);
   }
   100% {
@@ -310,9 +321,10 @@ button {
   left: 0px;
   opacity: 1;
   z-index: 200;
-  animation: loader 350ms;
-  animation-delay: 2650ms;
+  animation: loader 300ms;
+  animation-delay: 2900ms;
   animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.47, 0, 0.16, 1);
 }
 .loading-spinner .loading-spinner__elements {
   height: 100vh;
@@ -342,6 +354,7 @@ button {
 .loading-spinner .elements__position p:nth-child(1) {
   transform: scale(1) rotateX(0turn);
   animation: logo-ohmyfood 1000ms;
+  animation-timing-function: cubic-bezier(0.23, 0, 0.28, 1);
 }
 .loading-spinner .elements__position span {
   display: inline-block;
@@ -351,6 +364,7 @@ button {
   transform: rotateY(0turn);
   animation: o-mint 700ms;
   animation-delay: 1000ms;
+  animation-timing-function: cubic-bezier(0.93, 0, 0.83, 1);
 }
 @media screen and (min-width: 640px) {
   .loading-spinner .elements__position span {
@@ -371,6 +385,7 @@ button {
   animation: o-mint-after 700ms;
   animation-delay: 1000ms;
   animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.93, 0, 0.83, 1);
 }
 @media screen and (min-width: 640px) {
   .loading-spinner .elements__position span::after {
@@ -387,9 +402,10 @@ button {
   top: 1rem;
   transform: translateX(0rem) translateY(0rem) scaleX(0) scaleY(1.15);
   transform-origin: left;
-  animation: drop-ball 800ms;
+  animation: drop-ball 1000ms;
   animation-delay: 1500ms;
   animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.93, 0, 0.83, 1);
 }
 @media screen and (min-width: 640px) {
   .loading-spinner .elements__position p:nth-child(2) {
@@ -700,12 +716,14 @@ footer span {
     /* Media queries Tabloids for <section functioning> --> <h2> */
     text-align: center;
     padding-bottom: 1.9rem;
+    padding-top: 1.2rem;
   }
 }
 @media screen and (min-width: 1224px) {
   .functioning h2 {
     /* Media queries Desktops for <section functioning> --> <h2> */
     padding-bottom: 3rem;
+    padding-top: 0.9rem;
   }
 }
 @media screen and (min-width: 2000px) {

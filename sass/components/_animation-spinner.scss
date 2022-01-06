@@ -3,13 +3,13 @@
 $logo-duration:1000ms;
 $o-mint-duration:700ms;
 $mint-after-duration:$o-mint-duration;
-$drop-ball-duration:800ms;
-$loader-duration:350ms;
+$drop-ball-duration:1000ms;
+$loader-duration:300ms;
 
 $o-mint-delay:$logo-duration;
 $mint-after-delay:$o-mint-delay;
 $drop-ball-delay:$logo-duration + $o-mint-duration - 200ms;
-$loader-delay:$logo-duration + $o-mint-duration + $drop-ball-duration + 150ms;
+$loader-delay:$logo-duration + $o-mint-duration + $drop-ball-duration + 200ms;
 
 /* Loading-spinner animation */
 @keyframes loader {
@@ -58,12 +58,15 @@ $loader-delay:$logo-duration + $o-mint-duration + $drop-ball-duration + 150ms;
 /* ball dropped from 'O' animation inside loading-spinner */
 @keyframes drop-ball {
     0% {
-        transform:translateX(0rem) translateY(0rem) scaleX(0) scaleY(1.15);
+        transform:translateX(0rem) translateY(0rem) scaleX(0) scaleY(1);
     }
-    25% {
+    20% {
+        transform:translateX(0rem) translateY(0rem) scaleX(1) scaleY(1.7);
+    }
+    40% {
         transform:translateX(-0.5rem) translateY(3.7rem) scaleX(1) scaleY(1);
     }
-    35% {
+    45% {
         transform:translateX(-0.5rem) translateY(3.7rem) scaleX(1) scaleY(1);
     }
     100% {

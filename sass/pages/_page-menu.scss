@@ -1,4 +1,5 @@
 @use '../utils' as utils;
+@use '../components/animation-menus' as anim-card;
 
 
 /* HEADER specifications for pages menus*/
@@ -277,7 +278,7 @@ main {
             border-radius: 0rem 1rem 1rem 0rem;
         }    
     }
-    a {
+    .dish-type__dish {
         /* <a> - link dish 
         in <section menu restaurants> + <div flexbox> + <article type dish> */
         display:block;
@@ -287,6 +288,7 @@ main {
         cursor:pointer;
         margin-bottom: map-get(utils.$txt-size, txt-m);
         @include utils.shadow-box (84);
+        opacity:0;
         @include utils.responsive (tabs) {
             /* Media queries Tabloids 
             for <section menu restaurants> + <div flexbox> + <article type dish> --> <a dish> */
@@ -302,6 +304,15 @@ main {
             for <section menu restaurants> + <div flexbox> + <article type dish> --> <a dish> */
             margin-bottom: map-get(utils.$txt-size, txt-m);
         }
+        &--anim1 {
+            @include utils.card-anim;
+    }
+        &--anim2 {
+            @include utils.card-anim (150ms);
+        }
+        &--anim3 {
+            @include utils.card-anim (300ms);
+        }
         .dish__dish-description {
             /* <div> - text description of dish 
             in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
@@ -315,6 +326,7 @@ main {
             in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
             font-weight:map-get(utils.$txt-weight, txt-bold);
             align-self:flex-end;
+            padding-bottom:0.2rem;
         }  
         &:hover {
             @include utils.shadow-box (75);

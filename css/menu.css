@@ -1,3 +1,11 @@
+@keyframes anim-card {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body, button {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -677,7 +685,7 @@ main img {
     border-radius: 0rem 1rem 1rem 0rem;
   }
 }
-.menu-restaurant__dish-type a {
+.menu-restaurant__dish-type .dish-type__dish {
   /* <a> - link dish 
   in <section menu restaurants> + <div flexbox> + <article type dish> */
   display: block;
@@ -687,29 +695,48 @@ main img {
   cursor: pointer;
   margin-bottom: 1rem;
   box-shadow: 0px 5px 8px #d6d6d6;
+  opacity: 0;
 }
 @media screen and (min-width: 640px) {
-  .menu-restaurant__dish-type a {
+  .menu-restaurant__dish-type .dish-type__dish {
     /* Media queries Tabloids 
     for <section menu restaurants> + <div flexbox> + <article type dish> --> <a dish> */
     box-shadow: 0px 5px 8px #e6e6e6;
   }
 }
 @media screen and (min-width: 1224px) {
-  .menu-restaurant__dish-type a {
+  .menu-restaurant__dish-type .dish-type__dish {
     /* Media queries Desktop 
     for <section menu restaurants> + <div flexbox> + <article type dish> --> <a dish> */
     margin-bottom: 2rem;
   }
 }
 @media screen and (min-width: 2000px) {
-  .menu-restaurant__dish-type a {
+  .menu-restaurant__dish-type .dish-type__dish {
     /* Media queries Large screens desktops 
     for <section menu restaurants> + <div flexbox> + <article type dish> --> <a dish> */
     margin-bottom: 1rem;
   }
 }
-.menu-restaurant__dish-type a .dish__dish-description {
+.menu-restaurant__dish-type .dish-type__dish--anim1 {
+  animation: anim-card 400ms;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.47, 0, 0.54, 1);
+}
+.menu-restaurant__dish-type .dish-type__dish--anim2 {
+  animation: anim-card 400ms;
+  animation-delay: 150ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.47, 0, 0.54, 1);
+}
+.menu-restaurant__dish-type .dish-type__dish--anim3 {
+  animation: anim-card 400ms;
+  animation-delay: 300ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.47, 0, 0.54, 1);
+}
+.menu-restaurant__dish-type .dish-type__dish .dish__dish-description {
   /* <div> - text description of dish 
   in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
   display: flex;
@@ -717,23 +744,24 @@ main img {
   padding: 1.1rem 1rem 0rem 0.5rem;
   max-width: 100%;
 }
-.menu-restaurant__dish-type a .dish-description__price {
+.menu-restaurant__dish-type .dish-type__dish .dish-description__price {
   /* <p> - text for price of dish 
   in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
   font-weight: 700;
   align-self: flex-end;
+  padding-bottom: 0.2rem;
 }
-.menu-restaurant__dish-type a:hover {
+.menu-restaurant__dish-type .dish-type__dish:hover {
   box-shadow: 0px 5px 8px #bfbfbf;
 }
 @media screen and (min-width: 640px) {
-  .menu-restaurant__dish-type a:hover {
+  .menu-restaurant__dish-type .dish-type__dish:hover {
     /* Media queries Tabloids
     for <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> --> <div icon dish> */
     box-shadow: 0px 5px 8px #d9d9d9;
   }
 }
-.menu-restaurant__dish-type a .dish__icon {
+.menu-restaurant__dish-type .dish-type__dish .dish__icon {
   /* <div> - container for icon selection dish 
   in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
   float: right;
@@ -741,21 +769,21 @@ main img {
   width: 0px;
   transition: width 400ms ease-in-out;
 }
-.menu-restaurant__dish-type a:hover .dish__icon {
+.menu-restaurant__dish-type .dish-type__dish:hover .dish__icon {
   width: 70px;
 }
 @media screen and (min-width: 2000px) {
-  .menu-restaurant__dish-type a:hover .dish__icon {
+  .menu-restaurant__dish-type .dish-type__dish:hover .dish__icon {
     /* Media queries Large screens desktops
     for <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> --> <div icon dish> */
     width: 100px;
   }
 }
-.menu-restaurant__dish-type a .icon__checked {
+.menu-restaurant__dish-type .dish-type__dish .icon__checked {
   transition: transform 400ms 100ms cubic-bezier(0.68, 0.1, 0.38, 0.81);
   transform: rotate(0turn);
 }
-.menu-restaurant__dish-type a:hover .icon__checked {
+.menu-restaurant__dish-type .dish-type__dish:hover .icon__checked {
   /* <span> - icon checked
   in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> + <div icon dish> */
   transform: rotate(1turn);

@@ -1,4 +1,5 @@
 @use './maps';
+@use '../components/animation-menus' as anim-card;
 
 @mixin center-margin {
     margin:0 auto;
@@ -40,4 +41,10 @@
     @else {
         z-index:200;
     }
+}
+@mixin card-anim ($anim-card-delay:0ms) {
+    animation:anim-card anim-card.$anim-card-duration;
+    animation-delay:$anim-card-delay;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.47,0,.54,1);
 }
