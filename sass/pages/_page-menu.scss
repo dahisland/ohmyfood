@@ -326,7 +326,6 @@ main {
             in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
             font-weight:map-get(utils.$txt-weight, txt-bold);
             align-self:flex-end;
-            padding-bottom:0.2rem;
         }  
         &:hover {
             @include utils.shadow-box (75);
@@ -375,7 +374,7 @@ main {
         @include utils.ellipsis;
     }
     p {
-        display:inline-block;
+        display:inline;
         @include utils.ellipsis;
     }
 }

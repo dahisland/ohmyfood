@@ -751,7 +751,6 @@ main img {
   in <section menu restaurants> + <div flexbox> + <article type dish> + <a dish> */
   font-weight: 700;
   align-self: flex-end;
-  padding-bottom: 0.2rem;
 }
 .menu-restaurant__dish-type .dish-type__dish:hover {
   box-shadow: 0px 5px 8px #bfbfbf;
@@ -808,7 +807,7 @@ main img {
   white-space: nowrap;
 }
 .dish-description__details p {
-  display: inline-block;
+  display: inline;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
