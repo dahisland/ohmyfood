@@ -335,6 +335,7 @@ button {
 }
 .loading-spinner .elements__position {
   position: relative;
+  margin-top: -200px;
   width: 18rem;
   font-family: "Shrikhand", cursive;
   font-size: 3rem;
@@ -343,6 +344,7 @@ button {
   .loading-spinner .elements__position {
     width: 28rem;
     font-size: 5rem;
+    margin-top: -100px;
   }
 }
 .loading-spinner .elements__position p:nth-child(1), .loading-spinner .elements__position span {
