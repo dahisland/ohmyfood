@@ -286,13 +286,13 @@ button {
     transform: translateX(0rem) translateY(0rem) scaleX(1) scaleY(1.7);
   }
   40% {
-    transform: translateX(-0.5rem) translateY(3.7rem) scaleX(1) scaleY(1);
+    transform: translateX(-0.5rem) translateY(1.8rem) scaleX(1) scaleY(1);
   }
   45% {
-    transform: translateX(-0.5rem) translateY(3.7rem) scaleX(1) scaleY(1);
+    transform: translateX(-0.5rem) translateY(1.8rem) scaleX(1) scaleY(1);
   }
   100% {
-    transform: translateX(-0.5rem) translateY(3.7rem) scaleX(20.2) scaleY(0.5);
+    transform: translateX(-0.5rem) translateY(1.8rem) scaleX(35) scaleY(0.5);
   }
 }
 @media screen and (min-width: 640px) {
@@ -301,13 +301,13 @@ button {
       transform: translateX(0rem) translateY(0rem) scaleX(0) scaleY(1.15);
     }
     25% {
-      transform: translateX(-0.5rem) translateY(4.5rem) scaleX(1) scaleY(1);
+      transform: translateX(-0.5rem) translateY(4rem) scaleX(1) scaleY(1);
     }
     35% {
-      transform: translateX(-0.5rem) translateY(4.5rem) scaleX(1) scaleY(1);
+      transform: translateX(-0.5rem) translateY(4rem) scaleX(1) scaleY(1);
     }
     100% {
-      transform: translateX(-0.5rem) translateY(4.5rem) scaleX(27) scaleY(0.5);
+      transform: translateX(-0.5rem) translateY(4rem) scaleX(27) scaleY(0.5);
     }
   }
 }
@@ -395,13 +395,13 @@ button {
   }
 }
 .loading-spinner .elements__position p:nth-child(2) {
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
   background: #99E2D0;
   position: absolute;
   left: 1rem;
-  top: 1rem;
+  top: 2.5rem;
   transform: translateX(0rem) translateY(0rem) scaleX(0) scaleY(1.15);
   transform-origin: left;
   animation: drop-ball 1000ms;
@@ -413,7 +413,7 @@ button {
   .loading-spinner .elements__position p:nth-child(2) {
     width: 1rem;
     height: 1rem;
-    top: 3rem;
+    top: 3.5rem;
   }
 }
 

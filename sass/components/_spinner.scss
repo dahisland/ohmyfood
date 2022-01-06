@@ -76,13 +76,13 @@
             }
         }
         p:nth-child(2) {
-            width:0.8rem;
-            height:0.8rem;
+            width:0.5rem;
+            height:0.5rem;
             border-radius:50%;
             background:map-get(utils.$colors-palette, mint);
             position:absolute;
             left:1rem;
-            top:1rem;
+            top:2.5rem;
             transform:translateX(0rem) translateY(0rem) scaleX(0) scaleY(1.15);
             transform-origin: left;
             animation:drop-ball anim.$drop-ball-duration;
@@ -92,7 +92,7 @@
             @include utils.responsive (tabs) {
                 width:1rem;
                 height:1rem;
-                top:3rem;  
+                top:3.5rem;  
             }       
         }
     }   

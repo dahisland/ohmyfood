@@ -64,13 +64,13 @@ $loader-delay:$logo-duration + $o-mint-duration + $drop-ball-duration + 200ms;
         transform:translateX(0rem) translateY(0rem) scaleX(1) scaleY(1.7);
     }
     40% {
-        transform:translateX(-0.5rem) translateY(3.7rem) scaleX(1) scaleY(1);
+        transform:translateX(-0.5rem) translateY(1.8rem) scaleX(1) scaleY(1);
     }
     45% {
-        transform:translateX(-0.5rem) translateY(3.7rem) scaleX(1) scaleY(1);
+        transform:translateX(-0.5rem) translateY(1.8rem) scaleX(1) scaleY(1);
     }
     100% {
-        transform:translateX(-0.5rem) translateY(3.7rem) scaleX(20.2) scaleY(0.5);
+        transform:translateX(-0.5rem) translateY(1.8rem) scaleX(35) scaleY(0.5);
     }
 }
 @include utils.responsive (tabs) {
@@ -79,13 +79,13 @@ $loader-delay:$logo-duration + $o-mint-duration + $drop-ball-duration + 200ms;
             transform:translateX(0rem) translateY(0rem) scaleX(0) scaleY(1.15);
         }
         25% {
-            transform:translateX(-0.5rem) translateY(4.5rem) scaleX(1) scaleY(1);  
+            transform:translateX(-0.5rem) translateY(4rem) scaleX(1) scaleY(1);  
         }
         35% {
-            transform:translateX(-0.5rem) translateY(4.5rem) scaleX(1) scaleY(1);  
+            transform:translateX(-0.5rem) translateY(4rem) scaleX(1) scaleY(1);  
         }
         100% {
-            transform:translateX(-0.5rem) translateY(4.5rem) scaleX(27) scaleY(0.5);  
+            transform:translateX(-0.5rem) translateY(4rem) scaleX(27) scaleY(0.5);  
         }
     }
 }
