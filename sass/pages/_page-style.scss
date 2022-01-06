@@ -1,5 +1,14 @@
 @use '../utils' as utils;
 
+
+main {
+    @include utils.responsive (desktop) {
+        grid-template-rows: 260px auto auto;
+    }
+    @include utils.responsive (desktop-xl) {
+        grid-template-rows: auto;
+    }
+}
 /* SECTION RESERVATION */
 .reservation {
     /* <section reservation> */
@@ -115,6 +124,7 @@
         /* Media queries Desktops for <section functioning> */
         padding-left:0rem;
         padding-right:0rem;
+        padding-top:5.2rem;
         grid-row:2;
     }
     @include utils.responsive (desktop-xl) {
@@ -122,6 +132,7 @@
         grid-column:2;
         @include utils.padding-page;
         padding-bottom:0rem;
+        padding-top:0rem;
     }
     
     ol { 
@@ -147,8 +158,11 @@
         @include utils.responsive (desktop) {
             /* Media queries Desktops for <section functioning> --> <h2> */
             padding-bottom:3rem;
+        }  
+        @include utils.responsive (desktop-xl) {
+            /* Media queries Large screens desktop for <section functioning> --> <h2> */
             padding-top:3rem;
-        }    
+        }     
     }
 }
 .instructions__step {

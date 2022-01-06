@@ -512,6 +512,17 @@ footer span {
   }
 }
 
+@media screen and (min-width: 1224px) {
+  main {
+    grid-template-rows: 260px auto auto;
+  }
+}
+@media screen and (min-width: 2000px) {
+  main {
+    grid-template-rows: auto;
+  }
+}
+
 /* SECTION RESERVATION */
 .reservation {
   /* <section reservation> */
@@ -651,6 +662,7 @@ footer span {
     /* Media queries Desktops for <section functioning> */
     padding-left: 0rem;
     padding-right: 0rem;
+    padding-top: 5.2rem;
     grid-row: 2;
   }
 }
@@ -661,6 +673,7 @@ footer span {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 0rem;
+    padding-top: 0rem;
   }
 }
 .functioning ol {
@@ -693,6 +706,11 @@ footer span {
   .functioning h2 {
     /* Media queries Desktops for <section functioning> --> <h2> */
     padding-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .functioning h2 {
+    /* Media queries Large screens desktop for <section functioning> --> <h2> */
     padding-top: 3rem;
   }
 }
