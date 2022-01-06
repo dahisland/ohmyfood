@@ -721,20 +721,20 @@ main img {
   }
 }
 .menu-restaurant__dish-type .dish-type__dish--anim1 {
-  animation: anim-card 400ms;
+  animation: anim-card 500ms;
   animation-delay: 0ms;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.47, 0, 0.54, 1);
 }
 .menu-restaurant__dish-type .dish-type__dish--anim2 {
-  animation: anim-card 400ms;
-  animation-delay: 150ms;
+  animation: anim-card 500ms;
+  animation-delay: 200ms;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.47, 0, 0.54, 1);
 }
 .menu-restaurant__dish-type .dish-type__dish--anim3 {
-  animation: anim-card 400ms;
-  animation-delay: 300ms;
+  animation: anim-card 500ms;
+  animation-delay: 400ms;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.47, 0, 0.54, 1);
 }

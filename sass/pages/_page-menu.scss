@@ -308,10 +308,10 @@ main {
             @include utils.card-anim;
     }
         &--anim2 {
-            @include utils.card-anim (150ms);
+            @include utils.card-anim (200ms);
         }
         &--anim3 {
-            @include utils.card-anim (300ms);
+            @include utils.card-anim (400ms);
         }
         .dish__dish-description {
             /* <div> - text description of dish 
