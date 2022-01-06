@@ -361,7 +361,6 @@ button {
 .loading-spinner .elements__position span {
   display: inline-block;
   position: relative;
-  z-index: 221;
   width: 2.4rem;
   transform: rotateY(0turn);
   animation: o-mint 700ms;
@@ -382,7 +381,6 @@ button {
   left: 0;
   right: 0;
   opacity: 0;
-  z-index: 219;
   color: #99E2D0;
   animation: o-mint-after 700ms;
   animation-delay: 1000ms;

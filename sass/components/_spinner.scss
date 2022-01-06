@@ -46,7 +46,6 @@
         span {
             display:inline-block;
             position:relative;
-            z-index:221;
             width:2.4rem;
             transform:rotateY(0turn) ;
             animation:o-mint anim.$o-mint-duration;
@@ -64,7 +63,6 @@
                 left:0;
                 right:0;
                 opacity:0;
-                z-index:219;
                 color:map-get(utils.$colors-palette, mint);
                 animation:o-mint-after anim.$mint-after-duration;
                 animation-delay:anim.$mint-after-delay;
