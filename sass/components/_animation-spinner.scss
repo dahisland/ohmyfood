@@ -70,7 +70,7 @@ $loader-delay:$logo-duration + $o-mint-duration + $drop-ball-duration + 200ms;
         transform:translateX(-0.5rem) translateY(1.8rem) scaleX(1) scaleY(1);
     }
     100% {
-        transform:translateX(-0.5rem) translateY(1.8rem) scaleX(35) scaleY(0.5);
+        transform:translateX(-0.5rem) translateY(1.8rem) scaleX(34) scaleY(0.5);
     }
 }
 @include utils.responsive (tabs) {

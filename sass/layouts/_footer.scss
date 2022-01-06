@@ -4,6 +4,8 @@
 
 footer {
     background:lighten(map-get(utils.$colors-palette, dark),25%);
+    position:relative;
+    z-index:50;
     @include utils.responsive (tabs) {
         text-align:center;
     } 
