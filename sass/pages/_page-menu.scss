@@ -80,6 +80,13 @@ main {
             box-shadow:initial;
         }
     }
+    .img__enchante {
+        @include utils.responsive (desktop) {
+            /* Media queries Desktop 
+            for <main> + <picture> --> <img> */
+            height:900px;
+        } 
+    }   
 }
 
 /* SECTION MENU RESTAURANTS */
@@ -197,7 +204,7 @@ main {
             display:flex;
             flex-wrap:wrap;
             justify-content:space-between;
-            align-items:center;
+            align-items:flex-start;
         }
         @include utils.responsive (desktop) {
             /* Media queries Desktop 
@@ -217,6 +224,7 @@ main {
         @include utils.responsive (tabs) {
             /* Media queries Tabloids for <section menu restaurants> + <div flexbox> --> <div for button> */
             width:49%;
+            align-self:center;
         }
     }
     .btn-gradient--order {
@@ -247,7 +255,7 @@ main {
         position:relative;
         margin-bottom:5rem;
     }
-    h2 {
+    .dish-type__title {
         /* <h2> - title of article 
         in <section menu restaurants> + <div flexbox> + <article type dish> */
         width:2rem;
@@ -266,18 +274,39 @@ main {
             for <section menu restaurants> + <div flexbox> + <article type dish> --> <h2> */
             transform:rotate(270deg);
             font-size:2.5rem;
-            width:277px;
+            width:307px;
             padding-bottom:1rem;
             position:absolute;
-            left:-5.5rem;
-            bottom:75px;
+            left:-6.4rem;
+            bottom:83px;
             text-align:center;
             background:lighten(map-get(utils.$colors-palette, mint),20%);
             border-bottom:initial;
             border-left:4px solid map-get(utils.$colors-palette, mint);
             border-radius: 0rem 1rem 1rem 0rem;
+        }
+        &--larger {
+            @include utils.responsive (desktop-xl) {
+                /* Media queries Large screens desktops 
+                for <section menu restaurants> + <div flexbox> + <article type dish> --> <h2> */
+                transform:rotate(270deg);
+                font-size:2.5rem;
+                width:277px;
+                padding-bottom:1rem;
+                position:absolute;
+                left:-9rem;
+                bottom:138px;
+                text-align:center;
+                background:lighten(map-get(utils.$colors-palette, mint),20%);
+                border-bottom:initial;
+                border-left:4px solid map-get(utils.$colors-palette, mint);
+                border-radius: 0rem 1rem 1rem 0rem;
+                padding-right:312px;
+                padding-left:97px;
+            }    
         }    
     }
+
     .dish-type__dish {
         /* <a> - link dish 
         in <section menu restaurants> + <div flexbox> + <article type dish> */

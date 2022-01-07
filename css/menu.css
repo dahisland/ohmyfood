@@ -449,6 +449,13 @@ main img {
     box-shadow: initial;
   }
 }
+@media screen and (min-width: 1224px) {
+  main .img__enchante {
+    /* Media queries Desktop 
+    for <main> + <picture> --> <img> */
+    height: 900px;
+  }
+}
 
 /* SECTION MENU RESTAURANTS */
 .menu-restaurant {
@@ -589,7 +596,7 @@ main img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 @media screen and (min-width: 1224px) {
@@ -615,6 +622,7 @@ main img {
   .menu-restaurant .menu-restaurant__btn-order {
     /* Media queries Tabloids for <section menu restaurants> + <div flexbox> --> <div for button> */
     width: 49%;
+    align-self: center;
   }
 }
 .menu-restaurant .btn-gradient--order {
@@ -652,7 +660,7 @@ main img {
     margin-bottom: 5rem;
   }
 }
-.menu-restaurant__dish-type h2 {
+.menu-restaurant__dish-type .dish-type__title {
   /* <h2> - title of article 
   in <section menu restaurants> + <div flexbox> + <article type dish> */
   width: 2rem;
@@ -663,14 +671,32 @@ main img {
   border-bottom: 4px solid #99E2D0;
 }
 @media screen and (min-width: 1224px) {
-  .menu-restaurant__dish-type h2 {
+  .menu-restaurant__dish-type .dish-type__title {
     /* Media queries Desktop 
     for <section menu restaurants> + <div flexbox> + <article type dish> --> <h2> */
     margin-bottom: 2rem;
   }
 }
 @media screen and (min-width: 2000px) {
-  .menu-restaurant__dish-type h2 {
+  .menu-restaurant__dish-type .dish-type__title {
+    /* Media queries Large screens desktops 
+    for <section menu restaurants> + <div flexbox> + <article type dish> --> <h2> */
+    transform: rotate(270deg);
+    font-size: 2.5rem;
+    width: 307px;
+    padding-bottom: 1rem;
+    position: absolute;
+    left: -6.4rem;
+    bottom: 83px;
+    text-align: center;
+    background: #e8f9f5;
+    border-bottom: initial;
+    border-left: 4px solid #99E2D0;
+    border-radius: 0rem 1rem 1rem 0rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .menu-restaurant__dish-type .dish-type__title--larger {
     /* Media queries Large screens desktops 
     for <section menu restaurants> + <div flexbox> + <article type dish> --> <h2> */
     transform: rotate(270deg);
@@ -678,13 +704,15 @@ main img {
     width: 277px;
     padding-bottom: 1rem;
     position: absolute;
-    left: -5.5rem;
-    bottom: 75px;
+    left: -9rem;
+    bottom: 138px;
     text-align: center;
     background: #e8f9f5;
     border-bottom: initial;
     border-left: 4px solid #99E2D0;
     border-radius: 0rem 1rem 1rem 0rem;
+    padding-right: 312px;
+    padding-left: 97px;
   }
 }
 .menu-restaurant__dish-type .dish-type__dish {
