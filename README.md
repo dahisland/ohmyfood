@@ -152,4 +152,4 @@ Le projet répond aux attentes du client sur les point suivants :
 - Aucun framework n'a été utilisé pour la conception de cette première version.
 - Les différentes animations demandées ont été réalisées en CSS avec des @keyframes et des transitions.
 
-  Temps de réalisation du projet : environ 3 semaines.
+Temps de réalisation du projet : environ 3 semaines.
