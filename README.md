@@ -1,3 +1,13 @@
+[![forthebadge](./readme-assets/html5-badge.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
+[![forthebadge](./readme-assets/sass-badge.svg)](https://forthebadge.com)
+
+<br/>
+
+<div id="header" align="left">
+  <img src="./images/logo/ohmyfood.png" width="200"/>
+</div>
+
 # Projet OHMYFOOD
 
 Ohmyfood! est une jeune startup qui voudrait s'imposer sur le marché de la restauration.
