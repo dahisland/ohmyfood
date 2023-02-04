@@ -5,7 +5,7 @@
 <br/>
 
 <div id="header" align="left">
-  <img src="./images/logo/ohmyfood.png" width="200"/>
+  <img src="./readme-assets/logo-ohmyfood.png" width="200"/>
 </div>
 
 # Projet OHMYFOOD
